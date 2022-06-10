@@ -1,0 +1,16 @@
+{
+  "name": "rollinoats2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start custom-blocks/banner.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/amberstickel/Rollin-Oats-2022.git",
+  "author": "Amber Stickel",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "23.2.0"
+  }
+}
