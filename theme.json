@@ -1,0 +1,144 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version":2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "white",
+          "color": "#FFF",
+          "name": "White"
+        },
+        {
+          "slug": "black",
+          "color": "#000",
+          "name": "Black"
+        },
+        {
+          "slug": "container-bg-base",
+          "color": "#F7F3EA",
+          "name": "Container - Base"
+        },
+        {
+          "slug": "container-bg-primary",
+          "color": "#C3DEA5",
+          "name": "Container - Primary"
+        },
+        {
+          "slug": "container-bg-secondary",
+          "color": "#DCCFDE",
+          "name": "Container - Secondary"
+        },
+        {
+          "slug": "container-bg-white",
+          "color": "#FFF",
+          "name": "Container - White"
+        },
+        {
+          "slug": "text-primary",
+          "color": "#355A24",
+          "name": "Text - Primary"
+        },
+        {
+          "slug": "text-secondary",
+          "color": "#4A2664",
+          "name": "Text - Secondary"
+        },
+        {
+          "slug": "text-white",
+          "color": "#F7F3EA",
+          "name": "Text - White"
+        },
+        {
+          "slug": "link-primary",
+          "color": "#355A24",
+          "name": "Link - Primary"
+        },
+        {
+          "slug": "link-secondary",
+          "color": "#8F529A",
+          "name": "Link - Secondary"
+        },
+        {
+          "slug": "button-green-primary",
+          "color": "#6A933E",
+          "name": "Button - Green - Primary"
+        },
+        {
+          "slug": "button-green-secondary",
+          "color": "#355A24",
+          "name": "Button - Green - Secondary"
+        },
+        {
+          "slug": "button-purple-primary",
+          "color": "#8F529A",
+          "name": "Button - Purple - Primary"
+        },
+        {
+          "slug": "button-purple-secondary",
+          "color": "#4A2664",
+          "name": "Button - Purple - Secondaryy"
+        },
+        {
+          "slug": "icon-green",
+          "color": "#355A24",
+          "name": "Icon - Green"
+        },
+        {
+          "slug": "banner-purple",
+          "color": "#8F529A",
+          "name": "Banner-Purple"
+        }
+      ]
+    },
+    "typography": {
+			"fontSizes": [
+				{
+					"slug": "paragraph-small",
+					"size": "1rem",
+					"name": "Small"
+				},
+				{
+					"slug": "paragraph-medium",
+					"size": "1.125rem",
+					"name": "Medium"
+				},
+        {
+					"slug": "paragraph-large",
+					"size": "1.375rem",
+					"name": "Large"
+				},
+        {
+					"slug": "paragraph-xlarge",
+					"size": "1.5rem",
+					"name": "Extra Large"
+				},
+        {
+					"slug": "heading-xsmall",
+					"size": "1.5rem",
+					"name": "Extra Small"
+				},
+        {
+					"slug": "heading-small",
+					"size": "1.875rem",
+					"name":  "Small"
+				},
+        {
+					"slug": "heading-medium",
+					"size": "2.5rem",
+					"name": "Medium"
+				},
+        {
+					"slug": "heading-large",
+					"size": "3.125rem", 
+					"name": "Large"
+				},
+        {
+					"slug": "heading-xlarge",
+					"size": "4.375rem",
+					"name": "Extra Large"
+				}
+			]
+		}
+  }
+}
