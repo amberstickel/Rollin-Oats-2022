@@ -2,6 +2,15 @@
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version":2,
   "settings": {
+    "layout": {
+			"contentSize": "840px",
+			"wideSize": "1100px"
+		},
+    "spacing": {
+			"padding": true,
+			"margin": true,
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
+		},
     "color": {
       "palette": [
         {
