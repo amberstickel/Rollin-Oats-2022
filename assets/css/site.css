@@ -1,0 +1,34 @@
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.banner {
+  color: var(--wp--preset--color--text-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 360px;
+  position: relative;
+}
+
+.banner__svg {
+  min-height: 360px;
+  position: absolute;
+  width: 100%;
+}
+
+.banner-headline {
+  color: var(--wp--preset--color--text-white);
+  font-size: 3.75rem;
+  line-height: 4.375rem;
+  text-align: center;
+}
+
+.btn {
+  border: 1px solid red;
+  color: var(--wp--preset--color--text-white);
+  font-family: var(--wp--preset--font-family--basic-sans);
+}

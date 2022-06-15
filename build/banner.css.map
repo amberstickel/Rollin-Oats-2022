@@ -1,1 +1,0 @@
-{"version":3,"file":"banner.css","mappings":";;;AAAA;EACE,yDAAyD;EACzD,2CAA2C;AAC7C,C","sources":["webpack://rollinoats2022/./custom-blocks/banner.css"],"sourcesContent":[".banner {\n  background-color: var(--wp--preset--color--banner-purple);\n  color: var(--wp--preset--color--text-white);\n}"],"names":[],"sourceRoot":""}
