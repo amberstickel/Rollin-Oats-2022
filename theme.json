@@ -33,79 +33,44 @@
           "name": "Black"
         },
         {
-          "slug": "container-bg-base",
+          "slug": "cream",
           "color": "#F7F3EA",
-          "name": "Container - Base"
+          "name": "Cream"
         },
         {
-          "slug": "container-bg-primary",
+          "slug": "brown",
+          "color": "#534826",
+          "name": "Brown"
+        },
+        {
+          "slug": "light-green",
           "color": "#C3DEA5",
-          "name": "Container - Primary"
+          "name": "Light Green"
         },
         {
-          "slug": "container-bg-secondary",
+          "slug": "medium-green",
+          "color": "#8F529A",
+          "name": "Medium Green"
+        },
+        {
+          "slug": "dark-green",
+          "color": "#4A2664",
+          "name": "Dark Green"
+        },
+        {
+          "slug": "light-purple",
           "color": "#DCCFDE",
-          "name": "Container - Secondary"
+          "name": "Light Purple"
         },
         {
-          "slug": "container-bg-white",
-          "color": "#FFF",
-          "name": "Container - White"
+          "slug": "medium-purple",
+          "color": "#8F529A",
+          "name": "Medium Purple"
         },
         {
-          "slug": "text-primary",
-          "color": "#355A24",
-          "name": "Text - Primary"
-        },
-        {
-          "slug": "text-secondary",
+          "slug": "dark-purple",
           "color": "#4A2664",
-          "name": "Text - Secondary"
-        },
-        {
-          "slug": "text-white",
-          "color": "#F7F3EA",
-          "name": "Text - White"
-        },
-        {
-          "slug": "link-primary",
-          "color": "#355A24",
-          "name": "Link - Primary"
-        },
-        {
-          "slug": "link-secondary",
-          "color": "#8F529A",
-          "name": "Link - Secondary"
-        },
-        {
-          "slug": "button-green-primary",
-          "color": "#6A933E",
-          "name": "Button - Green - Primary"
-        },
-        {
-          "slug": "button-green-secondary",
-          "color": "#355A24",
-          "name": "Button - Green - Secondary"
-        },
-        {
-          "slug": "button-purple-primary",
-          "color": "#8F529A",
-          "name": "Button - Purple - Primary"
-        },
-        {
-          "slug": "button-purple-secondary",
-          "color": "#4A2664",
-          "name": "Button - Purple - Secondaryy"
-        },
-        {
-          "slug": "icon-green",
-          "color": "#355A24",
-          "name": "Icon - Green"
-        },
-        {
-          "slug": "banner-purple",
-          "color": "#8F529A",
-          "name": "Banner-Purple"
+          "name": "Dark Purple"
         }
       ]
     },
@@ -173,12 +138,12 @@
   },
   "styles": {
     "color": {
-			"background": "var(--wp--preset--color--container-bg-base)"
+			"background": "var(--wp--preset--color--cream)"
 		},
     "elements": {
       "h1": {
         "color": {
-          "text": "var(--wp--preset--color--text-primary)"
+          "text": "var(--wp--preset--color--dark-green)"
         },
         "typography": {
           "fontFamily":  "var(--wp--preset--font-family--new-spirit)",
@@ -187,7 +152,7 @@
       },
       "h2": {
         "color": {
-          "text": "var(--wp--preset--color--text-primary)"
+          "text": "var(--wp--preset--color--dark-green)"
         },
         "typography": {
           "fontFamily":  "var(--wp--preset--font-family--new-spirit)",
@@ -196,7 +161,7 @@
       },
       "h3": {
         "color": {
-          "text": "var(--wp--preset--color--text-primary)"
+          "text": "var(--wp--preset--color--dark-green)"
         },
         "typography": {
           "fontFamily":  "var(--wp--preset--font-family--new-spirit)",
@@ -205,7 +170,7 @@
       },
       "h4": {
         "color": {
-          "text": "var(--wp--preset--color--text-primary)"
+          "text": "var(--wp--preset--color--dark-green)"
         },
         "typography": {
           "fontFamily":  "var(--wp--preset--font-family--new-spirit)",
@@ -214,7 +179,7 @@
       },
       "h5": {
         "color": {
-          "text": "var(--wp--preset--color--text-primary)"
+          "text": "var(--wp--preset--color--dark-green)"
         },
         "typography": {
           "fontFamily":  "var(--wp--preset--font-family--new-spirit)",
@@ -225,7 +190,7 @@
     "blocks": {
       "core/paragraph": {
         "color": {
-          "text": "var(--wp--preset--color--text-primary)"
+          "text": "var(--wp--preset--color--dark-green)"
         },
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--basic-sans)",
@@ -235,7 +200,7 @@
       "core/button": {
         "color": {
           "text": "var(--wp--preset--color--white)",
-          "background": "var(--wp--preset--color--button-green-primary)"
+          "background": "var(--wp--preset--color--medium-green)"
         },
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--basic-sans)",
