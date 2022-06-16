@@ -50,3 +50,27 @@
   padding: 1rem;
   font-size: 4rem;
 }
+
+.slideshow {
+  border: 2px solid gray;
+  font-size: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.slide {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 360px;
+  position: relative;
+  width: 100%;
+}
+
+.slide__img {
+  background-color: var(--wp--preset--color--link-secondary);
+  min-height: 360px;
+  position: absolute;
+  width: 100%;
+}

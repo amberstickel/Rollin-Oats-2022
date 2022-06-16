@@ -79,9 +79,9 @@ class jsxBlock {
   }
 }
 
-
-
 new jsxBlock('banner', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('bannerheadline');
 new jsxBlock('genericbutton');
 new jsxBlock('logo');
+new jsxBlock('slideshow', true);
+new jsxBlock('slide', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
