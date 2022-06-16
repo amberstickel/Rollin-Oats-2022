@@ -9,7 +9,9 @@ registerBlockType("rollinoats/illustration", {
   attributes: {
     illustrationValue: {
       type: 'string',
-      default: 'bok-choy'
+    },
+    illustrationLabel: {
+      type: 'string',
     }
   },
   edit: EditComponent,
@@ -20,7 +22,7 @@ registerBlockType("rollinoats/illustration", {
 
 function EditComponent(props) {
   const { attributes, setAttributes } = props;
-  const { illustrationValue } = attributes;
+  const { illustrationValue, illustrationLabel } = attributes;
 
   const illustrationOptions = [
     {
@@ -53,11 +55,28 @@ function EditComponent(props) {
     },
 ];
 
+  const findIllustrationLabel = () => {
+    const selectedIllustrations = illustrationOptions.filter(option => option.value === illustrationValue);
+
+    if(selectedIllustrations.length > 0) {
+      const illustration = selectedIllustrations[0];
+      const values = Object.values(illustration);
+      const label = values[1];
+      setAttributes({
+        illustrationLabel: label
+      })
+    }
+  }
+
   const handleIllustrationSelection = (selection) => {
     setAttributes({
       illustrationValue: selection
     });
   }
+
+  useEffect(() => {
+    findIllustrationLabel();
+  }, [illustrationValue]);
 
   return (
     <>
@@ -74,6 +93,7 @@ function EditComponent(props) {
 
 
       <div className="illustration">
+        The selected illustration label is {illustrationLabel}.
         The selected illustration value is {illustrationValue}.
       </div>
     </>

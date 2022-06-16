@@ -134,8 +134,10 @@ __webpack_require__.r(__webpack_exports__);
   title: "Rollin Oats Illustration",
   attributes: {
     illustrationValue: {
-      type: 'string',
-      default: 'bok-choy'
+      type: 'string'
+    },
+    illustrationLabel: {
+      type: 'string'
     }
   },
   edit: EditComponent,
@@ -148,7 +150,8 @@ function EditComponent(props) {
     setAttributes
   } = props;
   const {
-    illustrationValue
+    illustrationValue,
+    illustrationLabel
   } = attributes;
   const illustrationOptions = [{
     value: 'bok-choy',
@@ -173,12 +176,28 @@ function EditComponent(props) {
     label: 'Spinach'
   }];
 
+  const findIllustrationLabel = () => {
+    const selectedIllustrations = illustrationOptions.filter(option => option.value === illustrationValue);
+
+    if (selectedIllustrations.length > 0) {
+      const illustration = selectedIllustrations[0];
+      const values = Object.values(illustration);
+      const label = values[1];
+      setAttributes({
+        illustrationLabel: label
+      });
+    }
+  };
+
   const handleIllustrationSelection = selection => {
     setAttributes({
       illustrationValue: selection
     });
   };
 
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    findIllustrationLabel();
+  }, [illustrationValue]);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: "Illustration",
     initialOpen: true
@@ -189,7 +208,7 @@ function EditComponent(props) {
     options: illustrationOptions
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "illustration"
-  }, "The selected illustration value is ", illustrationValue, "."));
+  }, "The selected illustration label is ", illustrationLabel, ". The selected illustration value is ", illustrationValue, "."));
 }
 
 function SaveComponent() {
