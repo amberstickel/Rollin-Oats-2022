@@ -18,6 +18,10 @@ registerBlockType("rollinoats/section", {
       type: "string",
       default: "light-green"
     },
+    waveBorderColorName: {
+      type: "string",
+      default: "cream"
+    },
     wavyTopBorder: {
       type: "boolean",
       default: false
@@ -52,7 +56,7 @@ const sectionColors = [
 
 function EditComponent(props) {
   const { attributes, setAttributes } = props;
-  const { colorName, wavyTopBorder, wavyBottomBorder } = attributes;
+  const { colorName, waveBorderColorName, wavyTopBorder, wavyBottomBorder } = attributes;
 
   const currentColorValue = sectionColors.filter(color => {
     return color.name == colorName
@@ -63,10 +67,19 @@ function EditComponent(props) {
     setAttributes({ colorName: name });
   }
 
+  const currentWaveBorderColorValue = sectionColors.filter(color => {
+    return color.name == waveBorderColorName
+  })[0].color;
+
+  function handleWaveBorderColorChange(colorCode) {
+    const { name } = getColorObjectByColorValue(sectionColors, colorCode);
+    setAttributes({ waveBorderColorName: name });
+  }
+
   return (
     <>
       <InspectorControls>
-        <PanelBody title="Color" initialOpen={true}>
+        <PanelBody title="Section Color" initialOpen={true}>
           <PanelRow>
             <ColorPalette 
               clearable={false}
@@ -76,7 +89,7 @@ function EditComponent(props) {
               value={currentColorValue} />
           </PanelRow>
         </PanelBody>
-        <PanelBody title="Border Settings" initialOpen={true}>
+        <PanelBody title="Wavy Border" initialOpen={true}>
           <PanelRow>
             <ToggleControl
               label="Wavy top border?"
@@ -94,8 +107,16 @@ function EditComponent(props) {
             />
 				  </PanelRow>
         </PanelBody>
+        <PanelBody title='Wave Border Color'>
+          <ColorPalette 
+            clearable={false}
+            colors={sectionColors}
+            disableCustomColors={true}
+            onChange={handleWaveBorderColorChange}
+            value={currentWaveBorderColorValue} />
+        </PanelBody>
       </InspectorControls>
-      <section className="ro--section">
+      <section className={`ro--section ro--section-bg--${waveBorderColorName}`}>
         {
           wavyTopBorder &&
           <div className={`ro--section__wavy-top ro--section-bg--${colorName}`}></div>
@@ -115,9 +136,9 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
   const { attributes } = props;
-  const { colorName, wavyTopBorder, wavyBottomBorder } = attributes;
+  const { colorName, waveBorderColorName, wavyTopBorder, wavyBottomBorder } = attributes;
   return (
-    <section className="ro--section">
+    <section className={`ro--section ro--section-bg--${waveBorderColorName}`}>
         {
           wavyTopBorder &&
           <div className={`ro--section__wavy-top ro--section-bg--${colorName}`}></div>

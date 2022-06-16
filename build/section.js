@@ -144,6 +144,10 @@ __webpack_require__.r(__webpack_exports__);
       type: "string",
       default: "light-green"
     },
+    waveBorderColorName: {
+      type: "string",
+      default: "cream"
+    },
     wavyTopBorder: {
       type: "boolean",
       default: false
@@ -177,6 +181,7 @@ function EditComponent(props) {
   } = props;
   const {
     colorName,
+    waveBorderColorName,
     wavyTopBorder,
     wavyBottomBorder
   } = attributes;
@@ -193,8 +198,21 @@ function EditComponent(props) {
     });
   }
 
+  const currentWaveBorderColorValue = sectionColors.filter(color => {
+    return color.name == waveBorderColorName;
+  })[0].color;
+
+  function handleWaveBorderColorChange(colorCode) {
+    const {
+      name
+    } = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.getColorObjectByColorValue)(sectionColors, colorCode);
+    setAttributes({
+      waveBorderColorName: name
+    });
+  }
+
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: "Color",
+    title: "Section Color",
     initialOpen: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
     clearable: false,
@@ -203,7 +221,7 @@ function EditComponent(props) {
     onChange: handleColorChange,
     value: currentColorValue
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: "Border Settings",
+    title: "Wavy Border",
     initialOpen: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
     label: "Wavy top border?",
@@ -219,8 +237,16 @@ function EditComponent(props) {
     onChange: () => setAttributes({
       wavyBottomBorder: !wavyBottomBorder
     })
-  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: "ro--section"
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: "Wave Border Color"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
+    clearable: false,
+    colors: sectionColors,
+    disableCustomColors: true,
+    onChange: handleWaveBorderColorChange,
+    value: currentWaveBorderColorValue
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+    className: `ro--section ro--section-bg--${waveBorderColorName}`
   }, wavyTopBorder && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `ro--section__wavy-top ro--section-bg--${colorName}`
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -236,11 +262,12 @@ function SaveComponent(props) {
   } = props;
   const {
     colorName,
+    waveBorderColorName,
     wavyTopBorder,
     wavyBottomBorder
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: "ro--section"
+    className: `ro--section ro--section-bg--${waveBorderColorName}`
   }, wavyTopBorder && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `ro--section__wavy-top ro--section-bg--${colorName}`
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {

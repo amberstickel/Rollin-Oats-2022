@@ -112,6 +112,7 @@
 
 .ro--section__content {
   padding: 4rem 2rem;
+  text-align: center;
   width: 100%;
 }
 
@@ -131,5 +132,4 @@
 
 .ro--section-bg--white {
   background-color: var(--wp--preset--color--ro-white);
-
 }
