@@ -74,3 +74,34 @@
   position: absolute;
   width: 100%;
 }
+
+.ro--section {
+  padding: 1rem;
+}
+
+.ro--section--wavy-top {
+  border-top: 10px solid red; 
+}
+
+.ro--section--wavy-bottom {
+  border-bottom: 10px solid blue;
+}
+
+.ro--section--light-green {
+  background-color: var(--wp--preset--color--ro-light-green);
+}
+
+.ro--section--light-purple {
+  background-color: var(--wp--preset--color--ro-light-purple);
+
+}
+
+.ro--section--cream {
+  background-color: var(--wp--preset--color--ro-cream);
+
+}
+
+.ro--section--white {
+  background-color: var(--wp--preset--color--ro-white);
+
+}

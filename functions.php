@@ -79,7 +79,7 @@ class jsxBlock {
   }
 }
 
-new jsxBlock('section', true);
+new jsxBlock('section');
 new jsxBlock('banner', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('bannerheadline');
 new jsxBlock('genericbutton');

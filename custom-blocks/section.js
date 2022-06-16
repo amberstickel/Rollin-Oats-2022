@@ -1,4 +1,3 @@
-import ourColors from "../inc/ourColors"
 import { registerBlockType } from '@wordpress/blocks';
 import { InnerBlocks } from '@wordpress/block-editor';
 import {  ToggleControl, PanelBody, PanelRow, ColorPalette } from "@wordpress/components";
@@ -17,7 +16,7 @@ registerBlockType("rollinoats/section", {
     },
     colorName: {
       type: "string",
-      default: "green"
+      default: "light-green"
     },
     wavyTopBorder: {
       type: "boolean",
@@ -30,18 +29,37 @@ registerBlockType("rollinoats/section", {
   },
   edit: EditComponent,
   save: SaveComponent,
-})
+});
+
+const sectionColors = [
+  { 
+    name: "light-green", 
+    color: "#C3DFA6" 
+  },
+  { 
+    name: "light-purple", 
+    color: "#DCCFDE" 
+  },
+  {
+    name: "cream",
+    color: "#F7F3EA"
+  },
+  {
+    name: "white",
+    color: "FFF"
+  }
+];
 
 function EditComponent(props) {
   const { attributes, setAttributes } = props;
-  const { wavyTopBorder, wavyBottomBorder } = attributes;
+  const { colorName, wavyTopBorder, wavyBottomBorder } = attributes;
 
-  const currentColorValue = ourColors.filter(color => {
-    return color.name == attributes.colorName
+  const currentColorValue = sectionColors.filter(color => {
+    return color.name == colorName
   })[0].color;
 
   function handleColorChange(colorCode) {
-    const { name } = getColorObjectByColorValue(ourColors, colorCode);
+    const { name } = getColorObjectByColorValue(sectionColors, colorCode);
     setAttributes({ colorName: name });
   }
 
@@ -52,7 +70,7 @@ function EditComponent(props) {
           <PanelRow>
             <ColorPalette 
               clearable={false}
-              colors={ourColors}
+              colors={sectionColors}
               disableCustomColors={true}
               onChange={handleColorChange}
               value={currentColorValue} />
@@ -77,7 +95,7 @@ function EditComponent(props) {
 				  </PanelRow>
         </PanelBody>
       </InspectorControls>
-      <section className="ro--section">
+      <section className={`ro--section ro--section--${colorName}`}>
         <InnerBlocks />
       </section>
     </>
@@ -85,6 +103,10 @@ function EditComponent(props) {
   );
 }
 
-function SaveComponent() {
-  return <InnerBlocks.Content />;
+function SaveComponent(props) {
+  return (
+    <section className={`ro--section ro--section--${props.attributes.colorName}`}>
+      <InnerBlocks.Content />
+    </section>
+  );
 }
