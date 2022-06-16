@@ -220,13 +220,31 @@ function EditComponent(props) {
       wavyBottomBorder: !wavyBottomBorder
     })
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: `ro--section ro--section--${colorName}`
+    className: `
+        ro--section 
+        ro--section--${colorName}
+        ${wavyTopBorder ? 'ro--section--wavy-top' : null}
+        ${wavyBottomBorder ? 'ro--section--wavy-bottom' : null}
+      `
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, null)));
 }
 
 function SaveComponent(props) {
+  const {
+    attributes
+  } = props;
+  const {
+    colorName,
+    wavyTopBorder,
+    wavyBottomBorder
+  } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: `ro--section ro--section--${props.attributes.colorName}`
+    className: `
+      ro--section 
+      ro--section--${colorName}
+      ${wavyTopBorder ? 'ro--section--wavy-top' : null}
+      ${wavyBottomBorder ? 'ro--section--wavy-bottom' : null}
+    `
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null));
 }
 })();

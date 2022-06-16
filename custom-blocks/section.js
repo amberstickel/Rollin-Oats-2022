@@ -95,7 +95,12 @@ function EditComponent(props) {
 				  </PanelRow>
         </PanelBody>
       </InspectorControls>
-      <section className={`ro--section ro--section--${colorName}`}>
+      <section className={`
+        ro--section 
+        ro--section--${colorName}
+        ${wavyTopBorder ? 'ro--section--wavy-top' : null}
+        ${wavyBottomBorder ? 'ro--section--wavy-bottom' : null}
+      `}>
         <InnerBlocks />
       </section>
     </>
@@ -104,8 +109,15 @@ function EditComponent(props) {
 }
 
 function SaveComponent(props) {
+  const { attributes } = props;
+  const { colorName, wavyTopBorder, wavyBottomBorder } = attributes;
   return (
-    <section className={`ro--section ro--section--${props.attributes.colorName}`}>
+    <section className={`
+      ro--section 
+      ro--section--${colorName}
+      ${wavyTopBorder ? 'ro--section--wavy-top' : null}
+      ${wavyBottomBorder ? 'ro--section--wavy-bottom' : null}
+    `}>
       <InnerBlocks.Content />
     </section>
   );
