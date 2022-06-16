@@ -141,7 +141,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     imgURL: {
       type: "string",
-      default: "banner.fallbackimage"
+      default: banner.fallbackimage
     },
     imgID: {
       type: "number"

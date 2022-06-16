@@ -15,7 +15,7 @@ registerBlockType("rollinoats/banner", {
     },
     imgURL: { 
       type: "string",
-      default: "banner.fallbackimage"
+      default: banner.fallbackimage
     },
     imgID: { type: "number" },
   },

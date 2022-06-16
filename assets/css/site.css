@@ -44,3 +44,9 @@
   color: var(--wp--preset--color--text-white);
   font-family: var(--wp--preset--font-family--basic-sans);
 }
+
+.our-placeholder-block {
+  background-color: red;
+  padding: 1rem;
+  font-size: 4rem;
+}

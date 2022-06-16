@@ -19,7 +19,33 @@ function setupRollinOatsTheme() {
 add_action( 'after_setup_theme', 'setupRollinOatsTheme' );
 
 
+class placeholderBlock {
+  function __construct($name) {
+    $this->name = $name;
+    add_action('init', [$this, 'onInit']);
+  }
 
+  function ourRenderCallback($attributes, $content) {
+    ob_start();
+    require get_theme_file_path("/custom-blocks/{$this->name}.php");
+    return ob_get_clean();
+  }
+
+  function onInit() {
+    wp_register_script($this->name, get_stylesheet_directory_uri() . "/custom-blocks/{$this->name}.js", array('wp-blocks', 'wp-editor'));
+    
+    $ourArgs = array(
+      'editor_script' => $this->name,
+      'render_callback' => [$this, 'ourRenderCallback']
+    );
+
+    register_block_type("rollinoats/{$this->name}", $ourArgs);
+  }
+}
+
+new placeholderBlock("events");
+
+// resusable method for creating new block types
 class jsxBlock {
   function __construct($name, $renderCallback = null, $imgData = null) {
     $this->name = $name;
@@ -52,6 +78,8 @@ class jsxBlock {
     register_block_type("rollinoats/{$this->name}", $ourArgs);
   }
 }
+
+
 
 new jsxBlock('banner', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('bannerheadline');
