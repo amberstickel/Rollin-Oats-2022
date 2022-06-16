@@ -4,7 +4,9 @@ import { registerBlockType } from '@wordpress/blocks';
 registerBlockType("rollinoats/bannerheadline", {
   title: "Banner Headline",
   attributes:{
-    text: {type: "string"},
+    text: {
+      type: "string"
+    },
   },
   edit: EditComponent,
   save: SaveComponent

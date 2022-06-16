@@ -1,20 +1,31 @@
 
 
 * {
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .banner {
-  color: var(--wp--preset--color--text-white);
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  mask-image: url('../images/banner.svg');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
   min-height: 360px;
   position: relative;
+  width: 100%;
+  -webkit-mask-image: url('../images/banner.svg');
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
 }
 
-.banner__svg {
+.banner__img {
+  background-color: var(--wp--preset--color--link-secondary);
   min-height: 360px;
   position: absolute;
   width: 100%;
@@ -25,6 +36,7 @@
   font-size: 3.75rem;
   line-height: 4.375rem;
   text-align: center;
+  z-index: 1;
 }
 
 .btn {

@@ -2,7 +2,7 @@
 
 // Add custom files
 function rollinOatsFiles() {
-	wp_enqueue_style( ' add_custom_fonts ', ' https://use.typekit.net/hjd3efb.css', false );
+	wp_enqueue_style( ' add_custom_fonts ', 'https://use.typekit.net/hjd3efb.css', false );
   wp_enqueue_style('rollin_oats_styles', get_theme_file_uri('/assets/css/site.css'));
 }
 
@@ -20,22 +20,40 @@ add_action( 'after_setup_theme', 'setupRollinOatsTheme' );
 
 
 
-// Reusable class for creating custom blocks
 class jsxBlock {
-	function __construct($name) {
-		$this->name = $name;
-		add_action('init', [$this, 'on_init']);
-	}
+  function __construct($name, $renderCallback = null, $imgData = null) {
+    $this->name = $name;
+    $this->renderCallback = $renderCallback;
+    $this->imgData = $imgData;
+    add_action('init', [$this, 'onInit']);
+  }
 
-	function on_init() {
-		wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'));
-  register_block_type("rollinoats/{$this->name}", array(
-    'editor_script' => $this->name
-  ));
-	}
+  function ourRenderCallback($attributes, $content) {
+    ob_start();
+    require get_theme_file_path("/custom-blocks/{$this->name}.php");
+    return ob_get_clean();
+  }
+
+  function onInit() {
+    wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'));
+    // this needs to come after register script
+    if ($this->imgData) {
+      wp_localize_script($this->name, $this->name, $this->imgData);
+    }
+    
+    $ourArgs = array(
+      'editor_script' => $this->name
+    );
+
+    if ($this->renderCallback) {
+      $ourArgs['render_callback'] = [$this, 'ourRenderCallback'];
+    }
+
+    register_block_type("rollinoats/{$this->name}", $ourArgs);
+  }
 }
 
-new jsxBlock('banner');
+new jsxBlock('banner', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('bannerheadline');
 new jsxBlock('genericbutton');
 new jsxBlock('logo');
