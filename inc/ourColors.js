@@ -25,4 +25,4 @@ const ourColors = [
   },
 ]
 
-export default ourColors
+export default ourColors;
