@@ -2,16 +2,22 @@
 import { registerBlockType } from '@wordpress/blocks';
 import {  InspectorControls } from '@wordpress/block-editor';
 import { ComboboxControl, PanelBody } from '@wordpress/components';
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect } from '@wordpress/element';
 
 registerBlockType("rollinoats/illustration", {
   title: "Rollin Oats Illustration",
   attributes: {
     illustrationValue: {
       type: 'string',
+      default: 'garlic-bulb'
     },
     illustrationLabel: {
       type: 'string',
+      default: 'Garlic Bulb'
+    },
+    imgURL: {
+      type: 'string',
+      default: illustration.fallbackimage
     }
   },
   edit: EditComponent,
@@ -22,7 +28,7 @@ registerBlockType("rollinoats/illustration", {
 
 function EditComponent(props) {
   const { attributes, setAttributes } = props;
-  const { illustrationValue, illustrationLabel } = attributes;
+  const { illustrationValue, illustrationLabel, imgURL } = attributes;
 
   const illustrationOptions = [
     {
@@ -74,8 +80,21 @@ function EditComponent(props) {
     });
   }
 
+  const updateImgURL = () => {
+    const imgDirectory = imgURL.split("/").slice(0, -1).join("/");
+    const imgPath = `/${illustrationValue}.svg`;
+    const newPath = imgDirectory.concat(imgPath);
+    // console.log('new image path', newPath);
+    setAttributes({
+      imgURL: newPath
+    });
+  }
+
   useEffect(() => {
-    findIllustrationLabel();
+    if(illustrationValue) {
+      findIllustrationLabel();
+      updateImgURL();
+    }
   }, [illustrationValue]);
 
   return (
@@ -93,8 +112,9 @@ function EditComponent(props) {
 
 
       <div className="illustration">
-        The selected illustration label is {illustrationLabel}.
-        The selected illustration value is {illustrationValue}.
+        {imgURL &&
+          <img src={imgURL} alt={illustrationLabel} />
+        }
       </div>
     </>
   );
@@ -104,8 +124,6 @@ function EditComponent(props) {
 
 function SaveComponent() {
   return (
-    <div className='illustration'>
-      This is an illustration placeholder
-    </div>
+    <div className='illustration'></div>
   );
 }

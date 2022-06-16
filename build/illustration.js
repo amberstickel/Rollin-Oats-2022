@@ -134,10 +134,16 @@ __webpack_require__.r(__webpack_exports__);
   title: "Rollin Oats Illustration",
   attributes: {
     illustrationValue: {
-      type: 'string'
+      type: 'string',
+      default: 'garlic-bulb'
     },
     illustrationLabel: {
-      type: 'string'
+      type: 'string',
+      default: 'Garlic Bulb'
+    },
+    imgURL: {
+      type: 'string',
+      default: illustration.fallbackimage
     }
   },
   edit: EditComponent,
@@ -151,7 +157,8 @@ function EditComponent(props) {
   } = props;
   const {
     illustrationValue,
-    illustrationLabel
+    illustrationLabel,
+    imgURL
   } = attributes;
   const illustrationOptions = [{
     value: 'bok-choy',
@@ -195,8 +202,21 @@ function EditComponent(props) {
     });
   };
 
+  const updateImgURL = () => {
+    const imgDirectory = imgURL.split("/").slice(0, -1).join("/");
+    const imgPath = `/${illustrationValue}.svg`;
+    const newPath = imgDirectory.concat(imgPath); // console.log('new image path', newPath);
+
+    setAttributes({
+      imgURL: newPath
+    });
+  };
+
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    findIllustrationLabel();
+    if (illustrationValue) {
+      findIllustrationLabel();
+      updateImgURL();
+    }
   }, [illustrationValue]);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: "Illustration",
@@ -208,13 +228,16 @@ function EditComponent(props) {
     options: illustrationOptions
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "illustration"
-  }, "The selected illustration label is ", illustrationLabel, ". The selected illustration value is ", illustrationValue, "."));
+  }, imgURL && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: imgURL,
+    alt: illustrationLabel
+  })));
 }
 
 function SaveComponent() {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "illustration"
-  }, "This is an illustration placeholder");
+  });
 }
 })();
 
