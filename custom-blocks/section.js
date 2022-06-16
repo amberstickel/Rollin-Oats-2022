@@ -95,13 +95,18 @@ function EditComponent(props) {
 				  </PanelRow>
         </PanelBody>
       </InspectorControls>
-      <section className={`
-        ro--section 
-        ro--section--${colorName}
-        ${wavyTopBorder ? 'ro--section--wavy-top' : null}
-        ${wavyBottomBorder ? 'ro--section--wavy-bottom' : null}
-      `}>
-        <InnerBlocks />
+      <section className="ro--section">
+        {
+          wavyTopBorder &&
+          <div className={`ro--section__wavy-top ro--section-bg--${colorName}`}></div>
+        }
+          <div className={`ro--section__content ro--section-bg--${colorName}`}>
+            <InnerBlocks />
+          </div>
+        {
+          wavyBottomBorder &&
+          <div className={`ro--section__wavy-bottom ro--section-bg--${colorName}`}></div>
+        }
       </section>
     </>
 
@@ -112,13 +117,18 @@ function SaveComponent(props) {
   const { attributes } = props;
   const { colorName, wavyTopBorder, wavyBottomBorder } = attributes;
   return (
-    <section className={`
-      ro--section 
-      ro--section--${colorName}
-      ${wavyTopBorder ? 'ro--section--wavy-top' : null}
-      ${wavyBottomBorder ? 'ro--section--wavy-bottom' : null}
-    `}>
-      <InnerBlocks.Content />
-    </section>
+    <section className="ro--section">
+        {
+          wavyTopBorder &&
+          <div className={`ro--section__wavy-top ro--section-bg--${colorName}`}></div>
+        }
+          <div className={`ro--section__content ro--section-bg--${colorName}`}>
+            <InnerBlocks.Content />
+          </div>
+        {
+          wavyBottomBorder &&
+          <div className={`ro--section__wavy-bottom ro--section-bg--${colorName}`}></div>
+        }
+      </section>
   );
 }

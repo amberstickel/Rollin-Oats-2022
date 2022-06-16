@@ -220,13 +220,14 @@ function EditComponent(props) {
       wavyBottomBorder: !wavyBottomBorder
     })
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: `
-        ro--section 
-        ro--section--${colorName}
-        ${wavyTopBorder ? 'ro--section--wavy-top' : null}
-        ${wavyBottomBorder ? 'ro--section--wavy-bottom' : null}
-      `
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, null)));
+    className: "ro--section"
+  }, wavyTopBorder && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `ro--section__wavy-top ro--section-bg--${colorName}`
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `ro--section__content ro--section-bg--${colorName}`
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, null)), wavyBottomBorder && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `ro--section__wavy-bottom ro--section-bg--${colorName}`
+  })));
 }
 
 function SaveComponent(props) {
@@ -239,13 +240,14 @@ function SaveComponent(props) {
     wavyBottomBorder
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: `
-      ro--section 
-      ro--section--${colorName}
-      ${wavyTopBorder ? 'ro--section--wavy-top' : null}
-      ${wavyBottomBorder ? 'ro--section--wavy-bottom' : null}
-    `
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null));
+    className: "ro--section"
+  }, wavyTopBorder && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `ro--section__wavy-top ro--section-bg--${colorName}`
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `ro--section__content ro--section-bg--${colorName}`
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null)), wavyBottomBorder && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `ro--section__wavy-bottom ro--section-bg--${colorName}`
+  }));
 }
 })();
 
