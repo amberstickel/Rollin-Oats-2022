@@ -3,7 +3,6 @@ import illustrationOptions from '../inc/illustrationOptions';
 import { registerBlockType } from '@wordpress/blocks';
 import {  InspectorControls } from '@wordpress/block-editor';
 import {  PanelBody, PanelRow, ComboboxControl, SelectControl, __experimentalInputControl as InputControl } from '@wordpress/components';
-import { useEffect } from '@wordpress/element';
 import {
   BokChoySVG,
   FishSVG,
@@ -26,7 +25,7 @@ registerBlockType("rollinoats/illustration", {
       type: 'string',
       default: 'left'
     },
-    positionCSS: {
+    customCSS: {
       type: "object"
     }
   },
@@ -48,7 +47,7 @@ const horizontalPlacementOptions = [
 function EditComponent(props) {
 
   const { attributes, setAttributes } = props;
-  const { illustrationValue, positionCSS, horizontalPlacement } = attributes;
+  const { illustrationValue, customCSS, horizontalPlacement } = attributes;
   
   const handleIllustrationSelection = (selection) => {
     setAttributes({
@@ -56,32 +55,37 @@ function EditComponent(props) {
     });
   }
 
-  const handlePositionCSSChange = (nextValue, positionName) => {
-    let newPositionCSS = {};
-    if(positionName === 'top') {
-      newPositionCSS = {
-        ...positionCSS,
+  const handleCustomCSSChange = (nextValue, propertyName) => {
+    let newCustomCSS = {};
+    if(propertyName === 'top') {
+      newCustomCSS = {
+        ...customCSS,
         top: nextValue
       };
-    } else if (positionName === 'bottom') {
-      newPositionCSS = {
-        ...positionCSS,
+    } else if (propertyName === 'bottom') {
+      newCustomCSS = {
+        ...customCSS,
         bottom: nextValue
       };
-    } else if (positionName === 'left') {
-      newPositionCSS = {
-        ...positionCSS,
+    } else if (propertyName === 'left') {
+      newcCustomCSS = {
+        ...customCSS,
         left: nextValue
       };
-    } else if (positionName === 'right') {
-      newPositionCSS = {
-        ...positionCSS,
+    } else if (propertyName === 'right') {
+      newCustomCSS = {
+        ...customCSS,
         right: nextValue
+      };
+    }  else if (propertyName === 'opacity') {
+      newCustomCSS = {
+        ...customCSS,
+        opacity: nextValue
       };
     }
 
     setAttributes({
-      positionCSS: newPositionCSS
+      customCSS: newCustomCSS
     });
   }
 
@@ -90,12 +94,25 @@ function EditComponent(props) {
     <>
       <InspectorControls>
         <PanelBody title="Illustration Image" initialOpen={true}>
-        <ComboboxControl
-            label="Image Name"
-            value={ illustrationValue }
-            onChange={ handleIllustrationSelection }
-            options={ illustrationOptions }
-        />
+          <PanelRow>
+            <ComboboxControl
+              label="Image Name"
+              value={ illustrationValue }
+              onChange={ handleIllustrationSelection }
+              options={ illustrationOptions }
+            />
+          </PanelRow>
+        
+          <PanelRow>
+            <InputControl
+              label="Image Opacity"
+              size="small"
+              value={ customCSS !== undefined ? customCSS.opacity : '' }
+              onChange={(nextValue) => handleCustomCSSChange(nextValue, 'opacity')}
+              
+            />
+          </PanelRow>
+       
         </PanelBody>
         <PanelBody title='Illustration Placement'>
           <PanelRow>
@@ -116,38 +133,38 @@ function EditComponent(props) {
             <InputControl
               label="Top Position"
               size="small"
-              value={ positionCSS !== undefined ? positionCSS.top : '' }
-              onChange={(nextValue) => handlePositionCSSChange(nextValue, 'top')}
+              value={ customCSS !== undefined ? customCSS.top : '' }
+              onChange={(nextValue) => handleCustomCSSChange(nextValue, 'top')}
             />
           </PanelRow>
           <PanelRow>
             <InputControl
               label="Bottom Position"
               size="small"
-              value={ positionCSS !== undefined ? positionCSS.bottom: '' }
-              onChange={(nextValue) => handlePositionCSSChange(nextValue, 'bottom')}
+              value={ customCSS !== undefined ? customCSS.bottom: '' }
+              onChange={(nextValue) => handleCustomCSSChange(nextValue, 'bottom')}
             />
           </PanelRow>
           <PanelRow>
             <InputControl
               label="Left Position"
               size="small"
-              value={ positionCSS !== undefined ? positionCSS.left : '' }
-              onChange={(nextValue) => handlePositionCSSChange(nextValue, 'left')}
+              value={ customCSS !== undefined ? customCSS.left : '' }
+              onChange={(nextValue) => handleCustomCSSChange(nextValue, 'left')}
             />
           </PanelRow>
           <PanelRow>
             <InputControl
               label="Right Position"
               size="small"
-              value={ positionCSS !== undefined ? positionCSS.right : '' }
-              onChange={(nextValue) => handlePositionCSSChange(nextValue, 'right')}
+              value={ customCSS !== undefined ? customCSS.right : '' }
+              onChange={(nextValue) => handleCustomCSSChange(nextValue, 'right')}
             />
           </PanelRow>
         </PanelBody>
       </InspectorControls>
 
-        <div className={`illustration illustration--${horizontalPlacement}`} style={positionCSS}>
+        <div className={`illustration illustration--${horizontalPlacement}`} style={customCSS}>
           {illustrationValue === 'bok-choy' &&
             <BokChoySVG />
           }
@@ -177,10 +194,10 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
   const { attributes } = props;
-  const { illustrationValue, positionCSS, horizontalPlacement } = attributes;
+  const { illustrationValue, customCSS, horizontalPlacement } = attributes;
 
   return (
-    <div className={`illustration illustration--${horizontalPlacement}`} style={positionCSS}>
+    <div className={`illustration illustration--${horizontalPlacement}`} style={customCSS}>
       {illustrationValue === 'bok-choy' &&
         <BokChoySVG />
       }

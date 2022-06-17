@@ -521,7 +521,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("rollinoats/illustration", {
   title: "Rollin Oats Illustration",
   attributes: {
@@ -533,7 +532,7 @@ __webpack_require__.r(__webpack_exports__);
       type: 'string',
       default: 'left'
     },
-    positionCSS: {
+    customCSS: {
       type: "object"
     }
   },
@@ -555,7 +554,7 @@ function EditComponent(props) {
   } = props;
   const {
     illustrationValue,
-    positionCSS,
+    customCSS,
     horizontalPlacement
   } = attributes;
 
@@ -565,41 +564,50 @@ function EditComponent(props) {
     });
   };
 
-  const handlePositionCSSChange = (nextValue, positionName) => {
-    let newPositionCSS = {};
+  const handleCustomCSSChange = (nextValue, propertyName) => {
+    let newCustomCSS = {};
 
-    if (positionName === 'top') {
-      newPositionCSS = { ...positionCSS,
+    if (propertyName === 'top') {
+      newCustomCSS = { ...customCSS,
         top: nextValue
       };
-    } else if (positionName === 'bottom') {
-      newPositionCSS = { ...positionCSS,
+    } else if (propertyName === 'bottom') {
+      newCustomCSS = { ...customCSS,
         bottom: nextValue
       };
-    } else if (positionName === 'left') {
-      newPositionCSS = { ...positionCSS,
+    } else if (propertyName === 'left') {
+      newcCustomCSS = { ...customCSS,
         left: nextValue
       };
-    } else if (positionName === 'right') {
-      newPositionCSS = { ...positionCSS,
+    } else if (propertyName === 'right') {
+      newCustomCSS = { ...customCSS,
         right: nextValue
+      };
+    } else if (propertyName === 'opacity') {
+      newCustomCSS = { ...customCSS,
+        opacity: nextValue
       };
     }
 
     setAttributes({
-      positionCSS: newPositionCSS
+      customCSS: newCustomCSS
     });
   };
 
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
     title: "Illustration Image",
     initialOpen: true
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ComboboxControl, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ComboboxControl, {
     label: "Image Name",
     value: illustrationValue,
     onChange: handleIllustrationSelection,
     options: _inc_illustrationOptions__WEBPACK_IMPORTED_MODULE_1__["default"]
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalInputControl, {
+    label: "Image Opacity",
+    size: "small",
+    value: customCSS !== undefined ? customCSS.opacity : '',
+    onChange: nextValue => handleCustomCSSChange(nextValue, 'opacity')
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
     title: "Illustration Placement"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
     label: "Horizontal Placement",
@@ -615,26 +623,26 @@ function EditComponent(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalInputControl, {
     label: "Top Position",
     size: "small",
-    value: positionCSS !== undefined ? positionCSS.top : '',
-    onChange: nextValue => handlePositionCSSChange(nextValue, 'top')
+    value: customCSS !== undefined ? customCSS.top : '',
+    onChange: nextValue => handleCustomCSSChange(nextValue, 'top')
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalInputControl, {
     label: "Bottom Position",
     size: "small",
-    value: positionCSS !== undefined ? positionCSS.bottom : '',
-    onChange: nextValue => handlePositionCSSChange(nextValue, 'bottom')
+    value: customCSS !== undefined ? customCSS.bottom : '',
+    onChange: nextValue => handleCustomCSSChange(nextValue, 'bottom')
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalInputControl, {
     label: "Left Position",
     size: "small",
-    value: positionCSS !== undefined ? positionCSS.left : '',
-    onChange: nextValue => handlePositionCSSChange(nextValue, 'left')
+    value: customCSS !== undefined ? customCSS.left : '',
+    onChange: nextValue => handleCustomCSSChange(nextValue, 'left')
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalInputControl, {
     label: "Right Position",
     size: "small",
-    value: positionCSS !== undefined ? positionCSS.right : '',
-    onChange: nextValue => handlePositionCSSChange(nextValue, 'right')
+    value: customCSS !== undefined ? customCSS.right : '',
+    onChange: nextValue => handleCustomCSSChange(nextValue, 'right')
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `illustration illustration--${horizontalPlacement}`,
-    style: positionCSS
+    style: customCSS
   }, illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.BokChoySVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.MushroomSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.SpinachSVG, null)));
 }
 
@@ -644,12 +652,12 @@ function SaveComponent(props) {
   } = props;
   const {
     illustrationValue,
-    positionCSS,
+    customCSS,
     horizontalPlacement
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `illustration illustration--${horizontalPlacement}`,
-    style: positionCSS
+    style: customCSS
   }, illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.BokChoySVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.MushroomSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_5__.SpinachSVG, null));
 }
 })();
