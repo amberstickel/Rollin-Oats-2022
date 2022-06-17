@@ -103,9 +103,7 @@ function EditComponent(props) {
           wavyTopBorder &&
           <div className={`ro--section__wavy-top ro--section-bg--${colorName}`}></div>
         }
-          <div className={`ro--section__content ro--section-bg--${colorName}`}>
-            <InnerBlocks />
-          </div>
+        <InnerBlocks />
         {
           wavyBottomBorder &&
           <div className={`ro--section__wavy-bottom ro--section-bg--${colorName}`}></div>
@@ -125,9 +123,7 @@ function SaveComponent(props) {
           wavyTopBorder &&
           <div className={`ro--section__wavy-top ro--section-bg--${colorName}`}></div>
         }
-          <div className={`ro--section__content ro--section-bg--${colorName}`}>
-            <InnerBlocks.Content />
-          </div>
+        <InnerBlocks.Content />
         {
           wavyBottomBorder &&
           <div className={`ro--section__wavy-bottom ro--section-bg--${colorName}`}></div>

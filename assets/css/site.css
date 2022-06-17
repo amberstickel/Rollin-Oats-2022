@@ -118,7 +118,8 @@ html, body {
 .ro--section__content {
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: 75vh;
+  height: 100%;
   padding: 2rem;
   position: relative;
   text-align: center;

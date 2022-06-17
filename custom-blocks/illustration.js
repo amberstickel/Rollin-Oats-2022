@@ -26,10 +26,6 @@ registerBlockType("rollinoats/illustration", {
       type: 'string',
       default: 'left'
     },
-    verticalPlacement: {
-      type: 'string',
-      default: 'top'
-    },
     positionCSS: {
       type: "object"
     }
@@ -49,25 +45,10 @@ const horizontalPlacementOptions = [
   }
 ];
 
-const verticalPlacementOptions = [
-  {
-    value: 'top',
-    label: 'Top'
-  },
-  {
-    value: 'middle',
-    label: 'Middle'
-  },
-  {
-    value: 'bottom',
-    label: 'Bottom'
-  }
-];
-
 function EditComponent(props) {
 
   const { attributes, setAttributes } = props;
-  const { illustrationValue, positionCSS, horizontalPlacement, verticalPlacement } = attributes;
+  const { illustrationValue, positionCSS, horizontalPlacement } = attributes;
   
   const handleIllustrationSelection = (selection) => {
     setAttributes({
@@ -75,10 +56,6 @@ function EditComponent(props) {
     });
   }
 
-  // if placement is left
-  // assign left: 0
-
-  //  move up, move down, move left, move right
   const handlePositionCSSChange = (nextValue, positionName) => {
     let newPositionCSS = {};
     if(positionName === 'top') {
@@ -121,18 +98,6 @@ function EditComponent(props) {
         />
         </PanelBody>
         <PanelBody title='Illustration Placement'>
-          <PanelRow>
-            <SelectControl 
-              label="Vertical Placement"
-              options={ verticalPlacementOptions }
-              value={verticalPlacement}
-              onChange={(nextValue) => {
-                setAttributes({
-                  verticalPlacement: nextValue
-                })
-              }}
-            />
-          </PanelRow>
           <PanelRow>
             <SelectControl 
               label="Horizontal Placement"
@@ -182,9 +147,7 @@ function EditComponent(props) {
         </PanelBody>
       </InspectorControls>
 
-      <div className="illustration-wrapper">
-
-        <div className={`illustration illustration--${horizontalPlacement} illustration--${verticalPlacement}`} style={positionCSS}>
+        <div className={`illustration illustration--${horizontalPlacement}`} style={positionCSS}>
           {illustrationValue === 'bok-choy' &&
             <BokChoySVG />
           }
@@ -207,8 +170,6 @@ function EditComponent(props) {
             <SpinachSVG />
           }
         </div>
-
-      </div>
     </>
   );
 }
@@ -216,33 +177,31 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
   const { attributes } = props;
-  const { illustrationValue, positionCSS, horizontalPlacement, verticalPlacement } = attributes;
+  const { illustrationValue, positionCSS, horizontalPlacement } = attributes;
 
   return (
-    <div className="illustration-wrapper">
-      <div className={`illustration illustration--${horizontalPlacement} illustration--${verticalPlacement}`} style={positionCSS}>
-        {illustrationValue === 'bok-choy' &&
-          <BokChoySVG />
-        }
-        {illustrationValue === 'fish' &&
-          <FishSVG />
-        }
-        {illustrationValue === 'garlic-bulb' &&
-          <GarlicSVG />
-        }
-        {illustrationValue === 'grape' &&
-          <GrapeSVG />
-        }
-        {illustrationValue === 'mushrooms' &&
-          <MushroomSVG />
-        }
-        {illustrationValue === 'salad-bowl' &&
-          <SaladBowlSVG />
-        }
-        {illustrationValue === 'spinach' &&
-          <SpinachSVG />
-        }
-      </div>
+    <div className={`illustration illustration--${horizontalPlacement}`} style={positionCSS}>
+      {illustrationValue === 'bok-choy' &&
+        <BokChoySVG />
+      }
+      {illustrationValue === 'fish' &&
+        <FishSVG />
+      }
+      {illustrationValue === 'garlic-bulb' &&
+        <GarlicSVG />
+      }
+      {illustrationValue === 'grape' &&
+        <GrapeSVG />
+      }
+      {illustrationValue === 'mushrooms' &&
+        <MushroomSVG />
+      }
+      {illustrationValue === 'salad-bowl' &&
+        <SaladBowlSVG />
+      }
+      {illustrationValue === 'spinach' &&
+        <SpinachSVG />
+      }
     </div>
     
   );
