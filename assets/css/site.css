@@ -155,6 +155,22 @@ html, body {
   position: absolute;
 }
 
+.illustration--left {
+  left: 0;
+}
+
+.illustration--right {
+  right: 0;
+}
+
+.illustration--top {
+  top: 0;
+}
+
+.illustration--bottom {
+  bottom: 0;
+}
+
 div[data-type="rollinoats/illustration"],
 div[data-type="rollinoats/illustration"]:hover,
 div[data-type="rollinoats/illustration"]:focus {
