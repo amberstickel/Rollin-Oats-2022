@@ -1,8 +1,18 @@
 
+import illustrationOptions from '../inc/illustrationOptions';
+import { horizontalPositionOptions, verticalPositionOptions } from '../inc/illustrationPositions';
 import { registerBlockType } from '@wordpress/blocks';
 import {  InspectorControls } from '@wordpress/block-editor';
-import { ComboboxControl, PanelBody } from '@wordpress/components';
-import { useEffect } from '@wordpress/element';
+import { ComboboxControl, PanelBody, PanelRow, SelectControl } from '@wordpress/components';
+import {
+  BokChoySVG,
+  FishSVG,
+  GarlicSVG,
+  GrapeSVG,
+  MushroomSVG,
+  SaladBowlSVG,
+  SpinachSVG
+} from '../illustrations';
 
 registerBlockType("rollinoats/illustration", {
   title: "Rollin Oats Illustration",
@@ -15,64 +25,22 @@ registerBlockType("rollinoats/illustration", {
       type: 'string',
       default: 'Garlic Bulb'
     },
-    imgURL: {
+    horizontalPosition: {
       type: 'string',
-      default: illustration.fallbackimage
+      default: 'left'
+    },
+    verticalPosition: {
+      type: 'string',
+      default: 'top'
     }
   },
   edit: EditComponent,
   save: SaveComponent,
 });
 
-
-
 function EditComponent(props) {
   const { attributes, setAttributes } = props;
-  const { illustrationValue, illustrationLabel, imgURL } = attributes;
-
-  const illustrationOptions = [
-    {
-      value: 'bok-choy',
-      label: 'Bok Choy',
-    },
-    {
-      value: 'fish',
-      label: 'Fish',
-    },
-    {
-      value: 'garlic-bulb',
-      label: 'Garlic Bulb',
-    },
-    {
-      value: 'grape',
-      label: 'Grape',
-    },
-    {
-      value: 'mushrooms',
-      label: 'Mushrooms',
-    },
-    {
-      value: 'salad-bowl',
-      label: 'Salad',
-    },
-    {
-      value: 'spinach',
-      label: 'Spinach',
-    },
-];
-
-  const findIllustrationLabel = () => {
-    const selectedIllustrations = illustrationOptions.filter(option => option.value === illustrationValue);
-
-    if(selectedIllustrations.length > 0) {
-      const illustration = selectedIllustrations[0];
-      const values = Object.values(illustration);
-      const label = values[1];
-      setAttributes({
-        illustrationLabel: label
-      })
-    }
-  }
+  const { illustrationValue, horizontalPosition, verticalPosition } = attributes;
 
   const handleIllustrationSelection = (selection) => {
     setAttributes({
@@ -80,27 +48,22 @@ function EditComponent(props) {
     });
   }
 
-  const updateImgURL = () => {
-    const imgDirectory = imgURL.split("/").slice(0, -1).join("/");
-    const imgPath = `/${illustrationValue}.svg`;
-    const newPath = imgDirectory.concat(imgPath);
-    // console.log('new image path', newPath);
+  const handleHorizontalPositionChange = (selection) => {
     setAttributes({
-      imgURL: newPath
+      horizontalPosition: selection
     });
   }
 
-  useEffect(() => {
-    if(illustrationValue) {
-      findIllustrationLabel();
-      updateImgURL();
-    }
-  }, [illustrationValue]);
+  const handleVerticalPositionChange = (selection) => {
+    setAttributes({
+      verticalPosition: selection
+    });
+  }
 
   return (
     <>
       <InspectorControls>
-        <PanelBody title="Illustration" initialOpen={true}>
+        <PanelBody title="Illustration Image" initialOpen={true}>
         <ComboboxControl
             label="Size"
             value={ illustrationValue }
@@ -108,12 +71,48 @@ function EditComponent(props) {
             options={ illustrationOptions }
         />
         </PanelBody>
+        <PanelBody title="Illustration Positions">
+          <PanelRow>
+            <SelectControl 
+              label="Horizontal Position"
+              value={horizontalPosition}
+              options={horizontalPositionOptions}
+              onChange={handleHorizontalPositionChange}
+            />
+          </PanelRow>
+          <PanelRow>
+            <SelectControl 
+              label="Vertical Position"
+              value={verticalPosition}
+              options={verticalPositionOptions}
+              onChange={handleVerticalPositionChange}
+            />
+          </PanelRow>        
+        </PanelBody>
       </InspectorControls>
 
 
-      <div className="illustration">
-        {imgURL &&
-          <img src={imgURL} alt={illustrationLabel} />
+      <div className={`illustration illustration--${verticalPosition} illustration--${horizontalPosition}`}>
+        {illustrationValue === 'bok-choy' &&
+          <BokChoySVG />
+        }
+        {illustrationValue === 'fish' &&
+          <FishSVG />
+        }
+        {illustrationValue === 'garlic-bulb' &&
+          <GarlicSVG />
+        }
+        {illustrationValue === 'grape' &&
+          <GrapeSVG />
+        }
+        {illustrationValue === 'mushrooms' &&
+          <MushroomSVG />
+        }
+        {illustrationValue === 'salad-bowl' &&
+          <SaladBowlSVG />
+        }
+        {illustrationValue === 'spinach' &&
+          <SpinachSVG />
         }
       </div>
     </>
@@ -121,9 +120,10 @@ function EditComponent(props) {
 }
 
 
-
 function SaveComponent() {
   return (
-    <div className='illustration'></div>
+    <div className='illustration'>
+      Insert SVG Here
+    </div>
   );
 }

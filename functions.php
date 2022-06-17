@@ -80,7 +80,7 @@ class jsxBlock {
 }
 
 new jsxBlock('section');
-new jsxBlock('illustration', true, ['fallbackimage' => get_theme_file_uri('assets/illustrations/garlic-bulb.svg')]);
+new jsxBlock('illustration');
 new jsxBlock('banner', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('bannerheadline');
 new jsxBlock('genericbutton');

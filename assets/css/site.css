@@ -80,6 +80,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .ro--section__wavy-top {
@@ -127,9 +128,12 @@
 
 .ro--section-bg--cream {
   background-color: var(--wp--preset--color--ro-cream);
-
 }
 
 .ro--section-bg--white {
   background-color: var(--wp--preset--color--ro-white);
+}
+
+.illustration {
+  position: absolute;
 }
