@@ -6,6 +6,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  height: 100%;
+}
+
 .banner {
   align-items: center;
   display: flex;
@@ -112,7 +116,11 @@
 }
 
 .ro--section__content {
-  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  padding: 2rem;
+  position: relative;
   text-align: center;
   width: 100%;
 }
@@ -134,6 +142,21 @@
   background-color: var(--wp--preset--color--ro-white);
 }
 
+.illustration-wrapper {
+  position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border: 10px solid red;
+}
+
 .illustration {
   position: absolute;
+}
+
+div[data-type="rollinoats/illustration"],
+div[data-type="rollinoats/illustration"]:hover,
+div[data-type="rollinoats/illustration"]:focus {
+  border: none;
 }

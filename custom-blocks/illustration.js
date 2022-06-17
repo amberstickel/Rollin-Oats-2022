@@ -2,8 +2,8 @@
 import illustrationOptions from '../inc/illustrationOptions';
 import { registerBlockType } from '@wordpress/blocks';
 import {  InspectorControls } from '@wordpress/block-editor';
-import { ComboboxControl, PanelBody, PanelRow, __experimentalInputControl as InputControl } from '@wordpress/components';
-import { useEffect, useState } from '@wordpress/element';
+import {  PanelBody, PanelRow, ComboboxControl, SelectControl, __experimentalInputControl as InputControl } from '@wordpress/components';
+import { useEffect } from '@wordpress/element';
 import {
   BokChoySVG,
   FishSVG,
@@ -22,47 +22,92 @@ registerBlockType("rollinoats/illustration", {
       type: 'string',
       default: 'garlic-bulb'
     },
-    position: {
-      type: "object",
-      source: "attribute"
+    horizontalPlacement: {
+      type: 'string',
+      default: 'left'
+    },
+    verticalPlacement: {
+      type: 'string',
+      default: 'top'
+    },
+    positionCSS: {
+      type: "object"
     }
   },
   edit: EditComponent,
   save: SaveComponent,
 });
 
+const horizontalPlacementOptions = [
+  {
+    value: 'left',
+    label: 'Left'
+  },
+  {
+    value: 'right',
+    label: 'Right'
+  }
+];
+
+const verticalPlacementOptions = [
+  {
+    value: 'top',
+    label: 'Top'
+  },
+  {
+    value: 'middle',
+    label: 'Middle'
+  },
+  {
+    value: 'bottom',
+    label: 'Bottom'
+  }
+];
+
 function EditComponent(props) {
 
-  const [ topPosition, setTopPosition ] = useState( '' );
-  const [ bottomPosition, setBottomPosition ] = useState( '' );
-  const [ leftPosition, setLeftPosition ] = useState( '' );
-  const [ rightPosition, setRightPosition ] = useState( '' );
-
   const { attributes, setAttributes } = props;
-  const { illustrationValue, position } = attributes;
-
-  useEffect(() => {
-    const newPosition = {
-      top: topPosition,
-      bottom: bottomPosition,
-      left: leftPosition,
-      right: rightPosition
-    }
-    setAttributes({
-      position: newPosition
-    });
-  }, [topPosition, bottomPosition, leftPosition, rightPosition]);
-
-  useEffect(() => {
-    console.log('new position attribute', position);
-  }, [position]);
-
+  const { illustrationValue, positionCSS, horizontalPlacement, verticalPlacement } = attributes;
+  
   const handleIllustrationSelection = (selection) => {
     setAttributes({
       illustrationValue: selection
     });
   }
-  
+
+  // if placement is left
+  // assign left: 0
+
+  //  move up, move down, move left, move right
+  const handlePositionCSSChange = (nextValue, positionName) => {
+    let newPositionCSS = {};
+    if(positionName === 'top') {
+      newPositionCSS = {
+        ...positionCSS,
+        top: nextValue
+      };
+    } else if (positionName === 'bottom') {
+      newPositionCSS = {
+        ...positionCSS,
+        bottom: nextValue
+      };
+    } else if (positionName === 'left') {
+      newPositionCSS = {
+        ...positionCSS,
+        left: nextValue
+      };
+    } else if (positionName === 'right') {
+      newPositionCSS = {
+        ...positionCSS,
+        right: nextValue
+      };
+    }
+
+    setAttributes({
+      positionCSS: newPositionCSS
+    });
+  }
+
 
   return (
     <>
@@ -75,49 +120,107 @@ function EditComponent(props) {
             options={ illustrationOptions }
         />
         </PanelBody>
-        <PanelBody title="Illustration Positions">
+        <PanelBody title='Illustration Placement'>
+          <PanelRow>
+            <SelectControl 
+              label="Vertical Placement"
+              options={ verticalPlacementOptions }
+              value={verticalPlacement}
+              onChange={(nextValue) => {
+                setAttributes({
+                  verticalPlacement: nextValue
+                })
+              }}
+            />
+          </PanelRow>
+          <PanelRow>
+            <SelectControl 
+              label="Horizontal Placement"
+              options={ horizontalPlacementOptions }
+              value={horizontalPlacement}
+              onChange={(nextValue) => {
+                setAttributes({
+                  horizontalPlacement: nextValue
+                })
+              }}
+            />
+          </PanelRow>
+        </PanelBody>
+        <PanelBody title="Illustration Positioning">
           <PanelRow>
             <InputControl
               label="Top Position"
               size="small"
-              value={ topPosition }
-              onChange={ (nextValue) => {
-                nextValue ? setTopPosition(nextValue) : '' }}
+              value={ positionCSS !== undefined ? positionCSS.top : '' }
+              onChange={(nextValue) => handlePositionCSSChange(nextValue, 'top')}
             />
           </PanelRow>
-          
           <PanelRow>
             <InputControl
               label="Bottom Position"
               size="small"
-              value={ bottomPosition }
-              onChange={ (nextValue) => {
-                nextValue ? setBottomPosition(nextValue) : '' }}
+              value={ positionCSS !== undefined ? positionCSS.bottom: '' }
+              onChange={(nextValue) => handlePositionCSSChange(nextValue, 'bottom')}
             />
           </PanelRow>
           <PanelRow>
             <InputControl
               label="Left Position"
               size="small"
-              value={ leftPosition }
-              onChange={ (nextValue) => {
-                nextValue ? setLeftPosition(nextValue) : '' }}
+              value={ positionCSS !== undefined ? positionCSS.left : '' }
+              onChange={(nextValue) => handlePositionCSSChange(nextValue, 'left')}
             />
           </PanelRow>
           <PanelRow>
             <InputControl
               label="Right Position"
               size="small"
-              value={ rightPosition }
-              onChange={ (nextValue) => {
-                nextValue ? setRightPosition(nextValue) : '' }}
+              value={ positionCSS !== undefined ? positionCSS.right : '' }
+              onChange={(nextValue) => handlePositionCSSChange(nextValue, 'right')}
             />
           </PanelRow>
         </PanelBody>
       </InspectorControls>
 
+      <div className="illustration-wrapper">
 
-      <div className={`illustration`} style={position}>
+        <div className={`illustration illustration--${horizontalPlacement} illustration--${verticalPlacement}`} style={positionCSS}>
+          {illustrationValue === 'bok-choy' &&
+            <BokChoySVG />
+          }
+          {illustrationValue === 'fish' &&
+            <FishSVG />
+          }
+          {illustrationValue === 'garlic-bulb' &&
+            <GarlicSVG />
+          }
+          {illustrationValue === 'grape' &&
+            <GrapeSVG />
+          }
+          {illustrationValue === 'mushrooms' &&
+            <MushroomSVG />
+          }
+          {illustrationValue === 'salad-bowl' &&
+            <SaladBowlSVG />
+          }
+          {illustrationValue === 'spinach' &&
+            <SpinachSVG />
+          }
+        </div>
+
+      </div>
+    </>
+  );
+}
+
+
+function SaveComponent(props) {
+  const { attributes } = props;
+  const { illustrationValue, positionCSS, horizontalPlacement, verticalPlacement } = attributes;
+
+  return (
+    <div className="illustration-wrapper">
+      <div className={`illustration illustration--${horizontalPlacement} illustration--${verticalPlacement}`} style={positionCSS}>
         {illustrationValue === 'bok-choy' &&
           <BokChoySVG />
         }
@@ -140,15 +243,7 @@ function EditComponent(props) {
           <SpinachSVG />
         }
       </div>
-    </>
-  );
-}
-
-
-function SaveComponent() {
-  return (
-    <div className='illustration'>
-      Insert SVG Here
     </div>
+    
   );
 }
