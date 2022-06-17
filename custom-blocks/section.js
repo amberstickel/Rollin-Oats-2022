@@ -1,3 +1,4 @@
+import sectionBgColors from '../inc/sectionBgColors';
 import { registerBlockType } from '@wordpress/blocks';
 import { InnerBlocks } from '@wordpress/block-editor';
 import {  ToggleControl, PanelBody, PanelRow, ColorPalette } from "@wordpress/components";
@@ -35,44 +36,25 @@ registerBlockType("rollinoats/section", {
   save: SaveComponent,
 });
 
-const sectionColors = [
-  { 
-    name: "light-green", 
-    color: "#C3DFA6" 
-  },
-  { 
-    name: "light-purple", 
-    color: "#DCCFDE" 
-  },
-  {
-    name: "cream",
-    color: "#F7F3EA"
-  },
-  {
-    name: "white",
-    color: "FFF"
-  }
-];
-
 function EditComponent(props) {
   const { attributes, setAttributes } = props;
   const { colorName, waveBorderColorName, wavyTopBorder, wavyBottomBorder } = attributes;
 
-  const currentColorValue = sectionColors.filter(color => {
+  const currentColorValue = sectionBgColors.filter(color => {
     return color.name == colorName
   })[0].color;
 
   function handleColorChange(colorCode) {
-    const { name } = getColorObjectByColorValue(sectionColors, colorCode);
+    const { name } = getColorObjectByColorValue(sectionBgColors, colorCode);
     setAttributes({ colorName: name });
   }
 
-  const currentWaveBorderColorValue = sectionColors.filter(color => {
+  const currentWaveBorderColorValue = sectionBgColors.filter(color => {
     return color.name == waveBorderColorName
   })[0].color;
 
   function handleWaveBorderColorChange(colorCode) {
-    const { name } = getColorObjectByColorValue(sectionColors, colorCode);
+    const { name } = getColorObjectByColorValue(sectionBgColors, colorCode);
     setAttributes({ waveBorderColorName: name });
   }
 
@@ -83,7 +65,7 @@ function EditComponent(props) {
           <PanelRow>
             <ColorPalette 
               clearable={false}
-              colors={sectionColors}
+              colors={sectionBgColors}
               disableCustomColors={true}
               onChange={handleColorChange}
               value={currentColorValue} />
@@ -110,7 +92,7 @@ function EditComponent(props) {
         <PanelBody title='Wave Border Color'>
           <ColorPalette 
             clearable={false}
-            colors={sectionColors}
+            colors={sectionBgColors}
             disableCustomColors={true}
             onChange={handleWaveBorderColorChange}
             value={currentWaveBorderColorValue} />

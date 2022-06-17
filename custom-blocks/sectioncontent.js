@@ -1,7 +1,8 @@
+import sectionBgColors from '../inc/sectionBgColors';
 import { registerBlockType } from '@wordpress/blocks';
 import { InnerBlocks } from '@wordpress/block-editor';
-import {  ToggleControl, PanelBody, PanelRow, ColorPalette } from "@wordpress/components";
-import { InspectorControls, getColorObjectByColorValue } from "@wordpress/block-editor"
+import { PanelBody, PanelRow, ColorPalette } from "@wordpress/components";
+import { InspectorControls, getColorObjectByColorValue } from "@wordpress/block-editor";
 
 
 registerBlockType("rollinoats/sectioncontent", {
@@ -17,24 +18,6 @@ registerBlockType("rollinoats/sectioncontent", {
   save: SaveComponent,
 });
 
-const sectionBgColors = [
-  { 
-    name: "light-green", 
-    color: "#C3DFA6" 
-  },
-  { 
-    name: "light-purple", 
-    color: "#DCCFDE" 
-  },
-  {
-    name: "cream",
-    color: "#F7F3EA"
-  },
-  {
-    name: "white",
-    color: "FFF"
-  }
-];
 
 function EditComponent(props) {
   const { attributes, setAttributes } = props;
