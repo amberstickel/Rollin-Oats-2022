@@ -85,6 +85,11 @@
           "fontFamily": "basic-sans, sans-serif",
           "slug": "basic-sans",
           "name": "Basic Sans"
+        },
+        {
+          "fontFamily": "roc-grotesk, sans-serif",
+          "slug": "roc-grotesk",
+          "name": "Roc Grotesk"
         }
       ],
 			"fontSizes": [
