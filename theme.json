@@ -44,17 +44,17 @@
         },
         {
           "slug": "ro-light-green",
-          "color": "#C3DEA5",
+          "color": "#C3DFA6",
           "name": "Light Green"
         },
         {
           "slug": "ro-medium-green",
-          "color": "#8F529A",
+          "color": "#6A933E",
           "name": "Medium Green"
         },
         {
           "slug": "ro-dark-green",
-          "color": "#4A2664",
+          "color": "#355A24",
           "name": "Dark Green"
         },
         {
@@ -203,13 +203,20 @@
         }
       },
       "core/button": {
+        "border": {
+          "radius": "0"
+        },
         "color": {
           "text": "var(--wp--preset--color--ro-white)",
-          "background": "var(--wp--preset--color--medium-green)"
+          "background": "var(--wp--preset--color--ro-medium-green)"
         },
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--basic-sans)",
-          "fontSize": "var(--wp--preset--font-size--paragraph-medium)"
+          "fontSize": "var(--wp--preset--font-size--paragraph-small)",
+          "fontWeight": "600",
+          "letterSpacing": "1px",
+          "lineHeight": "1.125rem",
+          "textTransform": "uppercase"
         }
       }
     }
