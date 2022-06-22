@@ -15,13 +15,13 @@ registerBlockType("rollinoats/section", {
       type: "string",
       default: "full"
     },
-    colorName: {
+    bgColorName: {
       type: "string",
       default: "light-green"
     },
     waveBorderColorName: {
       type: "string",
-      default: "cream"
+      default: "light-green"
     },
     wavyTopBorder: {
       type: "boolean",
@@ -38,15 +38,15 @@ registerBlockType("rollinoats/section", {
 
 function EditComponent(props) {
   const { attributes, setAttributes } = props;
-  const { colorName, waveBorderColorName, wavyTopBorder, wavyBottomBorder } = attributes;
+  const { bgColorName, waveBorderColorName, wavyTopBorder, wavyBottomBorder } = attributes;
 
   const currentColorValue = sectionBgColors.filter(color => {
-    return color.name == colorName
+    return color.name == bgColorName
   })[0].color;
 
   function handleColorChange(colorCode) {
     const { name } = getColorObjectByColorValue(sectionBgColors, colorCode);
-    setAttributes({ colorName: name });
+    setAttributes({ bgColorName: name });
   }
 
   const currentWaveBorderColorValue = sectionBgColors.filter(color => {
@@ -98,15 +98,19 @@ function EditComponent(props) {
             value={currentWaveBorderColorValue} />
         </PanelBody>
       </InspectorControls>
-      <section className={`ro--section ro--section-bg--${waveBorderColorName}`}>
+      <section className={`ro--section`}>
         {
           wavyTopBorder &&
-          <div className={`ro--section__wavy-top ro--section-bg--${colorName}`}></div>
+          <div className={`ro--section__wavy-top ro--section-bg--${waveBorderColorName}`}></div>
         }
-        <InnerBlocks />
+        <div className={`ro--section-bg--${bgColorName}`} style={{width: "100%"}}>
+          <div className={`ro--section__content`}>
+            <InnerBlocks />
+          </div>
+        </div>
         {
           wavyBottomBorder &&
-          <div className={`ro--section__wavy-bottom ro--section-bg--${colorName}`}></div>
+          <div className={`ro--section__wavy-bottom ro--section-bg--${waveBorderColorName}`}></div>
         }
       </section>
     </>
@@ -116,17 +120,21 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
   const { attributes } = props;
-  const { colorName, waveBorderColorName, wavyTopBorder, wavyBottomBorder } = attributes;
+  const { bgColorName, waveBorderColorName, wavyTopBorder, wavyBottomBorder } = attributes;
   return (
-    <section className={`ro--section ro--section-bg--${waveBorderColorName}`}>
+    <section className={`ro--section`}>
         {
           wavyTopBorder &&
-          <div className={`ro--section__wavy-top ro--section-bg--${colorName}`}></div>
+          <div className={`ro--section__wavy-top ro--section-bg--${waveBorderColorName}`}></div>
         }
-        <InnerBlocks.Content />
+        <div className={`ro--section-bg--${bgColorName}`} style={{width: "100%"}}>
+          <div className={`ro--section__content`}>
+            <InnerBlocks.Content />
+          </div>
+        </div>
         {
           wavyBottomBorder &&
-          <div className={`ro--section__wavy-bottom ro--section-bg--${colorName}`}></div>
+          <div className={`ro--section__wavy-bottom ro--section-bg--${waveBorderColorName}`}></div>
         }
       </section>
   );
