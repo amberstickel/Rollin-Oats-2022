@@ -83,7 +83,7 @@ new jsxBlock('section');
 new jsxBlock('sectioncontent');
 new jsxBlock('illustration');
 new jsxBlock('marqueebanner');
-new jsxBlock('banner', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
+new jsxBlock('pagehero', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('bannerheadline');
 new jsxBlock('genericbutton');
 new jsxBlock('logo');

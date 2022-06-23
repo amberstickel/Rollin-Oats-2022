@@ -19,7 +19,12 @@ html, body {
   width: 100%;
 }
 
-.banner {
+.page-hero {
+  position: relative;
+  width: 100%;
+}
+
+.page-hero__mask {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -37,14 +42,14 @@ html, body {
   -webkit-mask-size: cover;
 }
 
-.banner__img {
+.page-hero__img {
   background-color: var(--wp--preset--color--ro-dark-purple);
   min-height: 360px;
   position: absolute;
   width: 100%;
 }
 
-.banner-headline {
+.page-hero-headline {
   color: var(--wp--preset--color--ro-white);
   font-size: 3.75rem;
   line-height: 4.375rem;
@@ -56,12 +61,6 @@ html, body {
   border: 1px solid red;
   color: var(--wp--preset--color--ro-white);
   font-family: var(--wp--preset--font-family--basic-sans);
-}
-
-.our-placeholder-block {
-  background-color: red;
-  padding: 1rem;
-  font-size: 4rem;
 }
 
 .slideshow {
