@@ -98,10 +98,10 @@ function EditComponent(props) {
             value={currentWaveBorderColorValue} />
         </PanelBody>
       </InspectorControls>
-      <section className={`ro--section`}>
+      <section className={`ro--section ro--section-bg--${waveBorderColorName}`}>
         {
           wavyTopBorder &&
-          <div className={`ro--section__wavy-top ro--section-bg--${waveBorderColorName}`}></div>
+          <div className={`ro--section__wavy-top ro--section-bg--${bgColorName}`}></div>
         }
         <div className={`ro--section-bg--${bgColorName}`} style={{width: "100%"}}>
           <div className={`ro--section__content`}>
@@ -110,7 +110,7 @@ function EditComponent(props) {
         </div>
         {
           wavyBottomBorder &&
-          <div className={`ro--section__wavy-bottom ro--section-bg--${waveBorderColorName}`}></div>
+          <div className={`ro--section__wavy-bottom ro--section-bg--${bgColorName}`}></div>
         }
       </section>
     </>
