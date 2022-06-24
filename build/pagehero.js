@@ -207,7 +207,7 @@ function EditComponent(props) {
   function handleBgColorChange(colorCode) {
     const {
       name
-    } = getColorObjectByColorValue(_inc_sectionBgColors__WEBPACK_IMPORTED_MODULE_1__["default"], colorCode);
+    } = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.getColorObjectByColorValue)(_inc_sectionBgColors__WEBPACK_IMPORTED_MODULE_1__["default"], colorCode);
     setAttributes({
       bgColorName: name
     });
@@ -245,7 +245,7 @@ function EditComponent(props) {
       backgroundImage: `-webkit-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('${props.attributes.imgURL}')`
     }
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
-    allowedBlocks: ["rollinoats/bannerheadline"]
+    allowedBlocks: ["rollinoats/heroheadline", "rollinoats/herosubhead"]
   }))));
 }
 

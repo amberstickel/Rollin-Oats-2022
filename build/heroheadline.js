@@ -103,9 +103,9 @@ module.exports = window["wp"]["element"];
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!*****************************************!*\
-  !*** ./custom-blocks/bannerheadline.js ***!
-  \*****************************************/
+/*!***************************************!*\
+  !*** ./custom-blocks/heroheadline.js ***!
+  \***************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
@@ -116,8 +116,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("rollinoats/bannerheadline", {
-  title: "Banner Headline",
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("rollinoats/heroheadline", {
+  title: "Rollin Oats Hero Headline",
   attributes: {
     text: {
       type: "string"
@@ -137,7 +137,7 @@ function EditComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
     allowedFormats: ["core/bold", "core/italic"],
     tagName: "h1",
-    className: "banner-headline",
+    className: "page-hero__headline",
     value: props.attributes.text,
     onChange: handleTextChange
   }));
@@ -147,11 +147,11 @@ function SaveComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     value: props.attributes.text,
     tagName: "h1",
-    className: "banner-headline"
+    className: "page-hero__headline"
   });
 }
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bannerheadline.js.map
+//# sourceMappingURL=heroheadline.js.map

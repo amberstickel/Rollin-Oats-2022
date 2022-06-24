@@ -1,6 +1,6 @@
 import sectionBgColors from '../inc/sectionBgColors';
 import { registerBlockType } from '@wordpress/blocks';
-import { ColorPalette, InnerBlocks, InspectorControls, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
+import { ColorPalette, getColorObjectByColorValue, InnerBlocks, InspectorControls, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 import { Button, PanelBody, PanelRow } from '@wordpress/components'
 
 registerBlockType("rollinoats/pagehero", {
@@ -76,7 +76,7 @@ function EditComponent(props) {
         <div className="page-hero__mask">
           <div className="page-hero__img" style={{backgroundImage: `-webkit-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('${props.attributes.imgURL}')`}}
           ></div>
-          <InnerBlocks allowedBlocks={["rollinoats/bannerheadline"]} />
+          <InnerBlocks allowedBlocks={["rollinoats/heroheadline", "rollinoats/herosubhead"]} />
         </div>
       </section>
     </>
