@@ -76,7 +76,7 @@ function EditComponent(props) {
         <div className="page-hero__mask">
           <div className="page-hero__img" style={{backgroundImage: `-webkit-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('${props.attributes.imgURL}')`}}
           ></div>
-          <InnerBlocks allowedBlocks={["rollinoats/heroheadline", "rollinoats/herosubhead"]} />
+          <InnerBlocks allowedBlocks={["core/post-title", "rollinoats/herosubhead"]} />
         </div>
       </section>
     </>

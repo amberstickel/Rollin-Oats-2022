@@ -103,10 +103,8 @@ function EditComponent(props) {
           wavyTopBorder &&
           <div className={`ro--section__wavy-top ro--section-bg--${bgColorName}`}></div>
         }
-        <div className={`ro--section-bg--${bgColorName}`} style={{width: "100%"}}>
-          <div className={`ro--section__content`}>
-            <InnerBlocks />
-          </div>
+        <div className={`ro--section__container ro--section-bg--${bgColorName}`}>
+            <InnerBlocks allowedBlocks={["rollinoats/contentcontainer"]} />
         </div>
         {
           wavyBottomBorder &&
@@ -127,10 +125,8 @@ function SaveComponent(props) {
           wavyTopBorder &&
           <div className={`ro--section__wavy-top ro--section-bg--${waveBorderColorName}`}></div>
         }
-        <div className={`ro--section-bg--${bgColorName}`} style={{width: "100%"}}>
-          <div className={`ro--section__content`}>
-            <InnerBlocks.Content />
-          </div>
+        <div className={`ro--section__container ro--section-bg--${bgColorName}`}>
+          <InnerBlocks.Content />
         </div>
         {
           wavyBottomBorder &&

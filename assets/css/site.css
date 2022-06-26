@@ -128,15 +128,31 @@ html, body {
   -webkit-mask-size: cover;
 }
 
-.ro--section__content {
+.ro--section__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50vh;
+  width: 100%;
+}
+
+.ro--content-container {
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  min-height: 75vh;
   height: 100%;
   padding: 2rem;
   position: relative;
-  text-align: center;
   width: 100%;
+}
+
+.ro--content-container--regular {
+  max-width: 840px;
+}
+
+.ro--content-container--wide {
+  max-width: 1100px;
 }
 
 .ro--section-bg--light-green {
