@@ -16,6 +16,10 @@ const illustrationOptions = [
     label: 'Carrot'
   },
   {
+    value: 'corn',
+    label: 'Corn'
+  },
+  {
     value: 'fish',
     label: 'Fish'
   },
