@@ -450,8 +450,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "GrapeSVG": () => (/* reexport safe */ _grape__WEBPACK_IMPORTED_MODULE_8__.GrapeSVG),
 /* harmony export */   "MushroomSVG": () => (/* reexport safe */ _mushroom__WEBPACK_IMPORTED_MODULE_9__.MushroomSVG),
 /* harmony export */   "OkraSVG": () => (/* reexport safe */ _okra__WEBPACK_IMPORTED_MODULE_10__.OkraSVG),
-/* harmony export */   "SaladBowlSVG": () => (/* reexport safe */ _saladBowl__WEBPACK_IMPORTED_MODULE_11__.SaladBowlSVG),
-/* harmony export */   "SpinachSVG": () => (/* reexport safe */ _spinach__WEBPACK_IMPORTED_MODULE_12__.SpinachSVG)
+/* harmony export */   "PeaSVG": () => (/* reexport safe */ _pea__WEBPACK_IMPORTED_MODULE_11__.PeaSVG),
+/* harmony export */   "SaladBowlSVG": () => (/* reexport safe */ _saladBowl__WEBPACK_IMPORTED_MODULE_12__.SaladBowlSVG),
+/* harmony export */   "SpinachSVG": () => (/* reexport safe */ _spinach__WEBPACK_IMPORTED_MODULE_13__.SpinachSVG)
 /* harmony export */ });
 /* harmony import */ var _artichoke__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./artichoke */ "./illustrations/artichoke.js");
 /* harmony import */ var _asparagus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asparagus */ "./illustrations/asparagus.js");
@@ -464,8 +465,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _grape__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./grape */ "./illustrations/grape.js");
 /* harmony import */ var _mushroom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./mushroom */ "./illustrations/mushroom.js");
 /* harmony import */ var _okra__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./okra */ "./illustrations/okra.js");
-/* harmony import */ var _saladBowl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./saladBowl */ "./illustrations/saladBowl.js");
-/* harmony import */ var _spinach__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./spinach */ "./illustrations/spinach.js");
+/* harmony import */ var _pea__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pea */ "./illustrations/pea.js");
+/* harmony import */ var _saladBowl__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./saladBowl */ "./illustrations/saladBowl.js");
+/* harmony import */ var _spinach__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./spinach */ "./illustrations/spinach.js");
+
 
 
 
@@ -646,6 +649,43 @@ const OkraSVG = () => {
 
 /***/ }),
 
+/***/ "./illustrations/pea.js":
+/*!******************************!*\
+  !*** ./illustrations/pea.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PeaSVG": () => (/* binding */ PeaSVG)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const PeaSVG = () => {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "223.68",
+    height: "198.94"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("clipPath", {
+    id: "a"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Rectangle 136",
+    fill: "none",
+    d: "M0 0h223.68v198.94H0z"
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+    "data-name": "Group 99"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+    "data-name": "Group 98",
+    "clip-path": "url(#a)"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1526",
+    d: "M101.309 38.73c11.192-6.013 22.025-15.74 36.346-18.6 5.967-1.183 11.258-4.764 17.323-6.136a170.254 170.254 0 0 1 48.844-4.19c5.1.338 8.39-3.908 12.349-6.351 1.4-.861 2.459-2.356 3.883-3.1 2.243-1.183 4.354.9 3.386 2.31-2.161 3.145-1.5 8.267-4.256 9.86-14.785 8.47-19.829 25.367-30.285 37.537-2.925 3.406-6.428 6.034-9.353 9.425-8.262 9.573-12.57 21.892-20.724 31.577-11.161 13.261-20.063 28.489-33.442 39.865a384.914 384.914 0 0 0-34.333 32.761c-4.3 4.687-10.167 6.367-15.131 9.778-11.058 7.6-20.9 17.338-33.724 21.974-13.614 4.922-27.172 4.943-40.188-1.782-3.068-1.572-2.023-5.778-.789-8.723 7.56-17.948 14.7-36.121 23.059-53.653 6.654-13.958 14.593-26.988 25.984-37.888a425.334 425.334 0 0 0 34.62-37.5c4.7-5.726 10.218-10.726 16.426-17.159M19.387 155.656c-5.055 5.583-4.6 13.471-8.441 20.319 8.267-4.794 8.236-12.749 9.373-20.14q.284-1.229.569-2.443c4.825-4.154 8.8-10.475 15.786-9.947 4.676.353 5.419-1.87 6.208-5.45 1.511-6.869 4.164-13.307 10.859-16.012 5.767-2.336 9.455-4.487 11.3-12.185 1.992-8.354 9.389-14.746 17.922-17.492 3.78-1.209 5.071-2.761 5.614-6.94a25.284 25.284 0 0 1 4.707-11.279c5.957-8.308 13.276-13.03 23.464-11.079.031-3.37-1.168-6.085-.026-8.974 4.333-10.879 10.977-15.095 22.286-14.106 1.173.1 3.329 1.245 3.242-1.429-.256-8.477 5.143-13.118 10.761-17.881-4.8 1.286-9.107 3.816-13.691 4.656-12.354 2.269-22.4 9.6-32.3 16.549-12.646 8.856-21.574 22.23-32.387 33.36-8.5 8.743-16.134 18.357-25.124 26.6a55.581 55.581 0 0 0-11.274 13.676c-6.761 12.2-12.554 24.939-18.147 37.77-.41.748-1.117 1.409-.7 2.423M200.764 23.101c-9.824 5.424-20.555 8.672-29.18 15.049-18.48 13.666-35.214 29.79-51.692 46.037-8.4 8.282-16.319 17.143-24.745 25.451-8.385 8.282-17.159 16.467-23.981 26.092a144.534 144.534 0 0 1-31.921 32.161c-6.874 5.137-13.881 10.633-22.665 12.385-3.657.727-6.208 3.765-8.595 6.607-1.455 1.716-1.224 2.843 1.137 4.072 6.331 3.288 12.964 2.351 19.541 2.351 9.619.005 17.118-6.2 25.554-9.676 5.573-2.29 8.093-8.19 13.476-10.941 7.734-3.944 16.16-8.047 21.815-14.47 9.865-11.192 20.836-21.062 31.833-30.691 12.436-10.869 21.226-24.719 31.741-37.13a86.654 86.654 0 0 0 12.324-18.467 68.612 68.612 0 0 1 14.716-20.03c8.513-8.287 13.952-19.018 20.642-28.806m-93.186 66.948c4.236-2.832 7.15-8.072 11.309-12.006 1.24-1.173 4.057-1.491 2.827-4.61-1.106-2.807-2.51-4.651-5.711-5.122-9.833-1.465-21.624 7.867-22.904 18.542-.128 1.035.128 2.792.753 3.124 2.694 1.485 4.948 3.6 7.5 5.127.691.415 3.2-2.5 4.861-3.888.287-.225.563-.481 1.368-1.168m27.536-26.824c1.808-1.572 3.719-3.032 5.414-4.728a59.028 59.028 0 0 0 5.107-5.839c1.009-1.316 3.852-1.516 2.863-4.021-.886-2.259-3-3.171-5.3-3.3-1.619-.092-3.258.087-4.861-.113-7.99-1.019-13.973 2.464-16.565 10.459-1.711 5.3.881 9.747 4.661 12.887 3.247 2.694 3.816-2.576 6.152-3.242.958-.271 1.7-1.378 2.525-2.105m-58.151 38.5c-3.324 2.448-5.532 6.254-7.7 9.86-2.054 3.447-.656 6.546 2.489 9.3 3.427 2.991 4.83.548 6.828-1.6 4.518-4.871 9.23-9.542 13.66-14.49 1.106-1.24 4.384-1.793 2.669-4.4-1.619-2.448-3.334-5.9-7.248-4.236-3.637 1.537-7.57 2.479-10.7 5.568m-21.048 45.016a76.33 76.33 0 0 0 10.869-13.953c.994-1.706 4.425-2.3 2.561-5.286a6.668 6.668 0 0 0-7.9-3.222 19.761 19.761 0 0 0-14.608 17.922c-.266 4.052 3.442 4.4 5.342 6.341 1.905 1.957 2.29-1.526 3.734-1.8m95.413-117.52c-.891 1.506-2.674 2.817-3.452 5.112-1.649 4.907 1.48 7.34 4.3 10 2.971 2.807 4.011-.953 5.619-2.064 4.205-2.884 8.113-6.275 12.3-9.209 2.4-1.685 2.469-3.032.6-5.245-4.057-4.84-12.728-4.436-19.372 1.4M22.839 171.586c8.042-2.443 14.142-8.185 20.749-13.025 1.306-.963 4.036-1.957 3.078-3.929-1.137-2.346-2.484-5.163-5.388-5.921-2.1-.548-4.436-.886-6.367.123-4.83 2.52-9.722 5.05-10.275 11.873-.3 3.688-1.193 7.325-1.8 10.879m171.72-152.622c-4.139-3-15.663-2.607-19.208.64-.861.794-2.751 2.238-1.434 2.955 2.561 1.419 3.539 6.495 6.971 4.815 4.738-2.32 10.162-3.719 13.671-8.41m-23.957-1.736c-3.785-.179-6.853-.589-9.466 1.921 2.858-1.593 6.428 2.546 9.466-1.921"
+  }))));
+};
+
+/***/ }),
+
 /***/ "./illustrations/saladBowl.js":
 /*!************************************!*\
   !*** ./illustrations/saladBowl.js ***!
@@ -789,6 +829,9 @@ const illustrationOptions = [{
 }, {
   value: 'okra',
   label: 'Okra'
+}, {
+  value: 'pea',
+  label: 'Pea'
 }, {
   value: 'salad-bowl',
   label: 'Salad'
@@ -1082,7 +1125,7 @@ function EditComponent(props) {
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`,
     style: customCSS
-  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null)));
+  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'pea' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.PeaSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null)));
 }
 
 function SaveComponent(props) {
@@ -1097,7 +1140,7 @@ function SaveComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `illustration illustration--${horizontalPlacement}`,
     style: customCSS
-  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null));
+  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'pea' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.PeaSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null));
 }
 })();
 

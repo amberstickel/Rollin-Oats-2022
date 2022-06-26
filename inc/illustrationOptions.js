@@ -44,6 +44,10 @@ const illustrationOptions = [
     label: 'Okra'
   },
   {
+    value: 'pea',
+    label: 'Pea'
+  },
+  {
     value: 'salad-bowl',
     label: 'Salad'
   },
