@@ -13,6 +13,7 @@ import {
   GarlicSVG,
   GrapeSVG,
   MushroomSVG,
+  OkraSVG,
   SaladBowlSVG,
   SpinachSVG
 } from '../illustrations';
@@ -215,6 +216,9 @@ function EditComponent(props) {
           {illustrationValue === 'mushrooms' &&
             <MushroomSVG />
           }
+          {illustrationValue === 'okra' &&
+            <OkraSVG />
+          }
           {illustrationValue === 'salad-bowl' &&
             <SaladBowlSVG />
           }
@@ -256,6 +260,9 @@ function SaveComponent(props) {
       }
       {illustrationValue === 'mushrooms' &&
         <MushroomSVG />
+      }
+      {illustrationValue === 'okra' &&
+        <OkraSVG />
       }
       {illustrationValue === 'salad-bowl' &&
         <SaladBowlSVG />

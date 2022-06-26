@@ -372,8 +372,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "GarlicSVG": () => (/* reexport safe */ _garlic__WEBPACK_IMPORTED_MODULE_5__.GarlicSVG),
 /* harmony export */   "GrapeSVG": () => (/* reexport safe */ _grape__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG),
 /* harmony export */   "MushroomSVG": () => (/* reexport safe */ _mushroom__WEBPACK_IMPORTED_MODULE_7__.MushroomSVG),
-/* harmony export */   "SaladBowlSVG": () => (/* reexport safe */ _saladBowl__WEBPACK_IMPORTED_MODULE_8__.SaladBowlSVG),
-/* harmony export */   "SpinachSVG": () => (/* reexport safe */ _spinach__WEBPACK_IMPORTED_MODULE_9__.SpinachSVG)
+/* harmony export */   "OkraSVG": () => (/* reexport safe */ _okra__WEBPACK_IMPORTED_MODULE_8__.OkraSVG),
+/* harmony export */   "SaladBowlSVG": () => (/* reexport safe */ _saladBowl__WEBPACK_IMPORTED_MODULE_9__.SaladBowlSVG),
+/* harmony export */   "SpinachSVG": () => (/* reexport safe */ _spinach__WEBPACK_IMPORTED_MODULE_10__.SpinachSVG)
 /* harmony export */ });
 /* harmony import */ var _artichoke__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./artichoke */ "./illustrations/artichoke.js");
 /* harmony import */ var _bokChoy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bokChoy */ "./illustrations/bokChoy.js");
@@ -383,8 +384,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _garlic__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./garlic */ "./illustrations/garlic.js");
 /* harmony import */ var _grape__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./grape */ "./illustrations/grape.js");
 /* harmony import */ var _mushroom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./mushroom */ "./illustrations/mushroom.js");
-/* harmony import */ var _saladBowl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./saladBowl */ "./illustrations/saladBowl.js");
-/* harmony import */ var _spinach__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./spinach */ "./illustrations/spinach.js");
+/* harmony import */ var _okra__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./okra */ "./illustrations/okra.js");
+/* harmony import */ var _saladBowl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./saladBowl */ "./illustrations/saladBowl.js");
+/* harmony import */ var _spinach__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./spinach */ "./illustrations/spinach.js");
+
 
 
 
@@ -433,6 +436,130 @@ const MushroomSVG = () => {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
     "data-name": "Path 1203",
     d: "M134.529 133.746c-11.76 6.647-30.448 7.2-39.145-9.683a5.766 5.766 0 0 0-2.268-2.355c-3.74-2.279-5.3-6.034-5.68-10.345-.476-5.406 1.6-10.112 4.265-14.48a34.089 34.089 0 0 1 12.734-12.264c-5.345-5.992-7.51-13.05-7.168-21.169.6-14.453 9.542-23.227 19.125-31.623 7.168-6.281 16.192-8.127 24.752-10.717a22.4 22.4 0 0 1 14.031.24c7.986 2.964 16.325 4.425 24.444 6.791 6.6 1.921 13.51 1.769 19.913 5.551 18.863 11.14 24.836 28.58 21.176 49.113-1.469 8.225-2.952 16.318-1.959 24.92a38.755 38.755 0 0 1-31.627 42.767c-10.512 1.99-20.324-.232-30.037-3.58-8.012-2.758-15.37-6.947-20.978-14.077-.384.217-.978.574-1.579.909m8.225-67.42c1.295-5.005 2.551-10.005 5.427-14.224 1.115-1.628-1.1-3.226 1.195-4.352-3.786-.673-5.307.989-6.293 4.086-1.469 4.623-3.4 9.078-4.98 13.662-1.552 4.482-.1 11.048 2.869 13.78-.08.179-.164.354-.243.529l.521.019c-.129-.175-.263-.342-.4-.517 1.332-4.2.791-8.686 1.9-12.981m-25.375-6.822c2.134-4.417 5.707-7.172 9.721-9.42 4.078-2.294 8.511-3.8 12.4-6.548 1.617-1.138 3.276-1.134 5.577-.133a14.968 14.968 0 0 0 9.884.32c6.7-2.169 12.665-.453 18.25 2.8a37.525 37.525 0 0 0 11.969 4.912c6.293 1.195 10.687 6.73 12.376 13.365 1.244 4.893 3.42 9.534 4.843 14.484 2.766 9.66 2.013 19.091.1 28.595-.985 4.893-2.488 9.667-3.671 14.522a11.451 11.451 0 0 1-4.341 6.525c-10.192 8-21.446 8.191-33.081 4.961-4.969-1.381-9.858-3.006-14.24-6.217-2.191-1.613-4.174 1.3-5.749 2.682-1.533 1.347.361 2.572 1.366 3.268 12.935 8.99 26.833 14.4 42.649 12.034a33.615 33.615 0 0 0 28.557-37.954c-1.255-9.333.8-18.121 2.294-27.066 2.671-15.975-1.069-29.428-13.928-39.3-4.771-3.66-9.888-6.4-15.933-7.183-10.284-1.343-20.252-4.257-30.151-7.4-6.03-1.914-12.026-2.1-17.9.2-5.7 2.241-11.942 2.987-16.961 7.156-8.212 6.827-16.631 13.534-18.876 25.112-1.465 7.571-1.141 15.013 4.661 21.016 2 2.07 3.949 2.089 6.224.73a20.578 20.578 0 0 1 6.59-2.865c-2.69-6.171-5.878-11.859-2.625-18.6m-2.9 25.194c-9.645 3.99-17.675 9.967-21.644 20.552-1.982 5.273-.731 9.279 3.493 12.673 2.477 1.982 2.88 5.482 5.254 7.807 7.773 7.605 18.8 9.953 28.409 5.1 4.611-2.325 8.948-5.22 13.419-7.849 5.764-3.4 9.382-9.028 13.076-14.427 3.9-5.707 2.747-10.208-2.994-13.845-2.444-1.546-5.095-2.726-7.588-4.186a46.031 46.031 0 0 0-7.7-3.983c-7.761-2.652-15.58-5.212-23.733-1.838m47.8 7.891c10.162-3.645 20.069-8.1 30.482-11 1.769-.495 4.725-.685 4.687-3.165a17.947 17.947 0 0 0-3.884-10.618c-.81-1.065-1.994.342-2.922.738-5.326 2.3-9.4 6.688-14.45 9.584-6.506 3.751-12.5 8.484-18.749 12.821 1.187 2.18 2.427 2.5 4.836 1.636m18.829 14.168a58.475 58.475 0 0 1 12.722 4.55c2.2 1.035 3.211.59 3.713-1.758.148-.7.506-1.343.662-2.032.7-3.162 1.191-5.456-3.386-6.361-5.966-1.176-11.581-4.185-17.478-5.908-4.6-1.339-9.093-.582-12.635 2.941 3.846 6.491 10.337 7.278 16.4 8.568m-1.5-36.585c2.888-1.849 5.452-4.314 8.617-5.669 2.454-1.05 1.788-2.108.453-3.565-2.005-2.2-4.508-3.6-6.947-5.136-1.29-.814-1.986-.224-2.7.791-5.893 8.412-13.343 15.61-17.634 25.464 6.521-3.264 12.129-7.986 18.212-11.885m-13.77-15.77a135.7 135.7 0 0 0-15.663 25.814c-.578 1.225-1.039 2.682-.015 3.55 1.271 1.077 2.138-.632 3.116-1.229a13.871 13.871 0 0 0 4.615-4.733 179.2 179.2 0 0 1 15.968-22.006c1.21-1.472 2.184-2.9-1.476-3.633-2.131-.936-4.539-.32-6.544 2.237m-3.764 55.516c-2.869 3.222-3.515 6.247-.647 9.447 2.2 2.454 2.781 5.817 4.215 8.678 1.027 2.043 1.944 2.458 3.721 2.663a33.662 33.662 0 0 0 14.248-.909 45583.492 45583.492 0 0 0-21.538-19.879m21.522 13.51a5.9 5.9 0 0 0 6.822 1.278c2.424-1.077 3.409-3.565 4.379-5.889.594-1.419-.632-1.9-1.674-2.393a77.283 77.283 0 0 0-24.326-7.073c5.4 5.148 10.093 9.622 14.8 14.077m-32.022-68.269a46.569 46.569 0 0 0-5.262 21.305 275.981 275.981 0 0 1 15.5-24.725c-6.11-2.462-7.335-1.99-10.242 3.42m46.842 29.364c-5.46 2.785-11.566 3.706-18.007 6.4 6.837 1.777 12.266 5.25 18.813 6.407-.19-4.508.5-8.648-.807-12.8m-68.938-19.654c-.122 3.934.75 7.9.852 11.855.084 3.485 2.846 2.728 5.5 4.326-5.513-11.234-1.36-20.773 2.73-30.467-6.749 1.37-8.811 5.182-9.081 14.286m-3.216-8.283c-3.356 2.058-6.274 4.592-5.775 8.983.438 3.843 1.107 7.917 5.11 10.626.483-6.993-2.705-13.377.666-19.609m30.763 64.655c-1.339-2.477-2.093-2.56-3.926-.365-3.2 3.824-3.359 3.675 1.073 5.517 1.876.776 3.755 1.541 6.175 2.53a29.055 29.055 0 0 0-3.321-7.681"
+  }))));
+};
+
+/***/ }),
+
+/***/ "./illustrations/okra.js":
+/*!*******************************!*\
+  !*** ./illustrations/okra.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "OkraSVG": () => (/* binding */ OkraSVG)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const OkraSVG = () => {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "159.424",
+    height: "269.694"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("clipPath", {
+    id: "a"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Rectangle 129",
+    d: "M0 0h252.722v113.283H0z"
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+    "data-name": "Group 85"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+    "data-name": "Group 84",
+    transform: "rotate(-101 135.27 114.971)",
+    "clip-path": "url(#a)"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1231",
+    d: "M220.732 30.359c1.38 4.739 2.6 5.37 7.006 3.932a52 52 0 0 1 12.916-2.462 15.5 15.5 0 0 1 8.524 2.144c3.809 2.1 3.505 5.849 3.543 9.577.033 3.529-1.727 5.9-4.188 7.741-1.082.806-2.339-.27-3.207-1.153-3.14-3.2-6.451-3.463-10.787-2.476-4.222.963-4.649 3.055-5.128 6.8a119.686 119.686 0 0 1-9.141 32.929c-1.821 4.165-5.787 3.14-8.866 4.07-7.5 2.267-15.336 2.13-23.02 3.145-4.43.588-8.624 2.462-12.765 4.255-5.218 2.263-10.834 2.737-16.284 3.823a138.271 138.271 0 0 1-20.117 2.173 397.722 397.722 0 0 0-39.892 4.416c-6.9 1.067-13.851 2.528-20.734 3.263a99.075 99.075 0 0 1-29.082-.683c-4.724-.892-9.473-1.651-14.207-2.519a14.4 14.4 0 0 1-4.151-1.029c-7.447-3.932-15.753-4.829-23.537-7.537-2.191-.764-4.317-1.755-6.427-2.723-1.67-.778-1.442-2.637-.176-2.685 3.041-.119 4.3-3.107 6.992-3.8a82.6 82.6 0 0 0 15.485-5.759c9.065-4.407 18.111-8.884 27.275-13.059 8.037-3.667 14.676-9.169 21.289-15.041A79.231 79.231 0 0 1 92.44 44.689c9.2-4.117 18.813-7.22 27.673-12.186a12.349 12.349 0 0 1 6.072-1.319c4.212-.057 7.888-1.708 11.555-3.619 3.928-2.044 8.519-2.329 12.186-5.166 7.552-5.839 16.659-8.643 24.619-13.766 3.411-2.2 7.571-3.121 11.375-4.663a23.6 23.6 0 0 0 5.308-2.718c1.883-1.39 3.871-2.03 6.124.27 2.054 2.092 4.985 3.192 7.314 5.047 5.844 4.62 8.325 11.92 12.532 17.869 1.333 1.878 3.207 3.548 3.534 5.92M24.291 101.62c.09.569.432.593.849.436 2.22.9 4.027 3.007 6.712 2.5-.379.247-.3.527 0 .726.123.085.356 0 .541-.014l-.617-.645c-1.954-1.646-3.781-3.657-6.693-2.486.152-1.063-.394-.631-.83-.422.038-.726-.413-.56-.806-.493-.389-.232-.783-.455-1.176-.688-2.329-1.281-4.649-2.6-7.433-2.016-.46-.474-1.025-.417-1.262.076-.213.451.308.636.707.693a13.523 13.523 0 0 0 7.618 1.935c.451.152.892.294 1.338.432.356-.009.7-.024 1.053-.038m176.6-72.077c-1.632-.7.228-1.983-.546-2.96a8.948 8.948 0 0 0-1.788.479c-9.814 4.758-20.017 8.41-30.154 12.3-12.418 4.767-24.728 9.876-37.156 14.634-3.714 1.423-7.518 2.637-10.606 5.445-5.213 4.762-11.408 7.594-17.778 10.236-6.271 2.595-12.841 4.075-19.145 6.513-9.828 3.8-19.666 7.566-29.561 11.157a54.486 54.486 0 0 1-11.142 3.088c-8.026 1.1-15.777 3.51-24.528 4.653 4.3 2.429 7.775 4.411 12.148 3.154a44.155 44.155 0 0 1 8.685-1.627c2.8-.232 5.8.745 8.453.085 7.737-1.916 15.668-1.684 23.452-2.917 8.344-1.323 16.555-2.927 24.225-6.845-7.186 1.489-14.344 3.126-21.725 2.775a19.353 19.353 0 0 1 7.8-2.433c7.243-1.115 14.487-2.12 21.787-2.832 7.912-.773 16.009-1.044 23.679-3.681 5.654-1.954 11.2-4.255 16.882-6.1 15.767-5.1 31.5-10.336 47.406-14.9 6.01-1.727 12.1-4.4 18.661-3.069.142-.868.6-1.836.361-2.566-.569-1.8-.588-4.758-3.216-4.293a103.514 103.514 0 0 0-16.047 3.8c-9.378 3.211-18.528 7.172-28.162 9.511-.825.2-2.03 1.47-2.448-.152-.318-1.281 1.238-1.613 2.063-1.755a36.008 36.008 0 0 0 7.257-2.144c12.3-4.9 24.671-9.6 37.9-11.916-1.138-3.207-2.286-6.214-3.249-9.288-.474-1.546-.882-1.931-2.438-1.091-2.908 1.575-5.64 3.581-8.918 4.345-.873.2-1.988.631-2.357-.375-.522-1.4.968-1.285 1.646-1.48 3.344-.92 6.005-3.33 9.24-4.468 2.144-.759 1.025-2.467.873-3.809-.176-1.475-.266-1.461-1.618-1.565Zm13.9 53.421-.057.119c.351-2.827-.427-5.545-.9-8.268-.792-4.544-1.58-4.985-6.1-4.43-.327.038-.636.19-.963.228-4.535.669-9.074 1.314-13.609 1.969-.783.109-1.7.228-1.878-.787a1.272 1.272 0 0 1 1.409-1.518c6.831.18 13.414-3.363 20.335-1.328.185-3.14-1.414-5.754-1.494-8.666-.033-1.4-1.2-1.551-2.154-1.5a20 20 0 0 0-4.506.659c-7.727 2.239-15.506 4.226-23.21 6.6-16.484 5.076-32.962 10.123-49.147 16.232a51.827 51.827 0 0 1-15.317 3.731c-8.861.527-17.627 2.011-25.9 5.83a44.1 44.1 0 0 1-9.074 3.178c-10.726 2.356-21.706 2.736-32.521 4.382-6.067.925-12.347-.1-18.39 2.044 2.149 2.367 4.473 4.573 7.637 5.351 18.632 4.587 37.317 3.776 55.906-.009 10.345-2.1 20.843-2.974 31.24-4.141 6.8-.759 13.837-2.177 20.838-1.02a5.151 5.151 0 0 0 1.945-.27c6.726-1.651 13.618-2.343 20.359-3.97 4.336-1.044 8.187-3.121 12.314-4.558a22.744 22.744 0 0 0-8.685 1.3 21.809 21.809 0 0 1-8.126 1.048c-.768-.024-1.3-.285-1.281-1.138.024-.759.621-.716 1.186-.806 7.779-1.338 15.53-2.751 23.309-4.056 1.157-.19 3.074-.4 3.449.213 1.433 2.291 3.207 1.1 4.928 1.143 5.332.161 10.355-1.679 15.535-2.471 4.862-.74 4.217-.925 2.922-5.085M61.437 70.844l.052-.1c-5 2.481-9.985 5.033-15.023 7.438-7.542 3.61-15.132 7.115-22.7 10.659 7.794-.569 14.871-3.719 22.029-6.627.754-.3 1.807-1.774 2.467-.346.5 1.1-1 1.722-1.746 2.059-2.694 1.243-5.5 2.215-8.268 3.3 5.071.55 9.734-.811 14.211-2.538 10.507-4.06 21.336-7.2 31.568-12.082a31.913 31.913 0 0 1 4.435-1.319c10.872-3.292 21.763-6.446 30.666-14.468a30.539 30.539 0 0 1 11.408-6.034c7.376-2.376 14.543-5.379 21.706-8.377 6.133-2.557 12.267-5.213 18.58-7.158a129.635 129.635 0 0 0 29.87-13.3c1.1-.674 2.576-1.651 4.065-.2 1.072 1.044 1.561 2.433.569 3.292-1.893 1.632-.868 3.354-.441 4.891a110.175 110.175 0 0 0 5.246 15.677c1.309 2.922 3.833 6.323 3.23 8.828-.83 3.482.617 5.792 1.366 8.481a44.5 44.5 0 0 1 1.58 8.415c.342 4.022 1.2 8 1.831 12 .617-4.587 4.07-8.111 3.581-12.988a12.914 12.914 0 0 1 1.983-7.523 19.44 19.44 0 0 0 2.808-12.139c-.18-2.647.93-4.473 3.05-5.071 5.294-1.485 10.7-4.032 16.232.2-1.546-3.529.285-6.2 1.366-8.941a11.3 11.3 0 0 0-8.59-1.551c-3.875.655-7.708 1.622-11.574 2.414-5.085 1.048-6.11.617-8.676-4.283-2.984-5.706-6.309-11.171-9.833-16.555-2.011-3.069-5.441-4.834-6.631-8.41-.963-2.879-2.438-4.174-5.422-3.012 1.437 2.59 1.029 6.233 4.193 7.841a1.218 1.218 0 0 1 .285.9c-2.49 2.025-.18 2.637.934 3.581a1.265 1.265 0 0 1 .09 1.826 1.5 1.5 0 0 1-1.779.588 3.619 3.619 0 0 1-2.182-1.964c-.968-2-2.305-2.31-4.151-1.157a19.41 19.41 0 0 1-3.913 1.821c-1.2.417-2.357 1.674-3.795.73.2-1.418 1.257-1.409 2-1.8 2.381-1.2 5.322-1.845 6.992-3.738 1.988-2.244-.854-5.1-.721-7.817a4.226 4.226 0 0 0-.251-1.352c-.237-.768.313-2.03-.977-2.182-1.115-.133-1.276 1.077-1.855 1.722-.612.683-1.433 1.172.095 1.864 1.01.455.256 1.1-.28 1.447a17.694 17.694 0 0 1-3.154 1.85c-3.282 1.233-6.954 1.366-9.847 3.762a.99.99 0 0 1-1.466-.28c-.617-.8.925-1.21.237-2.187-3.154 1.793-6.314 3.586-9.525 5.408.655.844 2.305-.266 2.353 1.162.057 1.779-1.5.7-2.277 1.048a17.265 17.265 0 0 1-2.5.915c-6 1.712-10.54 6.726-17.086 7.594-6.076.806-11.147 5.626-17.29 6.5a48.426 48.426 0 0 0-14.045 4.217c-9.738 4.568-19.719 8.567-29.594 12.836a22.427 22.427 0 0 0-1.95 1.238c-7.318 4.224-13.257 10.358-19.76 15.732-1.271 1.053-3.287 1.214-3.776 3.264"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1232",
+    d: "M14.838 98.518c2.784-.58 5.109.74 7.434 2.025-.128.223-.247.455-.37.693a13.642 13.642 0 0 1-7.618-1.94c.185-.256.365-.512.555-.778"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1233",
+    d: "M25.083 102.142c2.908-1.172 4.739.84 6.693 2.486l.085-.081c-2.69.508-4.511-1.6-6.721-2.49Z"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1234",
+    d: "M22.271 100.547c.394.232.778.455 1.176.688-.076.142-.138.28-.209.441-.446-.152-.887-.3-1.338-.441.123-.232.251-.455.37-.688"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1235",
+    d: "m31.776 104.627.607.64c-.176.014-.413.1-.531.024-.3-.209-.379-.484 0-.735l-.081.071"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1236",
+    d: "M24.249 101.72c.441-.2.982-.631.835.427l.053-.09c-.422.157-.759.133-.84-.427Z"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1237",
+    d: "M23.447 101.226c.394-.066.849-.232.806.489l.043-.095c-.351.014-.707.028-1.058.047.071-.152.133-.294.209-.441"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1238",
+    d: "M88.224 65.645c3.814-1.489 7.632-2.96 11.446-4.473.968-.375 2.353-.778 2.685.228.47 1.461-1.162 1.091-1.94 1.494-6.926 3.548-14.373 5.662-21.507 8.619-.716.3-1.451.555-2.177.825-.659.251-1.4.417-1.651-.455-.218-.8.441-1.186 1.1-1.442q5.251-2.092 10.493-4.188c.512-.2 1.034-.4 1.551-.607"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1239",
+    d: "M112.894 56.325c1.746-3.4 4.549-4.582 7.016-5.422 4.312-1.485 8.13-3.894 12.172-5.882.659-.323 1.475-1.063 1.935.009.37.863-.465 1.309-1.138 1.779-4.568 3.211-9.9 4.644-14.79 7.129-1.518.764-2.68 2.381-5.194 2.386"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1240",
+    d: "M101.297 52.231c-2.936 2.419-6.162 3.8-9.217 5.479-3.306 1.817-6.684 3.5-10.042 5.2-.446.223-.987.688-1.433-.019-.408-.655.085-1.086.46-1.456a5.57 5.57 0 0 1 1.342-.944c5.295-2.777 10.585-5.56 15.911-8.284.7-.361 1.466-1.153 2.979.028"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1241",
+    d: "M156.245 34.125c4.392-4.881 10.085-6.034 15.568-7.651.65-.185 1.039.147 1.224.778a.836.836 0 0 1-.536 1.077 10.025 10.025 0 0 1-1.556.574c-4.008 1.082-8.035 2.1-11.579 4.558a3.523 3.523 0 0 1-3.121.664"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1242",
+    d: "M121.295 42.308c-2.4 1.115-4.819 2.2-7.2 3.363-.7.337-1.323.417-1.646-.361-.389-.944.46-1.105 1.025-1.361 3.316-1.508 6.627-3.041 9.971-4.483.84-.365 2.116-1.025 2.486.37.327 1.21-1.143 1.058-1.84 1.437a23.468 23.468 0 0 1-2.761 1.115.291.291 0 0 1-.033-.081"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1243",
+    d: "M61.433 70.845q4.29-1.672 8.576-3.335c.157.361.313.73.47 1.1a60.753 60.753 0 0 0-11.906 7.087c-.465.332-1.11.422-1.423-.218-.3-.612.194-1.039.607-1.39 1.276-1.077 3.022-1.57 3.728-3.344Z"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1244",
+    d: "M137.314 34.994a14.835 14.835 0 0 1 10.616-4.844q-5.064 2.889-10.127 5.782c-.166-.313-.327-.626-.489-.934"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1245",
+    d: "M156.975 79.621c6.93-2.191 14.06-3.482 21.089-5.189.768-.185 1.674-.408 1.874.655.171.882-.764 1-1.342 1.153-7.542 1.978-15.217 3.316-22.593 5.953-.764.27-1.674.5-1.969-.47-.337-1.072.721-1.2 1.395-1.494.508-.223 1.029-.4 1.546-.607"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1246",
+    d: "M134.174 88.604c-4.549 1.238-9.084 2.514-13.647 3.686a6.757 6.757 0 0 1-2.595-.066c-.693-.1-1.679-.152-1.622-1.214s.911-.972 1.731-1.006c5.626-.214 10.847-2.467 16.247-3.753.982-.232 2.343-1.523 2.889-.138.56 1.414-1.229 1.475-2.12 1.964a8.544 8.544 0 0 1-.925.37.628.628 0 0 0 .038.157"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1247",
+    d: "M154.38 91.74c-5.649 1.6-10.991 3.154-16.355 4.6-.721.19-1.888.555-2.21-.726-.389-1.57.93-1.105 1.651-1.366a73.305 73.305 0 0 1 13.637-3.415c1.01-.157 2.1-.716 3.278.911"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1248",
+    d: "M184.307 81.895c-4.535 2.927-9.117 2.96-13.391 4.008a57.833 57.833 0 0 0-5.683 1.618c-.631.218-1.6.949-1.878-.3-.209-.9.588-1.423 1.4-1.613 3.719-.9 7.414-1.978 11.185-2.58 2.538-.4 4.886-2.116 8.367-1.134"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1249",
+    d: "M119.535 100.861c-4.952.138-9.6 2.248-14.539 2.191-.693-.009-1.75.6-1.912-.583-.18-1.451 1.02-1.048 1.836-1.172 4.739-.759 9.468-1.57 14.2-2.367.754-.128 1.693-.465 1.921.574.251 1.119-.906 1.034-1.508 1.357"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1250",
+    d: "M73.671 101.43c-4.127 2.438-8.434 2.851-12.736 3.216a2.962 2.962 0 0 1-2.339-1.072c-.768-.806-.332-1.959.375-1.736 4.862 1.551 9.373-1.371 14.107-1.006.076 0 .147.142.593.6"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1251",
+    d: "M214.793 82.969c-.617.147-1.376.621-1.826.394a23.547 23.547 0 0 0-10.734-2.12c-1.015 0-2.69.27-2.713-1.134-.038-1.988 1.717-.64 2.547-.773 3.169-.508 6.247.451 9.3 1.262a5.115 5.115 0 0 1 3.368 2.49Z"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1252",
+    d: "M97.26 97.711c-2.239 1.219-5.445.664-8.377 1.636-.854.275-2.229.19-2.21-1.276.024-1.641 1.371-.55 2.054-.7 3.188-.707 6.4-1.267 9.624-1.76.745-.119 1.935-1.072 2.263.228.361 1.433-1.191.863-1.845 1.276a11.982 11.982 0 0 1-1.508.6"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1253",
+    d: "M66.138 107.099c4.146-1 8.268-2.016 12.546-1.893a.761.761 0 0 1 .678.982c-.052.28-.408.726-.583.7-4.217-.531-8.363 2.3-12.641.209"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1254",
+    d: "M145.382 71.243a81.351 81.351 0 0 1-18.134 5.882c-.783.166-1.864.408-2.021-.351-.209-1.02.84-1.447 1.76-1.641 7.684-1.622 14.676-5.346 22.033-7.96.64-.228 1.395-1.233 1.964-.157.55 1.044-.351 1.755-1.1 2.154-1.451.787-3 1.395-4.506 2.073"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1255",
+    d: "M85.515 79.886a28.305 28.305 0 0 1 13.324-5.678 87.854 87.854 0 0 0 16.389-4.957c.607-.237 1.513-1.11 1.935-.047.484 1.214-.849.911-1.39 1.3-4.535 3.316-9.852 4.141-15.089 5.132a62.3 62.3 0 0 0-11.308 3.624 5.343 5.343 0 0 1-3.861.621"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1256",
+    d: "M171.466 47.862c-1.2 1.878-3.216 2.116-4.952 2.841-2.95 1.248-5.953 2.362-8.951 3.5-1.115.422-2.675.968-3.088-.493-.332-1.21 1.39-1.067 2.215-1.352 4.843-1.722 9.439-4.321 14.776-4.492"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1257",
+    d: "M56.49 89.733c2.2-.721 4.383-1.47 6.6-2.125.574-.171 1.376-.323 1.546.669.142.816-.6.859-1.048 1.029-4.022 1.494-8.258 2.367-12.053 4.549a1.063 1.063 0 0 1-1.461-.351c-.337-.735.242-1.224.892-1.489 1.845-.73 3.7-1.442 5.559-2.168a.8.8 0 0 1-.038-.114"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1258",
+    d: "M138.718 59.615c-3.885 2.225-6.973 4.022-10.089 5.778a3.8 3.8 0 0 1-2.884.1c-.849-.223-.873-1.409-.285-1.5 4.388-.674 7.59-4.857 13.258-4.378"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1259",
+    d: "M181.133 41.881c1.717.19 4.041-2.419 4.615-.237.749 2.87-2.666 1.39-4.07 2.234-.968.56-3.591 1.233-3.785.081-.4-2.376 2.509-.612 3.24-2.078"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    "data-name": "Path 1260",
+    d: "m200.834 29.453-.522.351c.019-.166.052-.337.071-.5.171.071.337.147.508.232l-.057-.081"
   }))));
 };
 
@@ -572,6 +699,9 @@ const illustrationOptions = [{
 }, {
   value: 'mushrooms',
   label: 'Mushrooms'
+}, {
+  value: 'okra',
+  label: 'Okra'
 }, {
   value: 'salad-bowl',
   label: 'Salad'
@@ -865,7 +995,7 @@ function EditComponent(props) {
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`,
     style: customCSS
-  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null)));
+  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null)));
 }
 
 function SaveComponent(props) {
@@ -880,7 +1010,7 @@ function SaveComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `illustration illustration--${horizontalPlacement}`,
     style: customCSS
-  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null));
+  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null));
 }
 })();
 

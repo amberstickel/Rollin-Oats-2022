@@ -32,6 +32,10 @@ const illustrationOptions = [
     label: 'Mushrooms'
   },
   {
+    value: 'okra',
+    label: 'Okra'
+  },
+  {
     value: 'salad-bowl',
     label: 'Salad'
   },

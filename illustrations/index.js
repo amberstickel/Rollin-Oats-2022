@@ -6,6 +6,7 @@ import { FishSVG } from "./fish";
 import { GarlicSVG } from "./garlic";
 import { GrapeSVG } from "./grape";
 import { MushroomSVG } from "./mushroom";
+import { OkraSVG } from "./okra";
 import { SaladBowlSVG } from "./saladBowl";
 import { SpinachSVG } from "./spinach";
 
@@ -18,6 +19,7 @@ export {
   GarlicSVG,
   GrapeSVG,
   MushroomSVG,
+  OkraSVG,
   SaladBowlSVG,
   SpinachSVG
 };
