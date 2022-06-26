@@ -23,7 +23,7 @@ const sectionBgColors = [{
   color: "#F7F3EA"
 }, {
   name: "white",
-  color: "FFF"
+  color: "#FFFFFF"
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sectionBgColors);
 
@@ -268,7 +268,7 @@ function EditComponent(props) {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `ro--section__container ro--section-bg--${bgColorName}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
-    allowedBlocks: ["rollinoats/contentcontainer"]
+    allowedBlocks: ["rollinoats/contentcontainer", "rollinoats/illustration"]
   })), wavyBottomBorder && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `ro--section__wavy-bottom ro--section-bg--${bgColorName}`
   })));

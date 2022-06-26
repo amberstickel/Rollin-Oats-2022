@@ -23,7 +23,7 @@ const sectionBgColors = [{
   color: "#F7F3EA"
 }, {
   name: "white",
-  color: "FFF"
+  color: "#FFFFFF"
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sectionBgColors);
 

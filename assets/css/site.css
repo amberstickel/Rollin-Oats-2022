@@ -373,3 +373,19 @@ input {
   font-family: var(--wp--preset--font-family--basic-sans);
   font-size: var(--wp--preset--font-size--paragraph-medium)!important;
 }
+
+.illustration--green path {
+  fill: #6a933e;
+}
+
+.illustration--purple path {
+  fill: #8F529A;
+}
+
+.illustration--cream path {
+  fill: #F7F3EA;
+}
+
+.illustration--white path {
+  fill: #FFFFFF;
+}

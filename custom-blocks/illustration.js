@@ -1,8 +1,9 @@
 
 import illustrationOptions from '../inc/illustrationOptions';
+import illustrationColorOptions from '../inc/illustrationColors';
 import { registerBlockType } from '@wordpress/blocks';
-import {  InspectorControls } from '@wordpress/block-editor';
-import {  PanelBody, PanelRow, ComboboxControl, SelectControl, __experimentalInputControl as InputControl } from '@wordpress/components';
+import {  InspectorControls, getColorObjectByColorValue } from '@wordpress/block-editor';
+import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl } from '@wordpress/components';
 import {
   BokChoySVG,
   FishSVG,
@@ -20,6 +21,10 @@ registerBlockType("rollinoats/illustration", {
     illustrationValue: {
       type: 'string',
       default: 'garlic-bulb'
+    },
+    illustrationColor: {
+      type: "string",
+      default: "green"
     },
     horizontalPlacement: {
       type: 'string',
@@ -47,7 +52,7 @@ const horizontalPlacementOptions = [
 function EditComponent(props) {
 
   const { attributes, setAttributes } = props;
-  const { illustrationValue, customCSS, horizontalPlacement } = attributes;
+  const { illustrationValue, illustrationColor, customCSS, horizontalPlacement } = attributes;
   
   const handleIllustrationSelection = (selection) => {
     setAttributes({
@@ -68,7 +73,7 @@ function EditComponent(props) {
         bottom: nextValue
       };
     } else if (propertyName === 'left') {
-      newcCustomCSS = {
+      newCustomCSS = {
         ...customCSS,
         left: nextValue
       };
@@ -89,6 +94,14 @@ function EditComponent(props) {
     });
   }
 
+  const currentColorValue = illustrationColorOptions.filter(color => {
+    return color.name == illustrationColor
+  })[0].color;
+
+  function handleColorChange(colorCode) {
+    const { name } = getColorObjectByColorValue(illustrationColorOptions, colorCode);
+    setAttributes({ illustrationColor: name });
+  }
 
   return (
     <>
@@ -113,6 +126,16 @@ function EditComponent(props) {
             />
           </PanelRow>
        
+        </PanelBody>
+        <PanelBody title="Illustration Color" initialOpen={true}>
+          <PanelRow>
+            <ColorPalette 
+              clearable={false}
+              colors={illustrationColorOptions}
+              disableCustomColors={true}
+              onChange={handleColorChange}
+              value={currentColorValue} />
+          </PanelRow>
         </PanelBody>
         <PanelBody title='Illustration Placement'>
           <PanelRow>
@@ -164,7 +187,7 @@ function EditComponent(props) {
         </PanelBody>
       </InspectorControls>
 
-        <div className={`illustration illustration--${horizontalPlacement}`} style={customCSS}>
+        <div className={`illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`} style={customCSS}>
           {illustrationValue === 'bok-choy' &&
             <BokChoySVG />
           }
@@ -184,7 +207,9 @@ function EditComponent(props) {
             <SaladBowlSVG />
           }
           {illustrationValue === 'spinach' &&
-            <SpinachSVG />
+            <div className="illustration--spinach">
+              <SpinachSVG />
+            </div>
           }
         </div>
     </>

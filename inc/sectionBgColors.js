@@ -14,7 +14,7 @@ const sectionBgColors = [
   },
   {
     name: "white",
-    color: "FFF"
+    color: "#FFFFFF"
   }
 ];
 
