@@ -1,5 +1,9 @@
 const illustrationOptions = [
   {
+    value: 'artichoke',
+    label: 'Artichoke'
+  },
+  {
     value: 'bok-choy',
     label: 'Bok Choy'
   },

@@ -1,3 +1,4 @@
+import { ArtichokeSVG } from "./artichoke";
 import { BokChoySVG } from "./bokChoy";
 import { BreadSVG } from "./bread";
 import { CarrotSVG } from "./carrot";
@@ -9,6 +10,7 @@ import { SaladBowlSVG } from "./saladBowl";
 import { SpinachSVG } from "./spinach";
 
 export {
+  ArtichokeSVG,
   BokChoySVG,
   BreadSVG,
   CarrotSVG,

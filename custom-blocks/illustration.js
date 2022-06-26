@@ -5,6 +5,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import {  InspectorControls, getColorObjectByColorValue } from '@wordpress/block-editor';
 import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl } from '@wordpress/components';
 import {
+  ArtichokeSVG,
   BokChoySVG,
   BreadSVG,
   CarrotSVG,
@@ -190,6 +191,9 @@ function EditComponent(props) {
       </InspectorControls>
 
         <div className={`illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`} style={customCSS}>
+          {illustrationValue === 'artichoke' &&
+            <ArtichokeSVG />
+          }
           {illustrationValue === 'bok-choy' &&
             <BokChoySVG />
           }
@@ -229,8 +233,17 @@ function SaveComponent(props) {
 
   return (
     <div className={`illustration illustration--${horizontalPlacement}`} style={customCSS}>
+      {illustrationValue === 'artichoke' &&
+        <ArtichokeSVG />
+      }
       {illustrationValue === 'bok-choy' &&
         <BokChoySVG />
+      }
+      {illustrationValue === 'bread' &&
+        <BreadSVG />
+      }
+      {illustrationValue === 'carrot' &&
+        <CarrotSVG />
       }
       {illustrationValue === 'fish' &&
         <FishSVG />
