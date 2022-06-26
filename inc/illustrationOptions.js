@@ -4,6 +4,10 @@ const illustrationOptions = [
     label: 'Artichoke'
   },
   {
+    value: 'asparagus',
+    label: 'Asparagus'
+  },
+  {
     value: 'bok-choy',
     label: 'Bok Choy'
   },

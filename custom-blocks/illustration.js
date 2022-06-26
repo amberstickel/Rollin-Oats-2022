@@ -6,6 +6,7 @@ import {  InspectorControls, getColorObjectByColorValue } from '@wordpress/block
 import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl } from '@wordpress/components';
 import {
   ArtichokeSVG,
+  AsparagusSVG,
   BokChoySVG,
   BreadSVG,
   CarrotSVG,
@@ -196,6 +197,9 @@ function EditComponent(props) {
           {illustrationValue === 'artichoke' &&
             <ArtichokeSVG />
           }
+          {illustrationValue === 'asparagus' &&
+            <AsparagusSVG />
+          }
           {illustrationValue === 'bok-choy' &&
             <BokChoySVG />
           }
@@ -243,6 +247,9 @@ function SaveComponent(props) {
     <div className={`illustration illustration--${horizontalPlacement}`} style={customCSS}>
       {illustrationValue === 'artichoke' &&
         <ArtichokeSVG />
+      }
+      {illustrationValue === 'asparagus' &&
+        <AsparagusSVG />
       }
       {illustrationValue === 'bok-choy' &&
         <BokChoySVG />
