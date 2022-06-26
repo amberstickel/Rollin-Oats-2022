@@ -6,6 +6,7 @@ import {  InspectorControls, getColorObjectByColorValue } from '@wordpress/block
 import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl } from '@wordpress/components';
 import {
   BokChoySVG,
+  CarrotSVG,
   FishSVG,
   GarlicSVG,
   GrapeSVG,
@@ -191,6 +192,9 @@ function EditComponent(props) {
           {illustrationValue === 'bok-choy' &&
             <BokChoySVG />
           }
+          {illustrationValue === 'carrot' &&
+            <CarrotSVG />
+          }
           {illustrationValue === 'fish' &&
             <FishSVG />
           }
@@ -207,9 +211,7 @@ function EditComponent(props) {
             <SaladBowlSVG />
           }
           {illustrationValue === 'spinach' &&
-            <div className="illustration--spinach">
-              <SpinachSVG />
-            </div>
+            <SpinachSVG />
           }
         </div>
     </>
