@@ -3,6 +3,7 @@ import { AsparagusSVG } from "./asparagus";
 import { BokChoySVG } from "./bokChoy";
 import { BreadSVG } from "./bread";
 import { CarrotSVG } from "./carrot";
+import { ChickenSVG } from "./chicken";
 import { CornSVG } from "./corn";
 import { FishSVG } from "./fish";
 import { GarlicSVG } from "./garlic";
@@ -19,6 +20,7 @@ export {
   BokChoySVG,
   BreadSVG,
   CarrotSVG,
+  ChickenSVG,
   CornSVG,
   FishSVG,
   GarlicSVG,

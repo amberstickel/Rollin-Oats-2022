@@ -10,6 +10,7 @@ import {
   BokChoySVG,
   BreadSVG,
   CarrotSVG,
+  ChickenSVG,
   CornSVG,
   FishSVG,
   GarlicSVG,
@@ -210,6 +211,9 @@ function EditComponent(props) {
           {illustrationValue === 'carrot' &&
             <CarrotSVG />
           }
+          {illustrationValue === 'chicken' &&
+            <ChickenSVG />
+          }
           {illustrationValue === 'corn' &&
             <CornSVG />
           }
@@ -262,6 +266,9 @@ function SaveComponent(props) {
         <BreadSVG />
       }
       {illustrationValue === 'carrot' &&
+        <CarrotSVG />
+      }
+      {illustrationValue === 'chicken' &&
         <CarrotSVG />
       }
       {illustrationValue === 'corn' &&
