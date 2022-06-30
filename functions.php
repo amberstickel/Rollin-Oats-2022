@@ -4,6 +4,8 @@
 function rollinOatsFiles() {
 	wp_enqueue_style( ' add_custom_fonts ', 'https://use.typekit.net/hjd3efb.css', false );
   wp_enqueue_style('rollin_oats_styles', get_theme_file_uri('/assets/css/site.css'));
+  wp_enqueue_style('custom_editor_styles', get_theme_file_uri('/assets/css/editor.css'));
+
 }
 
 add_action('wp_enqueue_scripts', 'rollinOatsFiles');
