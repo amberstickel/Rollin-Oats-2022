@@ -7,7 +7,7 @@ import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __e
 import {
   ArtichokeSVG,
   AsparagusSVG,
-  BeetSVG,
+  BerrySVG,
   BokChoySVG,
   BreadSVG,
   BroccoliSVG,
@@ -208,6 +208,9 @@ function EditComponent(props) {
           {illustrationValue === 'beet' &&
             <BeetSVG />
           }
+          {illustrationValue === 'berry' &&
+            <BerrySVG />
+          }
           {illustrationValue === 'bok-choy' &&
             <BokChoySVG />
           }
@@ -273,6 +276,9 @@ function SaveComponent(props) {
       }
       {illustrationValue === 'beet' &&
         <BeetSVG />
+      }
+      {illustrationValue === 'berry' &&
+        <BerrySVG />
       }
       {illustrationValue === 'bok-choy' &&
         <BokChoySVG />

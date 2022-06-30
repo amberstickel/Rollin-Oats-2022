@@ -12,6 +12,10 @@ const illustrationOptions = [
     label: 'Beet'
   },
   {
+    value: 'berry',
+    label: 'Berry'
+  },
+  {
     value: 'bok-choy',
     label: 'Bok Choy'
   },
