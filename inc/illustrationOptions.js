@@ -8,12 +8,20 @@ const illustrationOptions = [
     label: 'Asparagus'
   },
   {
+    value: 'beet',
+    label: 'Beet'
+  },
+  {
     value: 'bok-choy',
     label: 'Bok Choy'
   },
   {
     value: 'bread',
     label: 'Bread'
+  },
+  {
+    value: 'broccoli',
+    label: 'Broccoli'
   },
   {
     value: 'chicken',
@@ -38,6 +46,10 @@ const illustrationOptions = [
   {
     value: 'grape',
     label: 'Grape'
+  },
+  {
+    value: 'kiwi',
+    label: 'Kiwi'
   },
   {
     value: 'mushrooms',

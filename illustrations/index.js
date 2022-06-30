@@ -1,13 +1,16 @@
 import { ArtichokeSVG } from "./artichoke";
 import { AsparagusSVG } from "./asparagus";
+import { BeetSVG } from "./beet";
 import { BokChoySVG } from "./bokChoy";
 import { BreadSVG } from "./bread";
+import { BroccoliSVG } from "./broccoli";
 import { CarrotSVG } from "./carrot";
 import { ChickenSVG } from "./chicken";
 import { CornSVG } from "./corn";
 import { FishSVG } from "./fish";
 import { GarlicSVG } from "./garlic";
 import { GrapeSVG } from "./grape";
+import { KiwiSVG } from "./kiwi";
 import { MushroomSVG } from "./mushroom";
 import { OkraSVG } from "./okra";
 import { PeaSVG } from "./pea";
@@ -17,14 +20,17 @@ import { SpinachSVG } from "./spinach";
 export {
   ArtichokeSVG,
   AsparagusSVG,
+  BeetSVG,
   BokChoySVG,
   BreadSVG,
+  BroccoliSVG,
   CarrotSVG,
   ChickenSVG,
   CornSVG,
   FishSVG,
   GarlicSVG,
   GrapeSVG,
+  KiwiSVG,
   MushroomSVG,
   OkraSVG,
   PeaSVG,

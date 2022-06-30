@@ -7,14 +7,17 @@ import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __e
 import {
   ArtichokeSVG,
   AsparagusSVG,
+  BeetSVG,
   BokChoySVG,
   BreadSVG,
+  BroccoliSVG,
   CarrotSVG,
   ChickenSVG,
   CornSVG,
   FishSVG,
   GarlicSVG,
   GrapeSVG,
+  KiwiSVG,
   MushroomSVG,
   OkraSVG,
   PeaSVG,
@@ -202,11 +205,17 @@ function EditComponent(props) {
           {illustrationValue === 'asparagus' &&
             <AsparagusSVG />
           }
+          {illustrationValue === 'beet' &&
+            <BeetSVG />
+          }
           {illustrationValue === 'bok-choy' &&
             <BokChoySVG />
           }
           {illustrationValue === 'bread' &&
             <BreadSVG />
+          }
+          {illustrationValue === 'broccoli' &&
+            <BroccoliSVG />
           }
           {illustrationValue === 'carrot' &&
             <CarrotSVG />
@@ -225,6 +234,9 @@ function EditComponent(props) {
           }
           {illustrationValue === 'grape' &&
             <GrapeSVG />
+          }
+          {illustrationValue === 'kiwi' &&
+            <KiwiSVG />
           }
           {illustrationValue === 'mushrooms' &&
             <MushroomSVG />
@@ -259,11 +271,17 @@ function SaveComponent(props) {
       {illustrationValue === 'asparagus' &&
         <AsparagusSVG />
       }
+      {illustrationValue === 'beet' &&
+        <BeetSVG />
+      }
       {illustrationValue === 'bok-choy' &&
         <BokChoySVG />
       }
       {illustrationValue === 'bread' &&
         <BreadSVG />
+      }
+      {illustrationValue === 'broccoli' &&
+        <BroccoliSVG />
       }
       {illustrationValue === 'carrot' &&
         <CarrotSVG />
@@ -282,6 +300,9 @@ function SaveComponent(props) {
       }
       {illustrationValue === 'grape' &&
         <GrapeSVG />
+      }
+      {illustrationValue === 'kiwi' &&
+        <KiwiSVG />
       }
       {illustrationValue === 'mushrooms' &&
         <MushroomSVG />
