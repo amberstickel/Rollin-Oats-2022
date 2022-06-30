@@ -14,6 +14,7 @@ import {
   CarrotSVG,
   ChickenSVG,
   CornSVG,
+  EggSVG,
   FishSVG,
   GarlicSVG,
   GrapeSVG,
@@ -229,6 +230,9 @@ function EditComponent(props) {
           {illustrationValue === 'corn' &&
             <CornSVG />
           }
+          {illustrationValue === 'egg' &&
+            <EggSVG />
+          }
           {illustrationValue === 'fish' &&
             <FishSVG />
           }
@@ -297,6 +301,9 @@ function SaveComponent(props) {
       }
       {illustrationValue === 'corn' &&
         <CornSVG />
+      }
+      {illustrationValue === 'egg' &&
+        <EggSVG />
       }
       {illustrationValue === 'fish' &&
         <FishSVG />

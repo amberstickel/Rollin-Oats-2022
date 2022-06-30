@@ -40,6 +40,10 @@ const illustrationOptions = [
     label: 'Corn'
   },
   {
+    value: 'egg',
+    label: 'Egg'
+  },
+  {
     value: 'fish',
     label: 'Fish'
   },

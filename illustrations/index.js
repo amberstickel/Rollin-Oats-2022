@@ -8,6 +8,7 @@ import { BroccoliSVG } from "./broccoli";
 import { CarrotSVG } from "./carrot";
 import { ChickenSVG } from "./chicken";
 import { CornSVG } from "./corn";
+import { EggSVG } from "./egg";
 import { FishSVG } from "./fish";
 import { GarlicSVG } from "./garlic";
 import { GrapeSVG } from "./grape";
@@ -29,6 +30,7 @@ export {
   CarrotSVG,
   ChickenSVG,
   CornSVG,
+  EggSVG,
   FishSVG,
   GarlicSVG,
   GrapeSVG,
