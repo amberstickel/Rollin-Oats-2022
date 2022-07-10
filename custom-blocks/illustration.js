@@ -214,7 +214,7 @@ function EditComponent(props) {
         <PanelBody title="Illustration Positioning">
           <PanelRow>
             <UnitControl
-              label="Move down"
+              label="Adjust top position"
               size="small"
               value={ customCSS !== undefined ? customCSS.top : '' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'top')}
@@ -222,7 +222,7 @@ function EditComponent(props) {
           </PanelRow>
           <PanelRow>
             <UnitControl
-              label="Move up"
+              label="Adjust bottom position"
               size="small"
               value={ customCSS !== undefined ? customCSS.bottom: '' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'bottom')}

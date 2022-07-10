@@ -1715,12 +1715,12 @@ function EditComponent(props) {
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
     title: "Illustration Positioning"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalUnitControl, {
-    label: "Move down",
+    label: "Adjust top position",
     size: "small",
     value: customCSS !== undefined ? customCSS.top : '',
     onChange: nextValue => handleCustomCSSChange(nextValue, 'top')
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalUnitControl, {
-    label: "Move up",
+    label: "Adjust bottom position",
     size: "small",
     value: customCSS !== undefined ? customCSS.bottom : '',
     onChange: nextValue => handleCustomCSSChange(nextValue, 'bottom')
