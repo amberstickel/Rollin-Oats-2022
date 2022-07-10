@@ -167,7 +167,6 @@ function EditComponent(props) {
           <PanelRow>
             <NumberControl
               label="Scale"
-              size="small"
               min={0}
               max={2}
               value={ scaleVal }
@@ -182,7 +181,6 @@ function EditComponent(props) {
 
             <NumberControl
               label="Opacity"
-              size="small"
               min={0}
               max={1}
               step={0.1}
@@ -329,7 +327,7 @@ function SaveComponent(props) {
 
   return (
     <div className={`illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`} style={customCSS}>
-      <div className="illustration__svg-wrapper" style={{tranform: scaleProperty}}>
+      <div className="illustration__svg-wrapper" style={{transform: scaleProperty}}>
         {illustrationValue === 'artichoke' &&
           <ArtichokeSVG />
         }

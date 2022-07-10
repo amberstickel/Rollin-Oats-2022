@@ -1683,7 +1683,6 @@ function EditComponent(props) {
     })
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalNumberControl, {
     label: "Scale",
-    size: "small",
     min: 0,
     max: 2,
     value: scaleVal,
@@ -1693,7 +1692,6 @@ function EditComponent(props) {
     })
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalNumberControl, {
     label: "Opacity",
-    size: "small",
     min: 0,
     max: 1,
     step: 0.1,
@@ -1770,7 +1768,7 @@ function SaveComponent(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "illustration__svg-wrapper",
     style: {
-      tranform: scaleProperty
+      transform: scaleProperty
     }
   }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'beet' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BeetSVG, null), illustrationValue === 'berry' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BerrySVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'broccoli' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BroccoliSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'chicken' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ChickenSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'egg' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.EggSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'kiwi' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.KiwiSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'pea' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.PeaSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null)));
 }
