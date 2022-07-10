@@ -263,6 +263,10 @@ div[data-type="rollinoats/illustration"]:focus {
   fill: #8F529A;
 }
 
+.illustration--dark-purple path {
+  fill: #4A2664;
+}
+
 .illustration--cream path {
   fill: #F7F3EA;
 }
