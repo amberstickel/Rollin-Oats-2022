@@ -169,7 +169,7 @@ function EditComponent(props) {
               label="Scale"
               size="small"
               min={0}
-              max={1}
+              max={2}
               value={ scaleVal }
               step={0.05}
               onChange={(nextValue) => setAttributes({
@@ -183,6 +183,8 @@ function EditComponent(props) {
             <NumberControl
               label="Opacity"
               size="small"
+              min={0}
+              max={1}
               step={0.1}
               value={ customCSS !== undefined ? customCSS.opacity : '1' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'opacity')}
