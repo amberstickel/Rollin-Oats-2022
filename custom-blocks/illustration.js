@@ -34,7 +34,7 @@ registerBlockType("rollinoats/illustration", {
   attributes: {
     illustrationValue: {
       type: 'string',
-      default: 'garlic-bulb'
+      default: 'artichoke'
     },
     illustrationColor: {
       type: "string",
@@ -138,8 +138,6 @@ function EditComponent(props) {
   }, [rotateProperty]);
 
   useEffect(() => {
-    console.log('scale val', scaleVal);
-    console.log('scale property', scaleProperty);
     setScaleProperty(`scale(${scaleVal})`);
   }, [scaleVal]);
 
@@ -169,6 +167,9 @@ function EditComponent(props) {
           <PanelRow>
             <NumberControl
               label="Scale"
+              size="small"
+              min={0}
+              max={1}
               value={ scaleVal }
               step={0.05}
               onChange={(nextValue) => setAttributes({
@@ -178,10 +179,12 @@ function EditComponent(props) {
           </PanelRow>
         
           <PanelRow>
-            <InputControl
-              label="Image Opacity"
+
+            <NumberControl
+              label="Opacity"
               size="small"
-              value={ customCSS !== undefined ? customCSS.opacity : '' }
+              step={0.1}
+              value={ customCSS !== undefined ? customCSS.opacity : '1' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'opacity')}
             />
           </PanelRow>
@@ -318,11 +321,13 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
   const { attributes } = props;
-  const { illustrationColor, illustrationValue, customCSS, horizontalPlacement, scaleProperty } = attributes;
+  const { illustrationColor, illustrationValue, customCSS, horizontalPlacement, scaleVal } = attributes;
+
+  const scaleProperty = `scale(${scaleVal})`;
 
   return (
     <div className={`illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`} style={customCSS}>
-      <div className="illustration__svg-wrapper" style={{scale: scaleProperty}}>
+      <div className="illustration__svg-wrapper" style={{tranform: scaleProperty}}>
         {illustrationValue === 'artichoke' &&
           <ArtichokeSVG />
         }
