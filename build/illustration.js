@@ -1299,12 +1299,7 @@ const SpinachSVG = () => {
     xmlns: "http://www.w3.org/2000/svg",
     width: "440.941",
     height: "478.126"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("clipPath", {
-    id: "a"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
-    "data-name": "Rectangle 14",
-    d: "M0 0h387.198v285.606H0z"
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
     "data-name": "Group 7"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
     "data-name": "Group 6",
@@ -1555,6 +1550,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__.registerBlockType)("rollinoats/illustration", {
   title: "Rollin Oats Illustration",
   attributes: {
@@ -1572,6 +1568,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     customCSS: {
       type: "object"
+    },
+    rotateDeg: {
+      type: "number",
+      default: '0'
     }
   },
   edit: EditComponent,
@@ -1594,7 +1594,8 @@ function EditComponent(props) {
     illustrationValue,
     illustrationColor,
     customCSS,
-    horizontalPlacement
+    horizontalPlacement,
+    rotateDeg
   } = attributes;
 
   const handleIllustrationSelection = selection => {
@@ -1626,6 +1627,10 @@ function EditComponent(props) {
       newCustomCSS = { ...customCSS,
         opacity: nextValue
       };
+    } else if (propertyName === 'angle') {
+      setAttributes({
+        rotateDeg: nextValue
+      });
     }
 
     setAttributes({
@@ -1646,6 +1651,14 @@ function EditComponent(props) {
     });
   }
 
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const newCustomCSS = { ...customCSS,
+      transform: `rotate(${rotateDeg}deg)`
+    };
+    setAttributes({
+      customCSS: newCustomCSS
+    });
+  }, [rotateDeg]);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
     title: "Illustration Image",
     initialOpen: true
@@ -1679,6 +1692,12 @@ function EditComponent(props) {
         horizontalPlacement: nextValue
       });
     }
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.AnglePickerControl, {
+    label: "Rotate",
+    value: rotateDeg,
+    onChange: nextValue => setAttributes({
+      rotateDeg: nextValue
+    })
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
     title: "Illustration Positioning"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalUnitControl, {

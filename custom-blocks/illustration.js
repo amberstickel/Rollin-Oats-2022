@@ -2,8 +2,9 @@
 import illustrationOptions from '../inc/illustrationOptions';
 import illustrationColorOptions from '../inc/illustrationColors';
 import { registerBlockType } from '@wordpress/blocks';
+import { useEffect } from '@wordpress/element';
 import {  InspectorControls, getColorObjectByColorValue } from '@wordpress/block-editor';
-import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl, __experimentalUnitControl as UnitControl } from '@wordpress/components';
+import {  PanelBody, PanelRow, AnglePickerControl, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl, __experimentalUnitControl as UnitControl } from '@wordpress/components';
 import {
   ArtichokeSVG,
   AsparagusSVG,
@@ -45,6 +46,10 @@ registerBlockType("rollinoats/illustration", {
     },
     customCSS: {
       type: "object"
+    }, 
+    rotateDeg: {
+      type: "number",
+      default: '0'
     }
   },
   edit: EditComponent,
@@ -65,7 +70,7 @@ const horizontalPlacementOptions = [
 function EditComponent(props) {
 
   const { attributes, setAttributes } = props;
-  const { illustrationValue, illustrationColor, customCSS, horizontalPlacement } = attributes;
+  const { illustrationValue, illustrationColor, customCSS, horizontalPlacement, rotateDeg } = attributes;
   
   const handleIllustrationSelection = (selection) => {
     setAttributes({
@@ -100,6 +105,10 @@ function EditComponent(props) {
         ...customCSS,
         opacity: nextValue
       };
+    } else if (propertyName === 'angle') {
+      setAttributes({
+        rotateDeg: nextValue
+      });
     }
 
     setAttributes({
@@ -115,6 +124,17 @@ function EditComponent(props) {
     const { name } = getColorObjectByColorValue(illustrationColorOptions, colorCode);
     setAttributes({ illustrationColor: name });
   }
+
+  useEffect(() => {
+    const newCustomCSS = {
+      ...customCSS,
+      transform: `rotate(${rotateDeg}deg)`
+    };
+    setAttributes({
+      customCSS: newCustomCSS
+    });
+    
+  }, [rotateDeg]);
 
   return (
     <>
@@ -135,7 +155,6 @@ function EditComponent(props) {
               size="small"
               value={ customCSS !== undefined ? customCSS.opacity : '' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'opacity')}
-              
             />
           </PanelRow>
        
@@ -163,6 +182,15 @@ function EditComponent(props) {
               }}
             />
           </PanelRow>
+          <PanelRow>
+            <AnglePickerControl
+              label="Rotate"
+              value={ rotateDeg }
+              onChange={(nextValue) => setAttributes({
+                rotateDeg: nextValue
+              })}
+            />
+          </PanelRow>
         </PanelBody>
         <PanelBody title="Illustration Positioning">
           <PanelRow>
@@ -174,7 +202,6 @@ function EditComponent(props) {
             />
           </PanelRow>
           <PanelRow>
-            
             <UnitControl
               label="Move up"
               size="small"
