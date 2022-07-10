@@ -141,7 +141,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     contentWidth: {
       type: "string",
-      default: "regular"
+      default: "wide"
     }
   },
   edit: EditComponent,
@@ -161,7 +161,10 @@ function EditComponent(props) {
     label: 'Regular (840px)'
   }, {
     value: 'wide',
-    label: 'Wide (1100px)'
+    label: 'Wide (1200px)'
+  }, {
+    value: 'full-width',
+    label: 'Full Width'
   }];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: "Content Width",

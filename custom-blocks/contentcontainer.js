@@ -14,7 +14,7 @@ registerBlockType("rollinoats/contentcontainer", {
     },
     contentWidth: {
       type: "string",
-      default: "regular"
+      default: "wide"
     }
   },
   edit: EditComponent,
@@ -34,7 +34,11 @@ const contentWidthOptions = [
   },
   {
     value: 'wide',
-    label: 'Wide (1100px)'
+    label: 'Wide (1200px)'
+  },
+  {
+    value: 'full-width',
+    label: 'Full Width'
   }
 ];
 

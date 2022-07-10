@@ -120,18 +120,16 @@ function SaveComponent(props) {
   const { attributes } = props;
   const { bgColorName, waveBorderColorName, wavyTopBorder, wavyBottomBorder } = attributes;
   return (
-    <section className={`ro--section`}>
-        {
-          wavyTopBorder &&
-          <div className={`ro--section__wavy-top ro--section-bg--${waveBorderColorName}`}></div>
-        }
-        <div className={`ro--section__container ro--section-bg--${bgColorName}`}>
-          <InnerBlocks.Content />
-        </div>
-        {
-          wavyBottomBorder &&
-          <div className={`ro--section__wavy-bottom ro--section-bg--${waveBorderColorName}`}></div>
-        }
-      </section>
+    <section className={`ro--section ro--section-bg--${waveBorderColorName}`}>
+    { wavyTopBorder &&
+      <div className={`ro--section__wavy-top ro--section-bg--${bgColorName}`}></div>
+    }
+    <div className={`ro--section__container ro--section-bg--${bgColorName}`}>
+        <InnerBlocks.Content />
+    </div>
+    { wavyBottomBorder &&
+      <div className={`ro--section__wavy-bottom ro--section-bg--${bgColorName}`}></div>
+    }
+  </section>
   );
 }

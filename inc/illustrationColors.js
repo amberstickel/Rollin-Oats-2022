@@ -4,6 +4,10 @@ const illustrationColorOptions = [
     color: "#6A933E" 
   },
   { 
+    name: "dark-green", 
+    color: "#355A24" 
+  },
+  { 
     name: "purple", 
     color: "#8F529A" 
   },

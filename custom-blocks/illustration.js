@@ -3,10 +3,11 @@ import illustrationOptions from '../inc/illustrationOptions';
 import illustrationColorOptions from '../inc/illustrationColors';
 import { registerBlockType } from '@wordpress/blocks';
 import {  InspectorControls, getColorObjectByColorValue } from '@wordpress/block-editor';
-import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl } from '@wordpress/components';
+import {  PanelBody, PanelRow, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl, __experimentalUnitControl as UnitControl } from '@wordpress/components';
 import {
   ArtichokeSVG,
   AsparagusSVG,
+  BeetSVG,
   BerrySVG,
   BokChoySVG,
   BreadSVG,
@@ -165,32 +166,33 @@ function EditComponent(props) {
         </PanelBody>
         <PanelBody title="Illustration Positioning">
           <PanelRow>
-            <InputControl
-              label="Top Position"
+            <UnitControl
+              label="Move down"
               size="small"
               value={ customCSS !== undefined ? customCSS.top : '' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'top')}
             />
           </PanelRow>
           <PanelRow>
-            <InputControl
-              label="Bottom Position"
+            
+            <UnitControl
+              label="Move up"
               size="small"
               value={ customCSS !== undefined ? customCSS.bottom: '' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'bottom')}
             />
           </PanelRow>
           <PanelRow>
-            <InputControl
-              label="Left Position"
+            <UnitControl
+              label="Adjust left position"
               size="small"
               value={ customCSS !== undefined ? customCSS.left : '' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'left')}
             />
           </PanelRow>
           <PanelRow>
-            <InputControl
-              label="Right Position"
+            <UnitControl
+              label="Adjust right position"
               size="small"
               value={ customCSS !== undefined ? customCSS.right : '' }
               onChange={(nextValue) => handleCustomCSSChange(nextValue, 'right')}
@@ -268,10 +270,10 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
   const { attributes } = props;
-  const { illustrationValue, customCSS, horizontalPlacement } = attributes;
+  const { illustrationColor, illustrationValue, customCSS, horizontalPlacement } = attributes;
 
   return (
-    <div className={`illustration illustration--${horizontalPlacement}`} style={customCSS}>
+    <div className={`illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`} style={customCSS}>
       {illustrationValue === 'artichoke' &&
         <ArtichokeSVG />
       }
