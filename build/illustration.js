@@ -1569,9 +1569,13 @@ __webpack_require__.r(__webpack_exports__);
     customCSS: {
       type: "object"
     },
-    rotateDeg: {
+    rotateProperty: {
       type: "number",
       default: '0'
+    },
+    scaleVal: {
+      type: "number",
+      default: 1
     }
   },
   edit: EditComponent,
@@ -1595,8 +1599,10 @@ function EditComponent(props) {
     illustrationColor,
     customCSS,
     horizontalPlacement,
-    rotateDeg
+    rotateProperty,
+    scaleVal
   } = attributes;
+  const [scaleProperty, setScaleProperty] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)('');
 
   const handleIllustrationSelection = selection => {
     setAttributes({
@@ -1627,10 +1633,6 @@ function EditComponent(props) {
       newCustomCSS = { ...customCSS,
         opacity: nextValue
       };
-    } else if (propertyName === 'angle') {
-      setAttributes({
-        rotateDeg: nextValue
-      });
     }
 
     setAttributes({
@@ -1653,12 +1655,17 @@ function EditComponent(props) {
 
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     const newCustomCSS = { ...customCSS,
-      transform: `rotate(${rotateDeg}deg)`
+      transform: `rotate(${rotateProperty}deg)`
     };
     setAttributes({
       customCSS: newCustomCSS
     });
-  }, [rotateDeg]);
+  }, [rotateProperty]);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    console.log('scale val', scaleVal);
+    console.log('scale property', scaleProperty);
+    setScaleProperty(`scale(${scaleVal})`);
+  }, [scaleVal]);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
     title: "Illustration Image",
     initialOpen: true
@@ -1667,6 +1674,19 @@ function EditComponent(props) {
     value: illustrationValue,
     onChange: handleIllustrationSelection,
     options: _inc_illustrationOptions__WEBPACK_IMPORTED_MODULE_1__["default"]
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.AnglePickerControl, {
+    label: "Rotate",
+    value: rotateProperty,
+    onChange: nextValue => setAttributes({
+      rotateProperty: nextValue
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalNumberControl, {
+    label: "Scale",
+    value: scaleVal,
+    step: 0.05,
+    onChange: nextValue => setAttributes({
+      scaleVal: nextValue
+    })
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalInputControl, {
     label: "Image Opacity",
     size: "small",
@@ -1692,12 +1712,6 @@ function EditComponent(props) {
         horizontalPlacement: nextValue
       });
     }
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.AnglePickerControl, {
-    label: "Rotate",
-    value: rotateDeg,
-    onChange: nextValue => setAttributes({
-      rotateDeg: nextValue
-    })
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
     title: "Illustration Positioning"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalUnitControl, {
@@ -1723,7 +1737,12 @@ function EditComponent(props) {
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`,
     style: customCSS
-  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'beet' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BeetSVG, null), illustrationValue === 'berry' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BerrySVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'broccoli' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BroccoliSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'chicken' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ChickenSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'egg' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.EggSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'kiwi' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.KiwiSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'pea' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.PeaSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null)));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "illustration__svg-wrapper",
+    style: {
+      transform: scaleProperty
+    }
+  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'beet' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BeetSVG, null), illustrationValue === 'berry' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BerrySVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'broccoli' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BroccoliSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'chicken' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ChickenSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'egg' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.EggSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'kiwi' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.KiwiSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'pea' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.PeaSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null))));
 }
 
 function SaveComponent(props) {
@@ -1734,12 +1753,18 @@ function SaveComponent(props) {
     illustrationColor,
     illustrationValue,
     customCSS,
-    horizontalPlacement
+    horizontalPlacement,
+    scaleProperty
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: `illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`,
     style: customCSS
-  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'beet' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BeetSVG, null), illustrationValue === 'berry' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BerrySVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'broccoli' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BroccoliSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'chicken' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'egg' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.EggSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'kiwi' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.KiwiSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'pea' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.PeaSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "illustration__svg-wrapper",
+    style: {
+      scale: scaleProperty
+    }
+  }, illustrationValue === 'artichoke' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ArtichokeSVG, null), illustrationValue === 'asparagus' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.AsparagusSVG, null), illustrationValue === 'beet' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BeetSVG, null), illustrationValue === 'berry' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BerrySVG, null), illustrationValue === 'bok-choy' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BokChoySVG, null), illustrationValue === 'bread' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BreadSVG, null), illustrationValue === 'broccoli' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.BroccoliSVG, null), illustrationValue === 'carrot' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CarrotSVG, null), illustrationValue === 'chicken' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.ChickenSVG, null), illustrationValue === 'corn' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.CornSVG, null), illustrationValue === 'egg' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.EggSVG, null), illustrationValue === 'fish' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.FishSVG, null), illustrationValue === 'garlic-bulb' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GarlicSVG, null), illustrationValue === 'grape' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.GrapeSVG, null), illustrationValue === 'kiwi' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.KiwiSVG, null), illustrationValue === 'mushrooms' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.MushroomSVG, null), illustrationValue === 'okra' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.OkraSVG, null), illustrationValue === 'pea' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.PeaSVG, null), illustrationValue === 'salad-bowl' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SaladBowlSVG, null), illustrationValue === 'spinach' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_illustrations__WEBPACK_IMPORTED_MODULE_6__.SpinachSVG, null)));
 }
 })();
 

@@ -2,9 +2,9 @@
 import illustrationOptions from '../inc/illustrationOptions';
 import illustrationColorOptions from '../inc/illustrationColors';
 import { registerBlockType } from '@wordpress/blocks';
-import { useEffect } from '@wordpress/element';
+import { useEffect, useState } from '@wordpress/element';
 import {  InspectorControls, getColorObjectByColorValue } from '@wordpress/block-editor';
-import {  PanelBody, PanelRow, AnglePickerControl, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl, __experimentalUnitControl as UnitControl } from '@wordpress/components';
+import {  PanelBody, PanelRow, AnglePickerControl, ColorPalette, ComboboxControl, SelectControl, __experimentalInputControl as InputControl, __experimentalNumberControl as NumberControl, __experimentalUnitControl as UnitControl } from '@wordpress/components';
 import {
   ArtichokeSVG,
   AsparagusSVG,
@@ -47,9 +47,13 @@ registerBlockType("rollinoats/illustration", {
     customCSS: {
       type: "object"
     }, 
-    rotateDeg: {
+    rotateProperty: {
       type: "number",
       default: '0'
+    },
+    scaleVal: {
+      type: "number",
+      default: 1
     }
   },
   edit: EditComponent,
@@ -70,7 +74,8 @@ const horizontalPlacementOptions = [
 function EditComponent(props) {
 
   const { attributes, setAttributes } = props;
-  const { illustrationValue, illustrationColor, customCSS, horizontalPlacement, rotateDeg } = attributes;
+  const { illustrationValue, illustrationColor, customCSS, horizontalPlacement, rotateProperty, scaleVal } = attributes;
+  const [scaleProperty, setScaleProperty] = useState('');
   
   const handleIllustrationSelection = (selection) => {
     setAttributes({
@@ -105,10 +110,6 @@ function EditComponent(props) {
         ...customCSS,
         opacity: nextValue
       };
-    } else if (propertyName === 'angle') {
-      setAttributes({
-        rotateDeg: nextValue
-      });
     }
 
     setAttributes({
@@ -128,13 +129,19 @@ function EditComponent(props) {
   useEffect(() => {
     const newCustomCSS = {
       ...customCSS,
-      transform: `rotate(${rotateDeg}deg)`
+      transform: `rotate(${rotateProperty}deg)`
     };
     setAttributes({
       customCSS: newCustomCSS
     });
     
-  }, [rotateDeg]);
+  }, [rotateProperty]);
+
+  useEffect(() => {
+    console.log('scale val', scaleVal);
+    console.log('scale property', scaleProperty);
+    setScaleProperty(`scale(${scaleVal})`);
+  }, [scaleVal]);
 
   return (
     <>
@@ -146,6 +153,27 @@ function EditComponent(props) {
               value={ illustrationValue }
               onChange={ handleIllustrationSelection }
               options={ illustrationOptions }
+            />
+          </PanelRow>
+
+          <PanelRow>
+            <AnglePickerControl
+              label="Rotate"
+              value={ rotateProperty }
+              onChange={(nextValue) => setAttributes({
+                rotateProperty: nextValue
+              })}
+            />
+          </PanelRow>
+
+          <PanelRow>
+            <NumberControl
+              label="Scale"
+              value={ scaleVal }
+              step={0.05}
+              onChange={(nextValue) => setAttributes({
+                scaleVal: nextValue
+              })}
             />
           </PanelRow>
         
@@ -180,15 +208,6 @@ function EditComponent(props) {
                   horizontalPlacement: nextValue
                 })
               }}
-            />
-          </PanelRow>
-          <PanelRow>
-            <AnglePickerControl
-              label="Rotate"
-              value={ rotateDeg }
-              onChange={(nextValue) => setAttributes({
-                rotateDeg: nextValue
-              })}
             />
           </PanelRow>
         </PanelBody>
@@ -229,66 +248,68 @@ function EditComponent(props) {
       </InspectorControls>
 
         <div className={`illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`} style={customCSS}>
-          {illustrationValue === 'artichoke' &&
-            <ArtichokeSVG />
-          }
-          {illustrationValue === 'asparagus' &&
-            <AsparagusSVG />
-          }
-          {illustrationValue === 'beet' &&
-            <BeetSVG />
-          }
-          {illustrationValue === 'berry' &&
-            <BerrySVG />
-          }
-          {illustrationValue === 'bok-choy' &&
-            <BokChoySVG />
-          }
-          {illustrationValue === 'bread' &&
-            <BreadSVG />
-          }
-          {illustrationValue === 'broccoli' &&
-            <BroccoliSVG />
-          }
-          {illustrationValue === 'carrot' &&
-            <CarrotSVG />
-          }
-          {illustrationValue === 'chicken' &&
-            <ChickenSVG />
-          }
-          {illustrationValue === 'corn' &&
-            <CornSVG />
-          }
-          {illustrationValue === 'egg' &&
-            <EggSVG />
-          }
-          {illustrationValue === 'fish' &&
-            <FishSVG />
-          }
-          {illustrationValue === 'garlic-bulb' &&
-            <GarlicSVG />
-          }
-          {illustrationValue === 'grape' &&
-            <GrapeSVG />
-          }
-          {illustrationValue === 'kiwi' &&
-            <KiwiSVG />
-          }
-          {illustrationValue === 'mushrooms' &&
-            <MushroomSVG />
-          }
-          {illustrationValue === 'okra' &&
-            <OkraSVG />
-          }
-          {illustrationValue === 'pea' &&
-            <PeaSVG />
-          }
-          {illustrationValue === 'salad-bowl' &&
-            <SaladBowlSVG />
-          }
-          {illustrationValue === 'spinach' &&
-            <SpinachSVG />
-          }
+          <div className="illustration__svg-wrapper" style={{transform: scaleProperty}}>
+            {illustrationValue === 'artichoke' &&
+              <ArtichokeSVG />
+            }
+            {illustrationValue === 'asparagus' &&
+              <AsparagusSVG />
+            }
+            {illustrationValue === 'beet' &&
+              <BeetSVG />
+            }
+            {illustrationValue === 'berry' &&
+              <BerrySVG />
+            }
+            {illustrationValue === 'bok-choy' &&
+              <BokChoySVG />
+            }
+            {illustrationValue === 'bread' &&
+              <BreadSVG />
+            }
+            {illustrationValue === 'broccoli' &&
+              <BroccoliSVG />
+            }
+            {illustrationValue === 'carrot' &&
+              <CarrotSVG />
+            }
+            {illustrationValue === 'chicken' &&
+              <ChickenSVG />
+            }
+            {illustrationValue === 'corn' &&
+              <CornSVG />
+            }
+            {illustrationValue === 'egg' &&
+              <EggSVG />
+            }
+            {illustrationValue === 'fish' &&
+              <FishSVG />
+            }
+            {illustrationValue === 'garlic-bulb' &&
+              <GarlicSVG />
+            }
+            {illustrationValue === 'grape' &&
+              <GrapeSVG />
+            }
+            {illustrationValue === 'kiwi' &&
+              <KiwiSVG />
+            }
+            {illustrationValue === 'mushrooms' &&
+              <MushroomSVG />
+            }
+            {illustrationValue === 'okra' &&
+              <OkraSVG />
+            }
+            {illustrationValue === 'pea' &&
+              <PeaSVG />
+            }
+            {illustrationValue === 'salad-bowl' &&
+              <SaladBowlSVG />
+            }
+            {illustrationValue === 'spinach' &&
+              <SpinachSVG />
+            }
+          </div>
         </div>
     </>
   );
@@ -297,71 +318,72 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
   const { attributes } = props;
-  const { illustrationColor, illustrationValue, customCSS, horizontalPlacement } = attributes;
+  const { illustrationColor, illustrationValue, customCSS, horizontalPlacement, scaleProperty } = attributes;
 
   return (
     <div className={`illustration illustration--${horizontalPlacement} illustration--${illustrationColor}`} style={customCSS}>
-      {illustrationValue === 'artichoke' &&
-        <ArtichokeSVG />
-      }
-      {illustrationValue === 'asparagus' &&
-        <AsparagusSVG />
-      }
-      {illustrationValue === 'beet' &&
-        <BeetSVG />
-      }
-      {illustrationValue === 'berry' &&
-        <BerrySVG />
-      }
-      {illustrationValue === 'bok-choy' &&
-        <BokChoySVG />
-      }
-      {illustrationValue === 'bread' &&
-        <BreadSVG />
-      }
-      {illustrationValue === 'broccoli' &&
-        <BroccoliSVG />
-      }
-      {illustrationValue === 'carrot' &&
-        <CarrotSVG />
-      }
-      {illustrationValue === 'chicken' &&
-        <CarrotSVG />
-      }
-      {illustrationValue === 'corn' &&
-        <CornSVG />
-      }
-      {illustrationValue === 'egg' &&
-        <EggSVG />
-      }
-      {illustrationValue === 'fish' &&
-        <FishSVG />
-      }
-      {illustrationValue === 'garlic-bulb' &&
-        <GarlicSVG />
-      }
-      {illustrationValue === 'grape' &&
-        <GrapeSVG />
-      }
-      {illustrationValue === 'kiwi' &&
-        <KiwiSVG />
-      }
-      {illustrationValue === 'mushrooms' &&
-        <MushroomSVG />
-      }
-      {illustrationValue === 'okra' &&
-        <OkraSVG />
-      }
-      {illustrationValue === 'pea' &&
-        <PeaSVG />
-      }
-      {illustrationValue === 'salad-bowl' &&
-        <SaladBowlSVG />
-      }
-      {illustrationValue === 'spinach' &&
-        <SpinachSVG />
-      }
+      <div className="illustration__svg-wrapper" style={{scale: scaleProperty}}>
+        {illustrationValue === 'artichoke' &&
+          <ArtichokeSVG />
+        }
+        {illustrationValue === 'asparagus' &&
+          <AsparagusSVG />
+        }
+        {illustrationValue === 'beet' &&
+          <BeetSVG />
+        }
+        {illustrationValue === 'berry' &&
+          <BerrySVG />
+        }
+        {illustrationValue === 'bok-choy' &&
+          <BokChoySVG />
+        }
+        {illustrationValue === 'bread' &&
+          <BreadSVG />
+        }
+        {illustrationValue === 'broccoli' &&
+          <BroccoliSVG />
+        }
+        {illustrationValue === 'carrot' &&
+          <CarrotSVG />
+        }
+        {illustrationValue === 'chicken' &&
+          <ChickenSVG />
+        }
+        {illustrationValue === 'corn' &&
+          <CornSVG />
+        }
+        {illustrationValue === 'egg' &&
+          <EggSVG />
+        }
+        {illustrationValue === 'fish' &&
+          <FishSVG />
+        }
+        {illustrationValue === 'garlic-bulb' &&
+          <GarlicSVG />
+        }
+        {illustrationValue === 'grape' &&
+          <GrapeSVG />
+        }
+        {illustrationValue === 'kiwi' &&
+          <KiwiSVG />
+        }
+        {illustrationValue === 'mushrooms' &&
+          <MushroomSVG />
+        }
+        {illustrationValue === 'okra' &&
+          <OkraSVG />
+        }
+        {illustrationValue === 'pea' &&
+          <PeaSVG />
+        }
+        {illustrationValue === 'salad-bowl' &&
+          <SaladBowlSVG />
+        }
+        {illustrationValue === 'spinach' &&
+          <SpinachSVG />
+        }
+      </div>
     </div>
-    
   );
 }
