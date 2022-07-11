@@ -471,7 +471,7 @@ textarea {
 }
 
 .wp-block-post-content .wp-block-image {
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 
 /* ------------------------------------------- */
@@ -624,4 +624,100 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   height: 200px;
+}
+
+.wp-block-query-pagination-numbers {
+  display: flex;
+  gap: 1rem;
+}
+
+.wp-block-query-pagination-numbers .page-numbers {
+  color: var(--wp--preset--color--ro-dark-purple);
+  text-decoration: none;
+}
+
+.wp-block-query-pagination-numbers .page-numbers.current {
+  border-bottom: 2px solid var(--wp--preset--color--ro-medium-purple);
+  color: var(--wp--preset--color--ro-medium-purple);
+  padding-bottom: 2px;
+}
+
+.ro--read-more {
+  border-bottom: 2px solid var(--wp--preset--color--ro-medium-purple);
+  color: var(--wp--preset--color--ro-medium-purple);
+  padding-bottom: 2px;
+}
+
+/* ------------------------------------------- */
+/* Table Styles
+/* ------------------------------------------- */
+thead {
+  color: var(--wp--preset--color--ro-medium-purple);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+th,
+td {
+  padding: 0 1rem;
+}
+
+a {
+  border-bottom: 2px solid var(--wp--preset--color--ro-medium-purple);
+  color: var(--wp--preset--color--ro-medium-purple);
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+/* ------------------------------------------- */
+/* Block: Embed
+/* ------------------------------------------- */
+
+.wp-block-embed {
+  margin: 2rem 0;
+}
+
+.wp-block-embed figcaption {
+  color: var(--wp--preset--color--ro-medium-purple);
+  display: block;
+  font-family: var(--wp--preset--font-family--basic-sans);
+  font-size: var(--wp--preset--font-size--paragraph-small);
+  margin: 1rem auto;
+  text-align: center;
+}
+
+
+/* ------------------------------------------- */
+/* Blockquote styling
+/* ------------------------------------------- */
+
+blockquote {
+  padding-left: 1.5rem;
+  position: relative;
+  quotes: '\201c' '\201d';
+}
+
+blockquote::before {
+  content: open-quote;
+  font-size: 7rem;
+  left: -2rem;
+  line-height: 5rem;
+  position: absolute;
+  top: 0;
+}
+
+blockquote,
+blockquote p {
+  font-family: var(--wp--preset--font-family--roc-grotesk);
+}
+
+
+blockquote cite {
+  color: var(--wp--preset--color--ro-medium-purple);
+  display: block;
+  font-family: var(--wp--preset--font-family--basic-sans);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+  text-transform: uppercase;
 }

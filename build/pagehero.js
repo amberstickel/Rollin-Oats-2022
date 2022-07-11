@@ -247,7 +247,7 @@ function EditComponent(props) {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "page-hero__content"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
-    allowedBlocks: ["core/post-title", "rollinoats/herosubhead"]
+    allowedBlocks: ["core/post-title", "core/heading", "rollinoats/herosubhead"]
   })))));
 }
 

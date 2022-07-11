@@ -283,6 +283,32 @@
           "fontWeight": "700",
           "lineHeight": "28px"
         }
+      },
+      "core/query-pagination-numbers": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--basic-sans)",
+          "fontSize": "var(--wp--preset--font-size--paragraph-medium)",
+          "fontWeight": "700",
+          "lineHeight": "28px"
+        }
+      },
+      "core/table": {
+        "color": {
+          "text": "var(--wp--preset--color--ro-dark-purple)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--basic-sans)",
+          "fontSize": "var(--wp--preset--font-size--paragraph-medium)",
+          "lineHeight": "28px"
+        }
+      },
+      "core/youtube": {
+        "spacing": {
+          "margin": {
+            "top": "1rem",
+            "bottom": "1rem"
+          }
+        }
       }
     }
   }
