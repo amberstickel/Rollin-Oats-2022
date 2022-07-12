@@ -117,6 +117,11 @@
 					"name": "Small Heading"
 				},
         {
+					"slug": "post-heading",
+					"size": "30px", 
+					"name": "Post Heading"
+				},
+        {
 					"slug": "heading-medium",
 					"size": "40px", 
 					"name": "Medium Heading"
@@ -158,7 +163,7 @@
         },
         "typography": {
           "fontFamily":  "var(--wp--preset--font-family--new-spirit)",
-          "fontSize": "var(--wp--preset--font-size--heading-small)"
+          "fontSize": "var(--wp--preset--font-size--post-heading)"
         }
       },
       "h4": {
@@ -182,6 +187,21 @@
     },
     "blocks": {
       "core/paragraph": {
+        "color": {
+          "text": "var(--wp--preset--color--ro-dark-purple)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--basic-sans)",
+          "fontSize": "var(--wp--preset--font-size--paragraph-medium)",
+          "lineHeight": "28px"
+        }
+      },
+      "core/heading": {
+        "color": {
+          "text": "var(--wp--preset--color--ro-dark-purple)"
+        }
+      },
+      "core/list": {
         "color": {
           "text": "var(--wp--preset--color--ro-dark-purple)"
         },

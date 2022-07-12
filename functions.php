@@ -1,53 +1,31 @@
 <?php 
 
-// Add custom files
-function rollinOatsFiles() {
-	wp_enqueue_style( ' add_custom_fonts ', 'https://use.typekit.net/hjd3efb.css', false );
-  wp_enqueue_style('rollin_oats_styles', get_theme_file_uri('/assets/css/site.css'));
-  wp_enqueue_style('custom_editor_styles', get_theme_file_uri('/assets/css/editor.css'));
+/*	--------------------------------------------------------------------------------
+	Enqueue Rollin Oats Styles
+--------------------------------------------------------------------------------*/
 
-}
+	function ro_styles() {
+    wp_enqueue_style( ' add_custom_fonts ', 'https://use.typekit.net/hjd3efb.css', false );
+		wp_enqueue_style( 'ro-styles-shared', 		get_template_directory_uri() . '/assets/css/shared.css' );
+		wp_enqueue_style( 'ro-styles-blocks', 		get_template_directory_uri() . '/assets/css/blocks.css' );
+	}
+	add_action( 'wp_enqueue_scripts', 'ro_styles' );
 
-add_action('wp_enqueue_scripts', 'rollinOatsFiles');
 
-
-
-// Add styles to editor
-function setupRollinOatsTheme() {
+/*	--------------------------------------------------------------------------------
+	Set Up Theme
+--------------------------------------------------------------------------------*/
+function ro_theme() {
 	add_theme_support('editor-styles');
-	add_editor_style(array('https://use.typekit.net/hjd3efb.css', 'assets/css/site.css'));
+	add_editor_style(array('https://use.typekit.net/hjd3efb.css', 'assets/css/shared.css', 'assets/css/blocks.css', 'assets/css/editor.css'));
 }
 
-add_action( 'after_setup_theme', 'setupRollinOatsTheme' );
+add_action( 'after_setup_theme', 'ro_theme' );
 
 
-class placeholderBlock {
-  function __construct($name) {
-    $this->name = $name;
-    add_action('init', [$this, 'onInit']);
-  }
-
-  function ourRenderCallback($attributes, $content) {
-    ob_start();
-    require get_theme_file_path("/custom-blocks/{$this->name}.php");
-    return ob_get_clean();
-  }
-
-  function onInit() {
-    wp_register_script($this->name, get_stylesheet_directory_uri() . "/custom-blocks/{$this->name}.js", array('wp-blocks', 'wp-editor'));
-    
-    $ourArgs = array(
-      'editor_script' => $this->name,
-      'render_callback' => [$this, 'ourRenderCallback']
-    );
-
-    register_block_type("rollinoats/{$this->name}", $ourArgs);
-  }
-}
-
-new placeholderBlock("events");
-
-// resusable method for creating new block types
+/*	--------------------------------------------------------------------------------
+	Custom Blocks
+--------------------------------------------------------------------------------*/
 class jsxBlock {
   function __construct($name, $renderCallback = null, $imgData = null) {
     $this->name = $name;
