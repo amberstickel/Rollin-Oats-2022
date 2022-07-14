@@ -44,7 +44,9 @@
 }
 
 .page-hero__img {
-  background-color: var(--wp--preset--color--ro-dark-purple);
+  background-color: var(--wp--preset--color--ro-medium-purple);
+  background-position: center;
+  background-size: cover;
   min-height: 400px;
   position: absolute;
   width: 100%;
@@ -195,6 +197,7 @@
   padding: 1.5rem;
   position: relative;
   width: 100%;
+  z-index: 2;
 }
 
 .ro--content-container--full-width { 
@@ -273,6 +276,12 @@ div[data-type="rollinoats/illustration"]:focus {
   fill: #FFFFFF;
 }
 
+@media screen and (max-width: 55rem) {
+  .illustration {
+    opacity: .25 !important;
+  }
+}
+
 
 
 /* ------------------------------------------- */
@@ -311,6 +320,12 @@ div[data-type="rollinoats/illustration"]:focus {
   position: absolute;
 }
 
+.marquee-banner__content li { 
+  color: var(--wp--preset--color--ro-cream);
+  font-family: var(--wp--preset--font-family--roc-grotesk);
+  font-size: var(--wp--preset--font-size--heading-small);
+}
+
 .marquee-banner__content li:after {
   border-radius: 50%;
   background-color: var(--wp--preset--color--ro-white);
@@ -323,17 +338,18 @@ div[data-type="rollinoats/illustration"]:focus {
   position: relative;
   width: .5rem;
 }
+
 .marquee-banner__content li:last-child:after { 
   content: none; 
 }
 
 .marquee-banner__content:nth-child(1) {
-  /* animation: marquee 20s linear infinite; */
+  animation: marquee 20s linear infinite;
   transform: translateX(var(--move-start));
 }
 
 .marquee-banner__content:nth-child(2) {
-  /* animation: marquee 20s linear infinite; */
+  animation: marquee 20s linear infinite;
   animation-delay: 10s;
   transform: translateX(var(--move-start));
 }
@@ -521,4 +537,9 @@ a.wp-block-navigation-item__content {
 /* ------------------------------------------- */
 .ro--header__container  .wp-block-navigation__responsive-container  {
   gap: 2rem;
+}
+
+.wp-block-image img {
+  width: auto;
+  max-width: 100%;
 }
