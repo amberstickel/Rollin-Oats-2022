@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "wp-scripts start custom-blocks/pagehero.js custom-blocks/herosubhead.js custom-blocks/logo.js custom-blocks/slideshow.js custom-blocks/slide.js custom-blocks/section.js custom-blocks/contentcontainer.js custom-blocks/illustration.js  custom-blocks/marqueebanner.js",
+    "start": "wp-scripts start custom-blocks/pagehero.js custom-blocks/herosubhead.js custom-blocks/logo.js custom-blocks/slideshow.js custom-blocks/slide.js custom-blocks/section.js custom-blocks/contentcontainer.js custom-blocks/illustration.js  custom-blocks/marqueebanner.js custom-blocks/communityeventimage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "git+https://github.com/amberstickel/Rollin-Oats-2022.git",

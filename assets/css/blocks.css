@@ -533,6 +533,45 @@ a.wp-block-navigation-item__content {
 
 
 /* ------------------------------------------- */
+/* Block: Community Event Image
+/* ------------------------------------------- */
+.community-event {
+  background-size: cover;
+  max-width: 280px;
+  min-height: 280px;
+  position: relative;
+  width: 100%;
+}
+
+.community-event__date {
+  align-items: center;
+  background-color: var(--wp--preset--color--ro-cream);
+  color: var(--wp--preset--color--ro-dark-purple);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--wp--preset--font-family--new-spirit);
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 90px;
+  justify-content: center;
+  position: absolute;
+  right: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 12px;
+  width: 90px;
+}
+
+.community-event__date span {
+  display: block;
+}
+
+.community-event__day {
+  margin-top: -4px;
+}
+
+
+/* ------------------------------------------- */
 /* Block overrides
 /* ------------------------------------------- */
 .ro--header__container  .wp-block-navigation__responsive-container  {

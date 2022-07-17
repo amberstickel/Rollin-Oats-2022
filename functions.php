@@ -60,6 +60,7 @@ class jsxBlock {
 }
 
 new jsxBlock('section');
+new jsxBlock('communityeventimage', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('contentcontainer');
 new jsxBlock('illustration');
 new jsxBlock('marqueebanner');
