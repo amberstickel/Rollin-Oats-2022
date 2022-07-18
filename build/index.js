@@ -3882,6 +3882,46 @@ var Glide = /*#__PURE__*/function (_Core) {
 
 /***/ }),
 
+/***/ "./assets/scripts/modules/Animations.js":
+/*!**********************************************!*\
+  !*** ./assets/scripts/modules/Animations.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class Animations {
+  constructor() {
+    function handleScroll(container) {
+      // Setting: Start fading halfway up the page
+      const startPos = 0.5;
+      const containerOffset = container.offsetTop; //  gets the number of pixels the window has been scrolled vertically
+
+      const scrollTop = window.scrollTop;
+      const currentPos = containerOffset - scrollTop;
+      const viewportHeight = window.innerHeight;
+
+      if (currentPos < viewportHeight * startPos) {
+        container.style.opacity = 0;
+      } else {
+        container.style.opacity = 1;
+      }
+    }
+
+    const allContentContainers = document.querySelectorAll(".ro--content-container");
+    allContentContainers.forEach(container => {
+      window.addEventListener('scroll', handleScroll(container));
+    });
+  }
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Animations);
+
+/***/ }),
+
 /***/ "./assets/scripts/modules/Slideshow.js":
 /*!*********************************************!*\
   !*** ./assets/scripts/modules/Slideshow.js ***!
@@ -3897,11 +3937,9 @@ __webpack_require__.r(__webpack_exports__);
 
 class Slideshow {
   constructor() {
-    const allSlideshows = document.querySelectorAll(".ro--slideshow"); // Initialize Glide for each slideshow in DOM
-
+    const allSlideshows = document.querySelectorAll(".ro--slideshow");
     allSlideshows.forEach(slideshow => {
       const slides = slideshow.querySelectorAll(".ro--slideshow__slide");
-      console.log('slides', slides);
       const slideCount = slides.length;
       const bulletsWrapper = slideshow.querySelector(".ro--slideshow__bullets");
       let dotHTML = "";
@@ -3910,9 +3948,8 @@ class Slideshow {
         dotHTML += `<button class="ro--slideshow__bullet glide__bullet" data-glide-dir="=${i}"></button>`;
       }
 
-      bulletsWrapper.insertAdjacentHTML("beforeend", dotHTML); // Initialize Glide
-
-      var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](slideshow, {
+      bulletsWrapper.insertAdjacentHTML("beforeend", dotHTML);
+      const glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](slideshow, {
         type: "carousel",
         hoverpause: false,
         perView: 1,
@@ -3991,9 +4028,12 @@ var __webpack_exports__ = {};
   !*** ./assets/scripts/index.js ***!
   \*********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_Slideshow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Slideshow */ "./assets/scripts/modules/Slideshow.js");
+/* harmony import */ var _modules_Animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Animations */ "./assets/scripts/modules/Animations.js");
+/* harmony import */ var _modules_Slideshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Slideshow */ "./assets/scripts/modules/Slideshow.js");
 
-const slideShow = new _modules_Slideshow__WEBPACK_IMPORTED_MODULE_0__["default"]();
+
+const animations = new _modules_Animations__WEBPACK_IMPORTED_MODULE_0__["default"]();
+const slideShow = new _modules_Slideshow__WEBPACK_IMPORTED_MODULE_1__["default"]();
 })();
 
 /******/ })()
