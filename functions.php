@@ -1,15 +1,18 @@
 <?php 
 
 /*	--------------------------------------------------------------------------------
-	Enqueue Rollin Oats Styles
+	Enqueue Rollin Oats Styles & Scripts
 --------------------------------------------------------------------------------*/
 
-	function ro_styles() {
+	function ro_files() {
     wp_enqueue_style( ' add_custom_fonts ', 'https://use.typekit.net/hjd3efb.css', false );
+    wp_enqueue_style( 'glide-styles', 		get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.core.min.css' );
 		wp_enqueue_style( 'ro-styles-shared', 		get_template_directory_uri() . '/assets/css/shared.css' );
 		wp_enqueue_style( 'ro-styles-blocks', 		get_template_directory_uri() . '/assets/css/blocks.css' );
+    wp_enqueue_script('ro-custom-js', get_template_directory_uri() . '/build/index.js', array('jquery'), '1.0', true );
+
 	}
-	add_action( 'wp_enqueue_scripts', 'ro_styles' );
+	add_action( 'wp_enqueue_scripts', 'ro_files' );
 
 
 /*	--------------------------------------------------------------------------------
@@ -18,6 +21,8 @@
 function ro_theme() {
 	add_theme_support('editor-styles');
 	add_editor_style(array('https://use.typekit.net/hjd3efb.css', 'assets/css/shared.css', 'assets/css/blocks.css', 'assets/css/editor.css'));
+  wp_enqueue_script('ro-custom-js', get_template_directory_uri() . '/build/index.js', array('jquery'), '1.0', true );
+
 }
 
 add_action( 'after_setup_theme', 'ro_theme' );
@@ -59,7 +64,6 @@ class jsxBlock {
   }
 }
 
-new jsxBlock('section');
 new jsxBlock('communityeventimage', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('contentcontainer');
 new jsxBlock('illustration');
@@ -67,5 +71,6 @@ new jsxBlock('marqueebanner');
 new jsxBlock('pagehero', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('herosubhead');
 new jsxBlock('logo');
+new jsxBlock('section');
 new jsxBlock('slideshow', true);
-new jsxBlock('slide', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
+new jsxBlock('slide', true);

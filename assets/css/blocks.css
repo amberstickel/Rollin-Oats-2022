@@ -118,7 +118,7 @@
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: cover;
-  min-height: 110px;
+  min-height: 210px;
   position: relative;
   width: 100%;
   -webkit-mask-image: url('../images/section-wavy-top.svg');
@@ -132,7 +132,7 @@
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: cover;
-  min-height: 110px;
+  min-height: 200px;
   position: relative;
   width: 100%;
   -webkit-mask-image: url('../images/section-wavy-bottom.svg');
@@ -526,6 +526,54 @@ a.wp-block-navigation-item__content {
 }
 
 
+
+/* ------------------------------------------- */
+/* Block: Slideshows
+/* ------------------------------------------- */
+
+.ro--slideshow {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.ro--slideshow__slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  white-space: initial;
+}
+
+.ro--slideshow__bullets {
+  align-items: center;
+  display: flex;
+  left: 1rem;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.ro--slideshow__bullet {
+  background-color: var(--wp--preset--color--ro-light-green);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  height: 12px;
+  margin: 0 1rem 0 0;
+  outline: none;
+  padding: 0;
+  transition: background-color 0.1s ease-out;
+  width: 12px;
+}
+
+.ro--slideshow__bullet.glide__bullet--active {
+  background-color: var(--wp--preset--color--ro-dark-green);
+}
+
+
+
 /* ------------------------------------------- */
 /* Block overrides
 /* ------------------------------------------- */
@@ -534,6 +582,6 @@ a.wp-block-navigation-item__content {
 }
 
 .wp-block-image img {
-  width: auto;
   max-width: 100%;
+  width: auto;
 }

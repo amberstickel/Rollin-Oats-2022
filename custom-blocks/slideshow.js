@@ -1,6 +1,6 @@
 
-import { registerBlockType } from '@wordpress/blocks';
 import { InnerBlocks } from '@wordpress/block-editor';
+import { registerBlockType } from '@wordpress/blocks';
 
 registerBlockType("rollinoats/slideshow", {
   title: "Rollin Oats Slideshow",
@@ -17,14 +17,18 @@ registerBlockType("rollinoats/slideshow", {
   save: SaveComponent,
 })
 
-function EditComponent(props) {
+function EditComponent() {
   return (
-    <div className="slideshow">
-      <InnerBlocks allowedBlocks={["rollinoats/slide"]}/>
+    <div className="ro--slideshow" style={{
+      border: "2px dotted #8F529A",
+      padding: "1rem"
+    }}>
+      <InnerBlocks 
+        allowedBlocks={["rollinoats/slide"]} />
     </div>
   );
 }
 
 function SaveComponent() {
-  return <InnerBlocks.Content />;
+  return <InnerBlocks.Content/>;
 }
