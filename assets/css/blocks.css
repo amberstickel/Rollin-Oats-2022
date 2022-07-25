@@ -219,15 +219,16 @@
 /* ------------------------------------------- */
 .illustration-wrapper {
   position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    border: 10px solid red;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border: 10px solid red;
 }
 
 .illustration {
   position: absolute;
+  z-index: 1;
 }
 
 .illustration--left {
