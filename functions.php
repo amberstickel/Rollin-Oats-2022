@@ -6,7 +6,7 @@
 
 	function ro_files() {
     wp_enqueue_style( ' add_custom_fonts ', 'https://use.typekit.net/hjd3efb.css', false );
-    wp_enqueue_style( 'glide-styles', 		get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.core.min.css' );
+    wp_enqueue_style( 'glide-styles', 		get_template_directory_uri() . '/assets/css/glide.core.min.css' );
 		wp_enqueue_style( 'ro-styles-shared', 		get_template_directory_uri() . '/assets/css/shared.css' );
 		wp_enqueue_style( 'ro-styles-blocks', 		get_template_directory_uri() . '/assets/css/blocks.css' );
     wp_enqueue_script('ro-custom-js', get_template_directory_uri() . '/build/index.js', array('jquery'), '1.0', true );
