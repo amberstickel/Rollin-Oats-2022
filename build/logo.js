@@ -110,7 +110,10 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 function LogoComponent() {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    className: "ro--logo-wrapper",
+    href: "/"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "ro--logo"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -241,7 +244,7 @@ function LogoComponent() {
     "data-name": "Path 1192",
     d: "m136.667 91.087-.6-6.553-2.5.23-.2-2.156 7.3-.672.2 2.156-2.5.23.6 6.553ZM136.508 84l.6 6.552 1.32-.121-.6-6.552 2.5-.23-.108-1.175-6.322.582.108 1.178Z",
     fill: "#fff"
-  }))));
+  })))));
 }
 })();
 
