@@ -379,11 +379,11 @@ a.wp-block-navigation-item__content {
 /* Block: Footer
 /* ------------------------------------------- */
 .ro--footer {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
-  padding: 1rem;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
 .ro--footer__grid {
@@ -397,7 +397,7 @@ a.wp-block-navigation-item__content {
   width: 100%;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1023px) {
   .ro--footer__nav-wrapper {
     display: none;
   }
