@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function LogoComponent() {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "logo"
+    className: "ro--logo"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "228",
