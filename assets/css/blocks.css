@@ -424,6 +424,9 @@ a.wp-block-navigation-item__content {
   font-size: var(--wp--preset--font-size--paragraph-medium)!important;
 }
 
+.ro--footer input[type="submit"] {
+  color: var(--wp--preset--color--ro-white);
+}
 
 
 /* ------------------------------------------- */
