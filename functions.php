@@ -74,3 +74,4 @@ new jsxBlock('logo');
 new jsxBlock('section');
 new jsxBlock('slideshow', true);
 new jsxBlock('slide', true);
+new jsxBlock('socialicons');
