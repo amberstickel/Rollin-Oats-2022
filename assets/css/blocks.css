@@ -633,10 +633,6 @@ div[data-type="rollinoats/illustration"]:focus {
 /* ------------------------------------------- */
 /* Block overrides
 /* ------------------------------------------- */
-.ro--header__container  .wp-block-navigation__responsive-container  {
-  gap: 2rem;
-}
-
 .wp-block-image img {
   max-width: 100%;
   width: auto;

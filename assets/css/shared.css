@@ -447,15 +447,36 @@ blockquote cite {
   transition: opacity 0.2s ease-out;
 }
 
+/* ------------------------------------------- */
+/* Block: Header
+/* ------------------------------------------- */
+.ro--header {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+}
 
-/* ------------------------------------------- */
-/* Navigation: Large screens
-/* ------------------------------------------- */
+.ro--header__container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.ro--header__shop-btn a.wp-block-navigation-item__content {
+  background-color: var(--wp--preset--color--ro-dark-green);
+  color: var(--wp--preset--color--ro-cream) !important;
+  padding: .25rem 1rem;
+}
+
 /* Header Nav Styles*/
 @media (min-width: 1125px) {
-  /* Space between logo and nav list */
-  .ro--header .ro--navigation {
-    gap: 1rem;
+
+  .ro--header .wp-block-navigation-item {
+    margin-right: 1rem;
   }
 
   /* Hide Overflow Menu option on large screens */
@@ -483,32 +504,6 @@ blockquote cite {
     color: var(--wp--preset--color--ro-cream);
   }
 }
-
-
-/* ------------------------------------------- */
-/* Block: Header
-/* ------------------------------------------- */
-.ro--header {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  padding: 1rem;
-}
-
-.ro--header__container {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  max-width: 1100px;
-  width: 100%;
-}
-
-.ro--header__shop-btn a.wp-block-navigation-item__content {
-  background-color: var(--wp--preset--color--ro-dark-green);
-  color: var(--wp--preset--color--ro-cream) !important;
-  padding: .25rem 1rem;
-}
-
 
 
 /* ------------------------------------------- */
