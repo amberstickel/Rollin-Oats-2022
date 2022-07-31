@@ -10,6 +10,7 @@ import { ChickenSVG } from "./chicken";
 import { CornSVG } from "./corn";
 import { EggSVG } from "./egg";
 import { FishSVG } from "./fish";
+import { FreshSinceSVG } from "./freshsince";
 import { GarlicSVG } from "./garlic";
 import { GrapeSVG } from "./grape";
 import { KiwiSVG } from "./kiwi";
@@ -32,6 +33,7 @@ export {
   CornSVG,
   EggSVG,
   FishSVG,
+  FreshSinceSVG,
   GarlicSVG,
   GrapeSVG,
   KiwiSVG,

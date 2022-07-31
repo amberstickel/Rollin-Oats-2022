@@ -105,7 +105,7 @@ function EditComponent(props) {
         }
         <div className={`ro--section__container ro--section-bg--${bgColorName}`}>
             <InnerBlocks allowedBlocks={["rollinoats/contentcontainer",
-            "rollinoats/illustration"]} />
+            "rollinoats/illustration", "rollinoats/sectionimage"]} />
         </div>
         {
           wavyBottomBorder &&
