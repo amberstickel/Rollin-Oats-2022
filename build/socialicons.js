@@ -104,7 +104,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)("rollinoats/socialicons", {
-  title: "Rollin' Oats Social Icons",
+  title: "Rollin Oats Social Icons",
   edit: SocialIconsComponent,
   save: SocialIconsComponent
 });
