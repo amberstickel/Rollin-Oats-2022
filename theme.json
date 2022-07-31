@@ -112,7 +112,7 @@
 					"name": "Paragraph"
 				},
         {
-					"slug": "heading-xsmall",
+					"slug": "heading-small",
 					"size": "24px",
 					"name": "Small Heading"
 				},
@@ -181,7 +181,7 @@
         },
         "typography": {
           "fontFamily":  "var(--wp--preset--font-family--new-spirit)",
-          "fontSize": "var(--wp--preset--font-size--heading-xsmall)"
+          "fontSize": "var(--wp--preset--font-size--heading-small)"
         }
       }
     },
