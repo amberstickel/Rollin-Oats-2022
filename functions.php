@@ -66,12 +66,14 @@ class jsxBlock {
 
 new jsxBlock('communityeventimage', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('contentcontainer');
+new jsxBlock('freshsince');
 new jsxBlock('illustration');
 new jsxBlock('marqueebanner');
 new jsxBlock('pagehero', true, ['fallbackimage' => get_theme_file_uri( 'assets/images/header.png' )]);
 new jsxBlock('herosubhead');
 new jsxBlock('logo');
 new jsxBlock('section');
+new jsxBlock('sectionimage');
 new jsxBlock('slideshow', true);
 new jsxBlock('slide', true);
 new jsxBlock('socialicons');
