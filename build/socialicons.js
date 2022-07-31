@@ -117,41 +117,22 @@ function SocialIconsComponent() {
     href: "https://www.facebook.com/RollinOats",
     target: "_blank"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
-    "data-name": "Group 24",
+    "data-name": "facebook",
     xmlns: "http://www.w3.org/2000/svg",
-    width: "11.665",
-    height: "25.104",
     viewBox: "0 0 11.665 25.104"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("clipPath", {
-    id: "a"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
-    "data-name": "Rectangle 41",
-    fill: "#355a24",
-    d: "M0 0h11.665v25.104H0z"
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
-    "data-name": "Group 23",
-    "clip-path": "url(#a)"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
     "data-name": "Path 1193",
     d: "M11.665 8.129H7.693V5.523A1.06 1.06 0 0 1 8.8 4.317h2.8V.016L7.74 0C3.454 0 2.478 3.208 2.478 5.261v2.868H0v4.432h2.478V25.1h5.215V12.561h3.517Z",
     fill: "#355a24"
-  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     className: "ro--social-icons__instagram",
     href: "https://www.instagram.com/rollinoatsstpete/",
     target: "_blank"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
-    "data-name": "Group 26",
+    "data-name": "instagrtam",
     xmlns: "http://www.w3.org/2000/svg",
-    width: "25.104",
-    height: "25.104",
     viewBox: "0 0 25.104 25.104"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("clipPath", {
-    id: "a"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
-    "data-name": "Rectangle 42",
-    fill: "#355a24",
-    d: "M0 0h25.104v25.104H0z"
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
     "data-name": "Group 25",
     "clip-path": "url(#a)",
     fill: "#355a24"

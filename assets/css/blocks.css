@@ -607,6 +607,11 @@ div[data-type="rollinoats/illustration"]:focus {
   width: 3rem;
 }
 
+.ro--social-icons svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 @media (min-width: 1024px) {
   .ro--social-icons {
     width: 4rem;
